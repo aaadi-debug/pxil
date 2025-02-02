@@ -37,18 +37,48 @@ function startCounters() {
 
 document.addEventListener("DOMContentLoaded", startCounters);
 
-        const newsData = [
-            { title: "New Product Launch", date: "Feb 3, 2025", summary: "We are excited to launch our latest innovation..." },
-            { title: "Award Recognition", date: "Jan 20, 2025", summary: "Our company received an industry-leading award..." },
-            { title: "Office Expansion", date: "Jan 10, 2025", summary: "We have expanded our offices to a new location..." },
-            { title: "Sustainability Efforts", date: "Dec 22, 2024", summary: "Our latest sustainability report highlights..." },
-            { title: "Partnership Announcement", date: "Dec 10, 2024", summary: "We have partnered with a leading tech company..." }
-        ];
- 
-        const container = document.querySelector(".grid");
- 
-        newsData.forEach((news) => {
-            const newsItem = `
+
+// function showTab(tabId) {
+//     document.querySelectorAll('.tab-content').forEach(tab => {
+//         tab.classList.add('hidden');
+//     });
+//     document.getElementById(tabId).classList.remove('hidden');
+// }
+
+function showTab(tabId) {
+    // Hide all tab contents
+    document.querySelectorAll(".tab-content").forEach(tab => {
+        tab.classList.add("hidden");
+        tab.classList.remove("fade-in");
+    });
+
+    // Remove active class from all buttons
+    document.querySelectorAll("button").forEach(btn => {
+        btn.classList.remove("active-tab");
+    });
+
+    // Show the selected tab content with animation
+    const activeTab = document.getElementById(tabId);
+    activeTab.classList.remove("hidden");
+    setTimeout(() => {
+        activeTab.classList.add("fade-in");
+    }, 10);
+
+    // Highlight active button
+    document.getElementById(`btn-${tabId}`).classList.add("active-tab");
+}
+const newsData = [
+    { title: "New Product Launch", date: "Feb 3, 2025", summary: "We are excited to launch our latest innovation..." },
+    { title: "Award Recognition", date: "Jan 20, 2025", summary: "Our company received an industry-leading award..." },
+    { title: "Office Expansion", date: "Jan 10, 2025", summary: "We have expanded our offices to a new location..." },
+    { title: "Sustainability Efforts", date: "Dec 22, 2024", summary: "Our latest sustainability report highlights..." },
+    { title: "Partnership Announcement", date: "Dec 10, 2024", summary: "We have partnered with a leading tech company..." }
+];
+
+const container = document.querySelector(".newsgrid");
+
+newsData.forEach((news) => {
+    const newsItem = `
 <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 hover:shadow-lg transition-shadow">
 <h3 class="text-xl font-semibold text-gray-900">${news.title}</h3>
 <p class="text-sm text-gray-500">${news.date}</p>
@@ -57,6 +87,6 @@ document.addEventListener("DOMContentLoaded", startCounters);
 <a href="#" class="text-blue-600 hover:underline">Read more →</a>
 </div>
 </div>
-            `;
-            container.innerHTML += newsItem;
-        });
+    `;
+    container.innerHTML += newsItem;
+});
