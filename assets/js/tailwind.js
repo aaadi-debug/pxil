@@ -6,7 +6,8 @@ tailwind.config = {
           secondary: '#272727', // Custom black color
           tertiary: '#FFD334', // Custom yellow color
           whiteClr: '#FFFFFF', // Custom white color
-          textClr: '#555555' // Custom gray color
+          textClr: '#555555' ,// Custom gray color
+           lightText: '#A4A4A4'
         }
       }
     }

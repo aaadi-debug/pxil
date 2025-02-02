@@ -1,53 +1,840 @@
 <!DOCTYPE html>
 <html lang="en">
- 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PXIL | Power Exchnage India Limited | Energy Exchange</title>
-    <script src="https://cdn.tailwindcss.com"></script> <!-- Tailwind css CDN -->
- 
-</head>
- 
-<body>
- 
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind css CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <style>
+      @keyframes float {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-15px);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+      .floating {
+        animation: float 3s ease-in-out infinite;
+      }
+    </style>
+    <style>
+      @keyframes fadeInUp {
+        0% {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .fade-in {
+        animation: fadeInUp 1s ease-out;
+      }
+    </style>
+  </head>
+
+  <body>
     <!-- Navbar will be loaded here -->
     <div id="navbar"></div>
- 
- 
-    <h1 class="border border-red-500 text-blue-500">cbdw</h1>
-donsl - aditya raj gupta
- 
-<div class="">
-    <div id="counter-section">
-        <h2>Auto Increment Counter</h2>
-        <div id="counter">0</div>
+
+    <div
+      class="flex flex-wrap gap-8 justify-center items-center bg-whiteClr p-10 bg-[url(./assets/images/section-bg-1.jpg)]"
+    >
+      <!-- Counter 1: Products with Contracts -->
+      <div
+        class="counter-section text-center p-8 shadow-lg- transition-all duration-300 transform hover:scale-105 hover:shadow-xl max-w-xs sm:max-w-sm lg:max-w-md"
+      >
+        <div
+          class="counter text-5xl font-extrabold text-tertiary mb-4"
+          data-target="12"
+        >
+          0
+        </div>
+        <h2 class="uppercase text-xl text-lightText font-bold">
+          Products with Contracts
+        </h2>
+      </div>
+
+      <!-- Counter 2: PAN India Bidding Regions -->
+      <div
+        class="counter-section text-center p-8 p-4 shadow-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl max-w-xs sm:max-w-sm lg:max-w-md"
+      >
+        <div
+          class="counter text-5xl font-extrabold text-tertiary mb-4"
+          data-target="13"
+        >
+          0
+        </div>
+        <h2 class="text-xl uppercase text-lightText font-bold">
+          PAN India Bidding Regions
+        </h2>
+      </div>
+
+      <!-- Counter 3: Clients -->
+      <div
+        class="counter-section text-center p-8 shadow-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl max-w-xs sm:max-w-sm lg:max-w-md"
+      >
+        <div
+          class="counter text-5xl font-extrabold text-tertiary mb-4"
+          data-target="4325"
+        >
+          0
+        </div>
+        <h2 class="text-xl uppercase text-lightText font-bold">Clients</h2>
+      </div>
+
+      <!-- Counter 4: Billion Units Transacted -->
+      <div
+        class="counter-section text-center p-8 shadow-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl max-w-xs sm:max-w-sm lg:max-w-md"
+      >
+        <div
+          class="counter text-5xl font-extrabold text-tertiary mb-4"
+          data-target="51.92"
+        >
+          0
+        </div>
+        <h2 class="text-xl uppercase text-lightText font-bold">
+          Billion Units Transacted
+        </h2>
+      </div>
     </div>
-    <div id="counter-section">
-        <h2>Auto Increment Counter</h2>
-        <div id="counter">0</div>
+    <div class="flex justify-center space-x-6 border-b-2 border-gray-200">
+      <button
+        class="pb-2 text-gray-600 hover:text-primary border-b-4 border-transparent hover:border-primary transition duration-300"
+      >
+        Tab 1
+      </button>
+      <button
+        class="pb-2 text-gray-600 hover:text-primary border-b-4 border-transparent hover:border-primary transition duration-300"
+      >
+        Tab 2
+      </button>
+      <button
+        class="pb-2 text-gray-600 hover:text-primary border-b-4 border-transparent hover:border-primary transition duration-300"
+      >
+        Tab 3
+      </button>
     </div>
-    <div id="counter-section">
-        <h2>Auto Increment Counter</h2>
-        <div id="counter">0</div>
+    <div class="flex justify-center space-x-4">
+      <button
+        class="px-6 py-2 bg-gray-200 text-gray-700 rounded-full hover:bg-primary hover:text-white transition"
+      >
+        Tab 1
+      </button>
+      <button
+        class="px-6 py-2 bg-gray-200 text-gray-700 rounded-full hover:bg-primary hover:text-white transition"
+      >
+        Tab 2
+      </button>
+      <button
+        class="px-6 py-2 bg-gray-200 text-gray-700 rounded-full hover:bg-primary hover:text-white transition"
+      >
+        Tab 3
+      </button>
     </div>
-    <div id="counter-section">
-        <h2>Auto Increment Counter</h2>
-        <div id="counter">0</div>
+    <div class="flex justify-center space-x-4">
+      <button
+        class="px-6 py-3 shadow-md bg-white rounded-lg hover:shadow-lg hover:bg-primary hover:text-white transition"
+      >
+        Tab 1
+      </button>
+      <button
+        class="px-6 py-3 shadow-md bg-white rounded-lg hover:shadow-lg hover:bg-primary hover:text-white transition"
+      >
+        Tab 2
+      </button>
+      <button
+        class="px-6 py-3 shadow-md bg-white rounded-lg hover:shadow-lg hover:bg-primary hover:text-white transition"
+      >
+        Tab 3
+      </button>
     </div>
-</div>
+    <div
+      class="relative flex justify-center space-x-6 border-b-2 border-gray-200"
+    >
+      <button
+        class="group pb-2 relative text-gray-600 hover:text-primary transition"
+      >
+        Tab 1
+        <span
+          class="absolute left-0 bottom-0 w-full h-1 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300"
+        ></span>
+      </button>
+      <button
+        class="group pb-2 relative text-gray-600 hover:text-primary transition"
+      >
+        Tab 2
+        <span
+          class="absolute left-0 bottom-0 w-full h-1 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300"
+        ></span>
+      </button>
+      <button
+        class="group pb-2 relative text-gray-600 hover:text-primary transition"
+      >
+        Tab 3
+        <span
+          class="absolute left-0 bottom-0 w-full h-1 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300"
+        ></span>
+      </button>
+    </div>
+    <div class="flex justify-center space-x-4 bg-gray-800 p-4 rounded-lg">
+      <button
+        class="px-6 py-2 bg-gray-700 text-white rounded-md hover:bg-primary hover:text-white transition"
+      >
+        Tab 1
+      </button>
+      <button
+        class="px-6 py-2 bg-gray-700 text-white rounded-md hover:bg-primary hover:text-white transition"
+      >
+        Tab 2
+      </button>
+      <button
+        class="px-6 py-2 bg-gray-700 text-white rounded-md hover:bg-primary hover:text-white transition"
+      >
+        Tab 3
+      </button>
+    </div>
+    <div class="flex justify-center space-x-4 bg-gray-900 p-6 rounded-xl">
+      <button
+        class="px-6 py-3 text-white text-lg font-semibold bg-gray-800 border-2 border-transparent hover:border-tertiary hover:text-tertiary shadow-lg transition duration-300"
+      >
+        Tab 1
+      </button>
+      <button
+        class="px-6 py-3 text-white text-lg font-semibold bg-gray-800 border-2 border-transparent hover:border-tertiary hover:text-tertiary shadow-lg transition duration-300"
+      >
+        Tab 2
+      </button>
+      <button
+        class="px-6 py-3 text-white text-lg font-semibold bg-gray-800 border-2 border-transparent hover:border-tertiary hover:text-tertiary shadow-lg transition duration-300"
+      >
+        Tab 3
+      </button>
+    </div>
+    <div class="flex justify-center space-x-4 p-6">
+      <button
+        class="px-6 py-3 bg-white shadow-md rounded-lg text-gray-700 text-lg font-bold transform hover:translate-y-[-5px] hover:shadow-xl transition-all duration-300"
+      >
+        Tab 1
+      </button>
+      <button
+        class="px-6 py-3 bg-white shadow-md rounded-lg text-gray-700 text-lg font-bold transform hover:translate-y-[-5px] hover:shadow-xl transition-all duration-300"
+      >
+        Tab 2
+      </button>
+      <button
+        class="px-6 py-3 bg-white shadow-md rounded-lg text-gray-700 text-lg font-bold transform hover:translate-y-[-5px] hover:shadow-xl transition-all duration-300"
+      >
+        Tab 3
+      </button>
+    </div>
+    <div class="relative flex justify-center space-x-4 p-6">
+      <button
+        class="relative px-6 py-3 text-lg font-semibold text-primary transition overflow-hidden group"
+      >
+        Tab 1
+        <span
+          class="absolute left-0 bottom-0 w-full h-1 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"
+        ></span>
+      </button>
+      <button
+        class="relative px-6 py-3 text-lg font-semibold text-primary transition overflow-hidden group"
+      >
+        Tab 2
+        <span
+          class="absolute left-0 bottom-0 w-full h-1 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"
+        ></span>
+      </button>
+      <<button
+        class="relative px-6 py-3 text-lg font-semibold text-primary transition overflow-hidden group"
+      >
+        Tab 2
+        <span
+          class="absolute left-0 bottom-0 w-full h-1 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"
+        ></span>
+      </button>
+    </div>
+    <div
+      class="flex justify-center space-x-4 p-6 backdrop-blur-lg bg-white/30 rounded-xl shadow-md"
+    >
+      <button
+        class="px-6 py-3 bg-white/20 border border-white text-white font-semibold rounded-lg hover:bg-white/40 transition-all duration-300"
+      >
+        Tab 1
+      </button>
+      <button
+        class="px-6 py-3 bg-white/20 border border-white text-white font-semibold rounded-lg hover:bg-white/40 transition-all duration-300"
+      >
+        Tab 2
+      </button>
+      <button
+        class="px-6 py-3 bg-white/20 border border-white text-white font-semibold rounded-lg hover:bg-white/40 transition-all duration-300"
+      >
+        Tab 3
+      </button>
+    </div>
+    <div class="flex justify-center space-x-4 p-6">
+      <button
+        class="relative px-6 py-3 bg-primary text-white rounded-lg text-lg font-bold transition-all duration-300 hover:scale-110 hover:shadow-lg"
+      >
+        Tab 1
+      </button>
+      <button
+        class="relative px-6 py-3 bg-secondary text-white rounded-lg text-lg font-bold transition-all duration-300 hover:scale-110 hover:shadow-lg"
+      >
+        Tab 2
+      </button>
+      <button
+        class="relative px-6 py-3 bg-tertiary text-black rounded-lg text-lg font-bold transition-all duration-300 hover:scale-110 hover:shadow-lg"
+      >
+        Tab 3
+      </button>
+    </div>
+    <!-- Section Container -->
+    <section class="text-center py-16 px-6">
+      <!-- Title -->
+      <h2
+        class="text-3xl font-extrabold text-blue-600 uppercase relative inline-block"
+      >
+        WHAT WE OFFER
+        <span
+          class="absolute bottom-0 left-1/2 w-24 h-1 bg-blue-500 -translate-x-1/2"
+        ></span>
+      </h2>
+      <p class="text-gray-600 mt-3">We offer different services</p>
+      <p class="text-gray-500 max-w-2xl mx-auto mt-2">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.
+        Vestibulum aliquam convallis ligula.
+      </p>
+
+      <!-- Service Boxes -->
+      <div class="grid md:grid-cols-3 gap-8 mt-10 max-w-6xl mx-auto">
+        <!-- Card 1 -->
+        <div
+          class="bg-white shadow-lg rounded-xl p-6 text-center transform hover:scale-105 transition-all duration-300"
+        >
+          <div
+            class="relative mx-auto w-16 h-16 flex items-center justify-center bg-blue-100 rounded-full"
+          >
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/1046/1046851.png"
+              alt="Commercial Equipment"
+              class="w-10"
+            />
+          </div>
+          <h3 class="text-xl font-semibold text-gray-800 mt-4">
+            Commercial Equipment
+          </h3>
+          <p class="text-gray-500 mt-2">
+            Duis at suscipit massa. Etiam quis mollis arcu.
+          </p>
+          <a
+            href="#"
+            class="inline-block mt-4 px-5 py-2 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition"
+            >Read More</a
+          >
+        </div>
+
+        <!-- Card 2 -->
+        <div
+          class="bg-white shadow-lg rounded-xl p-6 text-center transform hover:scale-105 transition-all duration-300"
+        >
+          <div
+            class="relative mx-auto w-16 h-16 flex items-center justify-center bg-blue-100 rounded-full"
+          >
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/1046/1046885.png"
+              alt="Home Appliance"
+              class="w-10"
+            />
+          </div>
+          <h3 class="text-xl font-semibold text-gray-800 mt-4">
+            Home Appliance
+          </h3>
+          <p class="text-gray-500 mt-2">
+            Duis at suscipit massa. Etiam quis mollis arcu.
+          </p>
+          <a
+            href="#"
+            class="inline-block mt-4 px-5 py-2 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition"
+            >Read More</a
+          >
+        </div>
+
+        <!-- Card 3 -->
+        <div
+          class="bg-white shadow-lg rounded-xl p-6 text-center transform hover:scale-105 transition-all duration-300"
+        >
+          <div
+            class="relative mx-auto w-16 h-16 flex items-center justify-center bg-blue-100 rounded-full"
+          >
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/1046/1046866.png"
+              alt="Military Products"
+              class="w-10"
+            />
+          </div>
+          <h3 class="text-xl font-semibold text-gray-800 mt-4">
+            Military Products
+          </h3>
+          <p class="text-gray-500 mt-2">
+            Duis at suscipit massa. Etiam quis mollis arcu.
+          </p>
+          <a
+            href="#"
+            class="inline-block mt-4 px-5 py-2 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition"
+            >Read More</a
+          >
+        </div>
+      </div>
+    </section>
+    <section class="w-full max-w-6xl px-6 py-12">
+      <!-- <h2 class="text-4xl font-bold text-center text-blue-600 uppercase mb-10">Social Media Updates</h2> -->
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- Twitter Post -->
+        <div
+          class="bg-white p-6 rounded-xl shadow-lg border border-gray-200 transition transform hover:scale-105"
+        >
+          <div class="flex items-center space-x-3">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/733/733579.png"
+              alt="Twitter"
+              class="w-8"
+            />
+            <h3 class="text-xl font-semibold text-blue-500">@TwitterHandle</h3>
+          </div>
+          <p class="text-gray-600 mt-4">
+            "Exciting news! Our latest update is live 🚀 Check it out!
+            #Innovation #Tech"
+          </p>
+          <a
+            href="#"
+            class="mt-4 inline-block text-blue-500 font-semibold hover:underline"
+            >View on Twitter →</a
+          >
+        </div>
+
+        <!-- Facebook Post -->
+        <div
+          class="bg-white p-6 rounded-xl shadow-lg border border-gray-200 transition transform hover:scale-105"
+        >
+          <div class="flex items-center space-x-3">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/733/733547.png"
+              alt="Facebook"
+              class="w-8"
+            />
+            <h3 class="text-xl font-semibold text-blue-800">Facebook Page</h3>
+          </div>
+          <p class="text-gray-600 mt-4">
+            "Join us for an exclusive behind-the-scenes look at our upcoming
+            project! 🎬 #ExcitingTimes"
+          </p>
+          <a
+            href="#"
+            class="mt-4 inline-block text-blue-800 font-semibold hover:underline"
+            >View on Facebook →</a
+          >
+        </div>
+
+        <!-- LinkedIn Post -->
+        <div
+          class="bg-white p-6 rounded-xl shadow-lg border border-gray-200 transition transform hover:scale-105"
+        >
+          <div class="flex items-center space-x-3">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/733/733561.png"
+              alt="LinkedIn"
+              class="w-8"
+            />
+            <h3 class="text-xl font-semibold text-blue-700">
+              LinkedIn Profile
+            </h3>
+          </div>
+          <p class="text-gray-600 mt-4">
+            "Networking is key! Connect with industry leaders and explore new
+            opportunities. 🤝 #Networking"
+          </p>
+          <a
+            href="#"
+            class="mt-4 inline-block text-blue-700 font-semibold hover:underline"
+            >View on LinkedIn →</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Social Media Feed Section -->
+    <section class="w-100 max-w-6xl border-2 py-12">
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- Twitter Post -->
+        <div
+          class="relative bg-white p-6 rounded-xl shadow-lg border border-gray-200 transition transform hover:scale-105"
+        >
+          <img
+            src="https://scontent.fdel58-1.fna.fbcdn.net/v/t39.30808-6/449742237_937618021502506_6149730171188058089_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=rjbdNJ7rei0Q7kNvgHWFslv&_nc_zt=23&_nc_ht=scontent.fdel58-1.fna&_nc_gid=ATRaLsuwof8xzZBumFcXZ0S&oh=00_AYBLDYj7ris6-U1e-jrJnoSSQ2y0Hhz_tCikkZ4zlTVl8A&oe=67A583D6"
+            alt="Twitter Post"
+            class="rounded-lg w-full"
+          />
+          <div class="flex items-center space-x-3 mt-4">
+            <img
+              src="https://scontent.fdel58-1.fna.fbcdn.net/v/t39.30808-6/449742237_937618021502506_6149730171188058089_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=rjbdNJ7rei0Q7kNvgHWFslv&_nc_zt=23&_nc_ht=scontent.fdel58-1.fna&_nc_gid=ATRaLsuwof8xzZBumFcXZ0S&oh=00_AYBLDYj7ris6-U1e-jrJnoSSQ2y0Hhz_tCikkZ4zlTVl8A&oe=67A583D6"
+              alt="Twitter"
+              class="w-8"
+            />
+            <h3 class="text-xl font-semibold text-blue-500">@TwitterHandle</h3>
+          </div>
+          <p class="text-gray-600 mt-2">
+            "Exciting news! Our latest update is live 🚀 Check it out!
+            #Innovation #Tech"
+          </p>
+          <a
+            href="#"
+            class="mt-4 inline-block text-blue-500 font-semibold hover:underline"
+            >View on Twitter →</a
+          >
+        </div>
+
+        <!-- Facebook Post -->
+        <div
+          class="relative bg-white p-6 rounded-xl shadow-lg border border-gray-200 transition transform hover:scale-105"
+        >
+          <img
+            src="https://scontent.fdel58-1.fna.fbcdn.net/v/t39.30808-6/449742237_937618021502506_6149730171188058089_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=rjbdNJ7rei0Q7kNvgHWFslv&_nc_zt=23&_nc_ht=scontent.fdel58-1.fna&_nc_gid=ATRaLsuwof8xzZBumFcXZ0S&oh=00_AYBLDYj7ris6-U1e-jrJnoSSQ2y0Hhz_tCikkZ4zlTVl8A&oe=67A583D6"
+            alt="Facebook Post"
+            class="rounded-lg w-full"
+          />
+          <div class="flex items-center space-x-3 mt-4">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/733/733547.png"
+              alt="Facebook"
+              class="w-8"
+            />
+            <h3 class="text-xl font-semibold text-blue-800">Facebook Page</h3>
+          </div>
+          <p class="text-gray-600 mt-2">
+            "Join us for an exclusive behind-the-scenes look at our upcoming
+            project! 🎬 #ExcitingTimes"
+          </p>
+          <a
+            href="#"
+            class="mt-4 inline-block text-blue-800 font-semibold hover:underline"
+            >View on Facebook →</a
+          >
+        </div>
+
+        <!-- LinkedIn Post -->
+        <div
+          class="relative bg-white p-6 rounded-xl shadow-lg border border-gray-200 transition transform hover:scale-105"
+        >
+          <img
+            src="https://media.licdn.com/dms/image/v2/D5622AQGCNDPHWMV4vQ/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1726652417701?e=2147483647&v=beta&t=BaAOXMlnf_YgP1LTTQbSyy7x8aFLtU3dpRMUPkhlPMs"
+            alt="LinkedIn Post"
+            class="rounded-lg w-full"
+          />
+          <div class="flex items-center space-x-3 mt-4">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/733/733561.png"
+              alt="LinkedIn"
+              class="w-8"
+            />
+            <h3 class="text-xl font-semibold text-blue-700">
+              LinkedIn Profile
+            </h3>
+          </div>
+          <p class="text-gray-600 mt-2">
+            "Networking is key! Connect with industry leaders and explore new
+            opportunities. 🤝 #Networking"
+          </p>
+          <a
+            href="#"
+            class="mt-4 inline-block text-blue-700 font-semibold hover:underline"
+            >View on LinkedIn →</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 px-8 bg-white">
+      <div
+        class="max-w-screen-xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12"
+      >
+        <div class="lg:w-1/2 text-center lg:text-left">
+          <h2 class="text-4xl font-bold text-blue-600 mb-6">About Us</h2>
+          <p class="text-lg text-gray-700 mb-6">
+            Power Exchange India Limited (PXIL) is India’s first institutionally
+            promoted power exchange, revolutionizing the energy sector since
+            2008. By seamlessly connecting buyers and sellers, we enhance the
+            efficiency of India’s energy markets. Our innovative solutions blend
+            local expertise with global insights, providing stakeholders with
+            the tools to succeed in a fast-evolving energy landscape.
+          </p>
+          <button
+            class="px-6 py-2 bg-blue-600 text-white font-semibold rounded-full hover:bg-blue-700 transition"
+          >
+            Learn More
+          </button>
+        </div>
+        <div class="lg:w-1/2 relative">
+          <div class="text-tertiary">
+            <i class="fa-solid fa-bolt w-24 h-24 animate-bounce"></i>
+          </div>
+          <div class="text-tertiary">
+            <i class="fa-solid fa-bolt w-24 h-24 animate-bounce"></i>
+          </div>
+
+          <img
+            src="https://powerexindiadr.pxil.in/static/images/News/card/pxil_md_session.png"
+            alt="Energy Transformation"
+            class="w-full rounded-lg shadow-lg"
+          />
+          <div
+            class="absolute top-1/4 left-1/4 transform -translate-x-1/4 -translate-y-1/4"
+          >
+            <img
+              src="https://www.example.com/energy-icon.svg"
+              alt="Energy Icon"
+              class="w-24 h-24 animate-bounce"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      class="relative w-full min-h-screen flex flex-col justify-center items-center p-10 overflow-hidden"
+    >
+      <h1
+        class="text-6xl font-extrabold tracking-tight text-secondary mb-12 relative"
+      >
+        Our Core Principles
+      </h1>
+
+      <div class="relative w-full max-w-6xl flex flex-col items-center gap-16">
+        <div class="relative flex items-center floating">
+          <i class="ph ph-lightning-bold text-primary text-6xl"></i>
+          <p class="text-3xl text-textClr mx-6 max-w-md">
+            Vision: Pioneering a brighter, sustainable tomorrow.
+          </p>
+          <i class="ph ph-lightning-bold text-primary text-6xl"></i>
+        </div>
+
+        <div
+          class="relative flex items-center floating"
+          style="animation-delay: 1s"
+        >
+          <i class="ph ph-battery-full text-tertiary text-6xl"></i>
+          <p class="text-3xl text-textClr mx-6 max-w-md">
+            Mission: Driving progress with innovation and purpose.
+          </p>
+          <i class="ph ph-battery-full text-tertiary text-6xl"></i>
+        </div>
+
+        <div
+          class="relative flex items-center floating"
+          style="animation-delay: 2s"
+        >
+          <i class="ph ph-recycle text-secondary text-6xl"></i>
+          <p class="text-3xl text-textClr mx-6 max-w-md">
+            Values: Trust, Excellence, and Forward Thinking.
+          </p>
+          <i class="ph ph-recycle text-secondary text-6xl"></i>
+        </div>
+      </div>
+    </section>
+
+    <div class="bg-whiteClr text-textClr relative overflow-hidden">
+      <section
+        class="relative w-full min-h-screen flex flex-col justify-center items-center p-10 overflow-hidden"
+      >
+        <h1
+          class="text-6xl font-extrabold tracking-tight text-secondary mb-12 relative after:content-[''] after:absolute after:w-40 after:h-1 after:bg-primary after:bottom-[-10px] after:left-1/2 after:-translate-x-1/2"
+        >
+          Our Core Principles
+        </h1>
+
+        <div
+          class="relative w-full max-w-6xl flex flex-col items-center gap-20"
+        >
+          <div
+            class="relative flex items-center floating hover:scale-110 transition-transform"
+          >
+            <!-- <i class="ph ph-lightning-bold text-primary text-7xl rotating"></i> -->
+            <i class="fa-solid fa-seedling text-primary text-7xl rotating"></i>
+            <div
+              class="ml-6 bg-primary text-whiteClr px-8 py-6 text-l font-semibold rounded-full shadow-lg transform hover:scale-110 transition"
+            >
+              Vision: To continually innovate and offer credible solutions to
+              transform Indian power markets and efficiently allocate energy
+              resources, thereby creating a significant difference for our
+              stakeholders across the globe.
+            </div>
+          </div>
+
+          <div
+            class="relative flex items-center floating hover:scale-110 transition-transform"
+            style="animation-delay: 1s"
+          >
+            <i class="ph ph-battery-full text-tertiary text-7xl rotating"></i>
+            <div
+              class="ml-6 bg-tertiary text-secondary px-8 py-6 text-l font-semibold rounded-full shadow-lg transform hover:scale-110 transition"
+            >
+              Mission: To increase the accessibility and transparency of the
+              power market in India, and enhance the speed and efficiency of
+              trade execution, via optimal utilization of local and global
+              insights.
+            </div>
+          </div>
+
+          <div
+            class="relative flex items-center floating hover:scale-110 transition-transform"
+            style="animation-delay: 2s"
+          >
+            <i class="ph ph-recycle text-secondary text-7xl rotating"></i>
+            <div
+              class="ml-6 bg-secondary text-whiteClr px-8 py-6 text-l font-semibold rounded-full shadow-lg transform hover:scale-110 transition"
+            >
+              Values: Integrity, Excellence, Commitment, Innovation.
+            </div>
+          </div>
+        </div>
+
+        <div class="wave"></div>
+      </section>
+    </div>
+
+    <div class="bg-whiteClr text-textClr">
+      <section
+        class="relative w-full min-h-screen flex flex-col justify-center items-center p-10 overflow-hidden"
+      >
+        <h1 class="text-5xl font-extrabold tracking-tight text-secondary mb-12">
+          Key Features of the Exchange
+        </h1>
+
+        <div
+          class="relative w-full max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-10"
+        >
+          <div class="flex items-center fade-in">
+            <i class="ph ph-globe text-primary text-6xl mr-4"></i>
+            <p class="text-xl">
+              Nation-wide, electronic Exchange for trading of power.
+            </p>
+          </div>
+
+          <div class="flex items-center fade-in" style="animation-delay: 0.2s">
+            <i class="ph ph-lightning text-tertiary text-6xl mr-4"></i>
+            <p class="text-xl">
+              Exchange handles power trading and transmission clearance
+              simultaneously.
+            </p>
+          </div>
+
+          <div class="flex items-center fade-in" style="animation-delay: 0.4s">
+            <i class="ph ph-calendar-check text-secondary text-6xl mr-4"></i>
+            <p class="text-xl">
+              Trading happens for Day Ahead, Day Ahead Contingency, Any Day,
+              Intra Day, and Weekly Contracts.
+            </p>
+          </div>
+
+          <div class="flex items-center fade-in" style="animation-delay: 0.6s">
+            <i class="ph ph-wind text-primary text-6xl mr-4"></i>
+            <p class="text-xl">
+              Trading platform available for Renewable Energy Certificates.
+            </p>
+          </div>
+
+          <div class="flex items-center fade-in" style="animation-delay: 0.8s">
+            <i class="ph ph-trend-up text-tertiary text-6xl mr-4"></i>
+            <p class="text-xl">
+              More contracts to be introduced in due course.
+            </p>
+          </div>
+
+          <div class="flex items-center fade-in" style="animation-delay: 1s">
+            <i class="ph ph-shield-check text-secondary text-6xl mr-4"></i>
+            <p class="text-xl">
+              Exchange is a central counterparty to all trades done on the
+              Exchange.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="bg-whiteClr text-textClr">
+      <section class="w-full py-16 px-8 flex flex-col items-center">
+        <h2 class="text-4xl font-extrabold text-secondary text-center">
+          OUR CONTACTS
+        </h2>
+        <p class="text-lightText text-center mt-2 max-w-2xl">
+          Connect with us for inquiries and support. We are here to help you
+          with all your energy trading needs.
+        </p>
+
+        <div
+          class="mt-10 w-full max-w-7xl bg-whiteClr shadow-lg rounded-lg p-8 grid grid-cols-1 md:grid-cols-4 gap-6"
+        >
+          <div class="flex flex-col items-center">
+            <i class="ph ph-map-pin text-primary text-5xl"></i>
+            <h3 class="font-semibold text-lg mt-3">HEAD OFFICE</h3>
+            <p class="text-sm text-lightText text-center">
+              9th Floor, 901 , Sumer Plaza, Marol Maroshi Road, Marol Andheri
+              (East), Mumbai 400059, India
+            </p>
+          </div>
+          <div class="flex flex-col items-center">
+            <i class="ph ph-map-pin text-primary text-5xl"></i>
+            <h3 class="font-semibold text-lg mt-3">BRANCH OFFICE</h3>
+            <p class="text-sm text-lightText text-center">
+              Unit No. 1012, 1014, 1015 10th Floor, Plot No. 11, DLF Tower-B,
+              Jasola District Centre New Delhi 110025, India
+            </p>
+          </div>
+          <div class="flex flex-col items-center">
+            <i class="ph ph-phone text-tertiary text-5xl"></i>
+            <h3 class="font-semibold text-lg mt-3">CALL US</h3>
+            <p class="text-sm text-lightText text-center">
+              HEAD OFFICE No.: + 91 22 4009 6600 
+            </p>
+            <p class="text-sm text-lightText text-center">
+                HEAD OFFICE No.: + 91 22 4009 6633
+              </p>
+            <p class="text-sm text-lightText text-center">
+              BRANCH OFFICE No.: +91 11 4075 6000
+            </p>
+          </div>
+
+          <div class="flex flex-col items-center">
+            <i class="ph ph-envelope text-secondary text-5xl"></i>
+            <h3 class="font-semibold text-lg mt-3">EMAIL US</h3>
+            <p class="text-sm text-lightText text-center">info@pxil.co.in</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
     <!-- Footer will be loaded here -->
     <div id="footer"></div>
- 
-    <script src="./assets/js/home.js">
-       
-    </script>
- 
+
+    <script src="./assets/js/home.js"></script>
+
     <!-- To import taiwlind css -->
     <script src="./assets/js/tailwind.js"></script>
     <!-- Load External JS -->
     <script src="./assets/js/loadComponents.js"></script>
-</body>
- 
+  </body>
 </html>
-

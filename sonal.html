@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0058a2',
+                        secondary: '#272727',
+                        tertiary: '#FFD334',
+                        whiteClr: '#FFFFFF',
+                        textClr: '#555555',
+                        lightText: '#A4A4A4'
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body class="bg-whiteClr text-textClr">
+    <section class="w-full py-16 px-8 flex flex-col items-center">
+        <h2 class="text-4xl font-extrabold text-secondary text-center">OUR CONTACTS</h2>
+        <p class="text-lightText text-center mt-2 max-w-2xl">
+            Connect with us for inquiries and support. We are here to help you with all your energy trading needs.
+        </p>
+        
+        <div class="mt-10 w-full max-w-4xl bg-whiteClr shadow-lg rounded-lg p-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="flex flex-col items-center">
+                <i class="ph ph-map-pin text-primary text-5xl"></i>
+                <h3 class="font-semibold text-lg mt-3">HEAD OFFICE</h3>
+                <p class="text-sm text-lightText text-center">1116 15th St, Sacramento, CA 95814, USA</p>
+            </div>
+            
+            <div class="flex flex-col items-center">
+                <i class="ph ph-phone text-tertiary text-5xl"></i>
+                <h3 class="font-semibold text-lg mt-3">CALL US</h3>
+                <p class="text-sm text-lightText text-center">Support: 0800 123 4567</p>
+                <p class="text-sm text-lightText text-center">Office: 0800 123 4566</p>
+            </div>
+            
+            <div class="flex flex-col items-center">
+                <i class="ph ph-envelope text-secondary text-5xl"></i>
+                <h3 class="font-semibold text-lg mt-3">EMAIL US</h3>
+                <p class="text-sm text-lightText text-center">energy@support.com</p>
+                <p class="text-sm text-lightText text-center">energy@info.com</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

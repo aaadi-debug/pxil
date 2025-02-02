@@ -1,26 +1,38 @@
-let count = 0;
-let maxCount = 100; // Set max count
-let speed = 20; // Adjust speed (lower = faster)
-let started = false; // To ensure it starts only once
+function startCounters() {
+    const counters = document.querySelectorAll(".counter");
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const counter = entry.target;
+                const target = parseFloat(counter.getAttribute("data-target"));
+                let count = 0;
 
-function startCounter() {
-    if (started) return; // Prevent multiple triggers
-    started = true;
-    let interval = setInterval(() => {
-        if (count < maxCount) {
-            count++;
-            document.getElementById("counter").innerText = count;
-        } else {
-            clearInterval(interval);
-        }
-    }, speed);
+                // Calculate speed dynamically based on target value
+                let speed = Math.max(10, 1000 / target); // Faster increments for larger targets
+
+                // Increment step calculation: smaller increments for larger targets
+                let incrementStep = target / 100; // Increment by 1% of the target each time
+
+                // Define a tolerance level to handle floating-point precision errors
+                const tolerance = 0.01; // Small tolerance to allow counter to stop near target
+
+                const updateCounter = () => {
+                    if (count < target - tolerance) {
+                        count += incrementStep; // Increment by smaller steps
+                        counter.innerText = count.toFixed(2); // Display value with 2 decimals
+                        setTimeout(updateCounter, speed);
+                    } else {
+                        // To avoid overshooting, ensure we set it to the exact target
+                        counter.innerText = target.toFixed(2);
+                    }
+                };
+                updateCounter();
+                observer.unobserve(counter); // Stop observing once started
+            }
+        });
+    }, { threshold: 0.5 });
+
+    counters.forEach(counter => observer.observe(counter));
 }
 
-// Detect when the counter section is in view
-let observer = new IntersectionObserver(entries => {
-    if (entries[0].isIntersecting) {
-        startCounter();
-    }
-}, { threshold: 0.5 }); // Trigger when 50% visible
-
-observer.observe(document.getElementById("counter-section"));
+document.addEventListener("DOMContentLoaded", startCounters);
