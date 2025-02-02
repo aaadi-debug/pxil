@@ -90,3 +90,74 @@ newsData.forEach((news) => {
     `;
     container.innerHTML += newsItem;
 });
+
+
+const slides = document.querySelectorAll(".slide");
+const dots = document.querySelectorAll(".pagination-dot");
+let currentSlide = 0;
+
+function changeSlide(index) {
+    slides.forEach((slide, i) => {
+        slide.classList.remove("opacity-100", "translate-x-0", "z-10");
+        slide.classList.add("opacity-0", "translate-x-full", "z-0");
+    });
+
+    slides[index].classList.remove("opacity-0", "translate-x-full");
+    slides[index].classList.add("opacity-100", "translate-x-0", "z-10");
+
+    animateContent(index);
+
+    // Remove active class from all dots
+    dots.forEach(dot => dot.classList.remove("active-dot"));
+
+    // Add active class to the selected dot
+    dots[index].classList.add("active-dot");
+
+    currentSlide = index;
+}
+
+// Set initial active dot
+dots[0].classList.add("active-dot");
+
+// Event listener for dots
+dots.forEach((dot, index) => {
+    dot.addEventListener("click", () => changeSlide(index));
+});
+
+
+function animateContent(index) {
+    const elements = slides[index].querySelectorAll(".slide-small-heading, .slide-big-heading, .slide-paragraph, .slide-button");
+    elements.forEach((el, i) => {
+        el.style.opacity = "0";
+        el.style.transform = "translateY(20px)";
+        setTimeout(() => {
+            el.style.transition = "opacity 0.5s ease-out, transform 0.5s ease-out";
+            el.style.opacity = "1";
+            el.style.transform = "translateY(0)";
+        }, i * 800);
+    });
+}
+
+dots.forEach((dot, index) => {
+    dot.addEventListener("click", () => changeSlide(index));
+});
+
+setInterval(() => {
+    currentSlide = (currentSlide + 1) % slides.length;
+    changeSlide(currentSlide);
+}, 7000);
+
+
+
+const notices = ["Notice 1: Important update! ", "Notice 2: Scheduled maintenance at 2 PM ", "Notice 3: New feature release this week! "];
+const wrapper = document.getElementById("notice-wrapper");
+// Create duplicate notices for infinite effect
+function createNotices() {
+    notices.forEach(notice => { let span = document.createElement("span"); span.className = "inline-block px-6 text-lg font-semibold"; span.innerText = notice; wrapper.appendChild(span); });
+    // Duplicate notices for seamless looping            
+    notices.forEach(notice => { let span = document.createElement("span"); span.className = "inline-block px-6 text-lg font-semibold"; span.innerText = notice; wrapper.appendChild(span); });
+} createNotices();
+// Apply animation 
+wrapper.style.display = "flex"; wrapper.style.animation = "marquee 10s linear infinite";
+// Add CSS animation dynamically
+const style = document.createElement("style"); style.innerHTML = ` @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } } `; document.head.appendChild(style);
