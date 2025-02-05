@@ -1,14 +1,43 @@
 <!-- Navbar -->
-<nav class="bg-primary text-white p-4 shadow-md">
-    <div class="container mx-auto flex justify-between items-center">
-        <h1 class="text-xl font-bold">PXIL - Energy Exchange</h1>
-        <nav>
-            <ul class="flex space-x-4">
-                <li><a href="index.html" class="hover:text-gray-300">Home</a></li>
-                <li><a href="../market/trading.html" class="hover:text-gray-300">Market</a></li>
-                <li><a href="../about-us.html" class="hover:text-gray-300">About</a></li>
-                <li><a href="../contact-us.html" class="hover:text-gray-300">Contact</a></li>
-            </ul>
-        </nav>
+<nav class="fixed top-0 left-0 w-full bg-white shadow-lg z-50">
+    <!-- Top Contact Bar -->
+    <div class="bg-gray-900 text-white text-center py-2 text-sm">
+      <p>Call us: +123 456 7890 | Email: support@example.com</p>
     </div>
-</nav>
+    
+    <!-- Main Navbar -->
+    <div class="container mx-auto flex justify-between items-center px-10 py-3">
+      <!-- Logo -->
+      <a href="index.html">
+        <img src="/assets/images/logos/MainLogo.jpg" class="w-40 h-16 p-1" alt="Logo"/>
+      </a>
+  
+      <!-- Nav Links -->
+      <ul class="flex gap-8 text-lg font-semibold text-gray-700">
+        <li><a href="index.html" class="hover:text-blue-600 transition">Home</a></li>
+        <li><a href="#" class="hover:text-blue-600 transition">Trading</a></li>
+        <li><a href="../market/trading.html" class="hover:text-blue-600 transition">Market</a></li>
+        <li><a href="../about-us.html" class="hover:text-blue-600 transition">About</a></li>
+        <li><a href="../contact-us.html" class="hover:text-blue-600 transition">Contact</a></li>
+        <li><a href="#" class="hover:text-blue-600 transition">News</a></li>
+        <li><a href="#" class="hover:text-blue-600 transition">Pratyay Login</a></li>
+      </ul>
+  
+      <!-- Social Icons -->
+      <div class="flex space-x-4">
+        <a href="#" class="text-gray-700 text-xl hover:text-blue-600 transition">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" class="text-gray-700 text-xl hover:text-blue-600 transition">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="#" class="text-gray-700 text-xl hover:text-blue-600 transition">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- To prevent content from being hidden behind fixed navbar -->
+  <div class="mt-24"></div>
+  
