@@ -77,6 +77,7 @@
   <!-- Navbar will be loaded here -->
   <div id="navbar"></div>
 
+  <!-- Herosection -->
   <div class="relative w-full h-[80vh] sm:h-[600px] md:h-[500px] overflow-hidden">
     <!-- Slides Container -->
     <div class="relative w-full h-[80vh] sm:h-[600px] md:h-[700px]">
@@ -190,124 +191,205 @@
     </div>
   </div>
 
+  <!-- Latest Updates -->
   <div class="flex">
-    <div class="bg-primary px-4 text-whiteClr w-1/6 flex justify-center items-center">
+    <div class="bg-primary px-4 text-whiteClr w-1/6 flex justify-center items-center text-lg font-semibold">
       Latest Updates
     </div>
     <div class="bg-gray-100 flex items-center justify-center w-5/6">
-      <div class="w-full text-secondary p-4 rounded-lg shadow-lg overflow-hidden relative">
+      <div class="w-full text-secondary p-4 overflow-hidden relative">
         <div id="notice-wrapper" class="flex whitespace-nowrap w-full">
           <!-- Notices will be inserted dynamically -->
         </div>
       </div>
     </div>
   </div>
-  <div class="w-1/5 shadow-lg">
-    <!-- Tabs -->
-    <div class="flex space-x-2">
-      <button id="btn-DAS"
-        class="w-1/3 py-3 text-center font-medium tab-button bg-primary hover:bg-gray-300 bg-gray-200 text-white rounded-t-lg shadow-md transition-all duration-300"
-        onclick="openTab('DAS')">
-        DAS
-      </button>
-      <button id="btn-GDAS"
-        class="w-1/3 py-3 text-center font-medium tab-button text-secondary bg-gray-200 hover:bg-gray-300 hover:bg-gray-200 rounded-t-lg transition-all duration-300"
-        onclick="openTab('GDAS')">
-        G-DAS
-      </button>
-      <button id="btn-RTM"
-        class="w-1/3 py-3 text-center font-medium tab-button text-secondary bg-gray-200 hover:bg-gray-300 rounded-t-lg transition-all duration-300"
-        onclick="openTab('RTM')">
-        RTM
-      </button>
-    </div>
 
-    <!-- Content -->
-    <div class="p-2 bg-gray-50 rounded-b-xl">
-      <div id="DAS" class="tab-content">
-        <h2 class="text-l font-semibold text-primary">
-          DAS: 03-February-2025
-        </h2>
-        <table class="w-full mt-4 border border-gray-300 rounded-lg overflow-hidden shadow-sm">
-          <thead class="bg-primary text-white">
-            <tr>
-              <th class="p-3 text-left">Time Slot</th>
-              <th class="p-3 text-right">Rs/MWh</th>
-            </tr>
-          </thead>
-          <tbody class="bg-white divide-y divide-gray-200 text-xs">
-            <tr>
-              <td class="p-3">Morning (06-10 Hrs)</td>
-              <td class="p-3 text-right">10.00</td>
-            </tr>
-            <tr class="bg-gray-100">
-              <td class="p-3">Day (10-17 Hrs)</td>
-              <td class="p-3 text-right">10.00</td>
-            </tr>
-            <tr>
-              <td class="p-3">Evening (17-23 Hrs)</td>
-              <td class="p-3 text-right">10.00</td>
-            </tr>
-            <tr class="bg-gray-100">
-              <td class="p-3">Night (23-24, 01 to 06 Hrs)</td>
-              <td class="p-3 text-right">10.00</td>
-            </tr>
-            <tr class="font-semibold bg-gray-200">
-              <td class="p-3">Average MCP (24 Hrs)</td>
-              <td class="p-3 text-right">10.00</td>
-            </tr>
-            <tr class="font-semibold bg-gray-100">
-              <td class="p-3">Weighted Average MCP (24 Hrs)</td>
-              <td class="p-3 text-right">10.00</td>
-            </tr>
-          </tbody>
-        </table>
+  <!-- DAS, GDA, RTM Section -->
+  <div id="section1" class="py-10 lg:px-10 px-6"
+    style="background-image: url('./assets/images/bg/towers2.png'); background-repeat: no-repeat; background-position: center; background-size: cover;">
+    <div class="max-w-3xl mx-auto">
+      <!-- Tabs -->
+      <div class="flex justify-center items-center space-x-2 w-full">
+        <div class="flex gap-4">
+          <button id="btn-DAS"
+            class="max-sm:text-xs px-6 py-2 border border-primary font-semibold rounded transition active-tab transform hover:translate-y-[-5px] hover:shadow-xl transition-all duration-300"
+            onclick="switchTab('section1', 'DAS')">
+            DAS
+          </button>
+          <button id="btn-GDAS"
+            class="max-sm:text-xs px-6 py-2 border border-primary font-semibold rounded transition transform hover:translate-y-[-5px] hover:shadow-xl transition-all duration-300"
+            onclick="switchTab('section1', 'GDAS')">
+            G-DAS
+          </button>
+          <button id="btn-RTM"
+            class="max-sm:text-xs px-6 py-2 border border-primary font-semibold rounded transition transform hover:translate-y-[-5px] hover:shadow-xl transition-all duration-300"
+            onclick="switchTab('section1', 'RTM')">
+            RTM
+          </button>
+        </div>
       </div>
-      <div id="GDAS" class="tab-content hidden">
-        <h2 class="text-l font-semibold text-primary">
-          G-DAS: 03-February-2025
-        </h2>
-        <p class="mt-4 text-gray-700">
-          G-DAS content will be displayed here.
-        </p>
-      </div>
-      <div id="RTM" class="tab-content hidden">
-        <h2 class="text-l font-semibold text-primary">
-          RTM: 03-February-2025
-        </h2>
-        <p class="mt-4 text-gray-700">RTM content will be displayed here.</p>
+
+      <!-- Content -->
+      <div class="p-3 bg-gray-50 rounded-xl">
+        <div id="DAS" class="tab-content flex flex-col">
+          <div class="text-secondary font-semibold border-2 border-secondary mr-auto px-4 rounded-full">
+            DAS: 03-February-2025
+          </div>
+          <table class="w-full mt-4 border border-gray-300 rounded-lg overflow-hidden">
+            <thead class="bg-primary text-white border">
+              <tr>
+                <th class="p-3 text-left">Time Slot</th>
+                <th class="p-3 text-right">Rs/MWh</th>
+              </tr>
+            </thead>
+            <tbody class="bg-white divide-y divide-gray-200 text-xs border">
+              <tr>
+                <td class="p-3">Morning (06-10 Hrs)</td>
+                <td class="p-3 text-right">10.00</td>
+              </tr>
+              <tr class="bg-gray-100">
+                <td class="p-3">Day (10-17 Hrs)</td>
+                <td class="p-3 text-right">10.00</td>
+              </tr>
+              <tr>
+                <td class="p-3">Evening (17-23 Hrs)</td>
+                <td class="p-3 text-right">10.00</td>
+              </tr>
+              <tr class="bg-gray-100">
+                <td class="p-3">Night (23-24, 01 to 06 Hrs)</td>
+                <td class="p-3 text-right">10.00</td>
+              </tr>
+              <tr class="font-semibold bg-gray-200">
+                <td class="p-3">Average MCP (24 Hrs)</td>
+                <td class="p-3 text-right">10.00</td>
+              </tr>
+              <tr class="font-semibold bg-gray-100">
+                <td class="p-3">Weighted Average MCP (24 Hrs)</td>
+                <td class="p-3 text-right">10.00</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="GDAS" class="tab-content hidden">
+          <h2 class="text-l font-semibold text-primary">
+            G-DAS: 03-February-2025
+          </h2>
+          <p class="mt-4 text-gray-700">
+            G-DAS content will be displayed here.
+          </p>
+        </div>
+        <div id="RTM" class="tab-content hidden">
+          <h2 class="text-l font-semibold text-primary">
+            RTM: 03-February-2025
+          </h2>
+          <p class="mt-4 text-gray-700">RTM content will be displayed here.</p>
+        </div>
       </div>
     </div>
   </div>
 
-  <section class="py-10 lg:px-10 px-6 sevenTabs">
+
+  <!-- About PXIL -->
+  <section class="relative py-20 mx-auto lg:px-20 px-6">
+    <div class="grid grid-cols-2 gap-12">
+      <!-- Left Side (Image & Floating Elements) -->
+      <div class="relative w-full">
+        <div class="flex justify-start">
+          <img src="https://powerexindia.in/static/images/Homepage/SocialMedia/linkedin.jpg" alt="Businessman"
+            class="w-[70%]" />
+        </div>
+
+        <!-- Floating Cards -->
+        <div class="absolute top-10 right-0 bg-white shadow-md px-6 py-4 flex items-center gap-2">
+          <span class="text-blue-500 text-xl">💼</span>
+          <span class="text-sm font-semibold">PXIL Service 1</span>
+        </div>
+
+        <div class="absolute top-28 right-10 bg-white shadow-md px-6 py-4 flex items-center gap-2">
+          <span class="text-blue-500 text-xl">💳</span>
+          <span class="text-sm font-semibold">PXIL Service 2</span>
+        </div>
+
+        <div class="absolute bottom-[-40px] right-0">
+          <img src="/assets/images/home-banners/about-style1-2.jpg" alt="Financial Growth"
+            class="border-8 border-whiteClr" />
+        </div>
+      </div>
+
+      <!-- Right Side (Text Content) -->
+      <div class="w-full">
+        <p class="text-blue-600 font-semibold mb-2">About PXIL</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 leading-snug">
+          Building A More Compact <br />
+          Our Power Market
+        </h2>
+        <p class="text-gray-600 mt-4">
+          Power Exchange India Limited (PXIL) is India’s first institutionally
+          promoted power exchange, revolutionizing the energy sector since
+          2008. By seamlessly connecting buyers and sellers, we enhance the
+          efficiency of India’s energy markets.
+        </p>
+        <p class="text-gray-600 mt-4 mb-6">
+          Our innovative solutions blend local expertise with global insights,
+          providing stakeholders with the tools to succeed in a fast-evolving
+          energy landscape.
+        </p>
+
+        <div class="bg-white px-6 py-4 rounded-md shadow-md mt-6 mb-4">
+          <p class="text-gray-600 italic">
+            <b>VISION : </b>To continually innovate and offer credible
+            solutions to transform Indian power markets and efficiently
+            allocate energy resources, thereby creating a significant
+            difference for our stakeholders across the globe.
+          </p>
+        </div>
+
+        <div class="bg-white px-6 py-4 rounded-md shadow-md mt-6 mb-10">
+          <p class="text-gray-600 italic">
+            <b>MISSION : </b>To increase the accessibility and transparency of
+            the power market in India, and enhance the speed and efficiency of
+            trade execution, via optimal utilization of local and global
+            insights.
+          </p>
+        </div>
+
+        <a href="/about-us.html" class="bg-primary text-whiteClr  px-4 py-4 hover:bg-primary/80">
+          More About us
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="section2" class="py-10 lg:px-10 px-6 sevenTabs">
     <div class="mx-auto">
       <div class="flex flex-wrap justify-center gap-4 max-sm:gap-2">
-        <button onclick="showTab('idas')" id="btn-idas"
+        <button onclick="switchTab('section2', 'idas')" id="btn-idas"
           class="max-sm:text-xs px-6 py-2 border border-primary font-semibold rounded transition active-tab transform hover:translate-y-[-5px] hover:shadow-xl transition-all duration-300">
           IDAS
         </button>
-        <button onclick="showTab('rtm')" id="btn-rtm"
+        <button onclick="switchTab('section2', 'rtm')" id="btn-rtm"
           class="max-sm:text-xs px-6 py-2 border border-primary text-primary font-semibold rounded hover:bg-primary hover:text-white transition transform hover:translate-y-[-5px] hover:shadow-xl transition-all duration-300">
           RTM
         </button>
-        <button onclick="showTab('tam')" id="btn-tam"
+        <button onclick="switchTab('section2', 'tam')" id="btn-tam"
           class="max-sm:text-xs px-6 py-2 border border-primary text-primary font-semibold rounded hover:bg-primary hover:text-white transition transform hover:translate-y-[-5px] hover:shadow-xl transition-all duration-300">
           TAM
         </button>
-        <button onclick="showTab('gtam')" id="btn-gtam"
+        <button onclick="switchTab('section2', 'gtam')" id="btn-gtam"
           class="max-sm:text-xs px-6 py-2 border border-primary text-primary font-semibold rounded hover:bg-primary hover:text-white transition transform hover:translate-y-[-5px] hover:shadow-xl transition-all duration-300">
           GTAM
         </button>
-        <button onclick="showTab('rec')" id="btn-rec"
+        <button onclick="switchTab('section2', 'rec')" id="btn-rec"
           class="max-sm:text-xs px-6 py-2 border border-primary text-primary font-semibold rounded hover:bg-primary hover:text-white transition transform hover:translate-y-[-5px] hover:shadow-xl transition-all duration-300">
           REC
         </button>
-        <button onclick="showTab('escert')" id="btn-escert"
+        <button onclick="switchTab('section2', 'escert')" id="btn-escert"
           class="max-sm:text-xs px-6 py-2 border border-primary text-primary font-semibold rounded hover:bg-primary hover:text-white transition transform hover:translate-y-[-5px] hover:shadow-xl transition-all duration-300">
           ESCERT
         </button>
-        <button onclick="showTab('reverse')" id="btn-reverse"
+        <button onclick="switchTab('section2', 'reverse')" id="btn-reverse"
           class="max-sm:text-xs px-6 py-2 border border-primary text-primary font-semibold rounded hover:bg-primary hover:text-white transition transform hover:translate-y-[-5px] hover:shadow-xl transition-all duration-300">
           REVERSE AUCTION
         </button>
@@ -332,87 +414,6 @@
       </div>
       <div id="reverse" class="tab-content hidden mt-6 p-4 bg-gray-100 rounded">
         Content for REVERSE AUCTION
-      </div>
-    </div>
-  </section>
-
-  <section class="relative w-[80%] py-16 mx-auto lg:px-10 ">
-    <div class="grid grid-cols-2 gap-12">
-      <!-- Left Side (Image & Floating Elements) -->
-      <div class="relative w-full">
-        <div class="flex justify-end">
-          <img src="https://powerexindia.in/static/images/Homepage/SocialMedia/linkedin.jpg" alt="Businessman"
-            class="w-[70%]" />
-        </div>
-
-        <!-- Floating Cards -->
-        <div class="absolute top-10 left-0 bg-white shadow-md px-6 py-4 flex items-center gap-2">
-          <span class="text-blue-500 text-xl">💼</span>
-          <span class="text-sm font-semibold">PXIL Service 1</span>
-        </div>
-
-        <div class="absolute top-28 left-10 bg-white shadow-md px-6 py-4 flex items-center gap-2">
-          <span class="text-blue-500 text-xl">💳</span>
-          <span class="text-sm font-semibold">PXIL Service 2</span>
-        </div>
-
-        <div class="absolute bottom-[-40px] left-0">
-          <img src="/assets/images/home-banners/about-style1-2.jpg" alt="Financial Growth"
-            class="border-8 border-whiteClr" />
-        </div>
-      </div>
-
-      <!-- Right Side (Text Content) -->
-      <div class="w-full">
-        <p class="text-blue-600 font-semibold mb-2">About PXIL</p>
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 leading-snug">
-          Building A More Compact <br />
-          Our Power Market
-        </h2>
-        <p class="text-gray-600 mt-4">
-          Power Exchange India Limited (PXIL) is India’s first institutionally
-          promoted power exchange, revolutionizing the energy sector since
-          2008. By seamlessly connecting buyers and sellers, we enhance the
-          efficiency of India’s energy markets.
-        </p>
-        <p class="text-gray-600 mt-4 mb-6">
-          Our innovative solutions blend local expertise with global insights,
-          providing stakeholders with the tools to succeed in a fast-evolving
-          energy landscape.
-        </p>
-        <!-- 
-                <div class="grid grid-cols-2 gap-4 mt-6 ">
-                    <div class="bg-white px-4 py-4 font-semibold flex items-center gap-2">
-                        <span class="border-2 px-2 py-1 text-primary rounded-full border-primary"><i
-                                class="fa-solid fa-check"></i></span> Expertise 1
-                    </div>
-                    <div class="bg-white px-4 py-4 font-semibold flex items-center gap-2">
-                        <span class="border-2 px-2 py-1 text-primary rounded-full border-primary"><i
-                                class="fa-solid fa-check"></i></span> Expertise 2
-                    </div>
-                </div> -->
-
-        <div class="bg-white px-6 py-4 rounded-md shadow-md mt-6 mb-4">
-          <p class="text-gray-600 italic">
-            <b>VISION : </b>To continually innovate and offer credible
-            solutions to transform Indian power markets and efficiently
-            allocate energy resources, thereby creating a significant
-            difference for our stakeholders across the globe.
-          </p>
-        </div>
-
-        <div class="bg-white px-6 py-4 rounded-md shadow-md mt-6 mb-4">
-          <p class="text-gray-600 italic">
-            <b>MISSION : </b>To increase the accessibility and transparency of
-            the power market in India, and enhance the speed and efficiency of
-            trade execution, via optimal utilization of local and global
-            insights.
-          </p>
-        </div>
-
-        <a href="/about-us.html" class="bg-primary text-whiteClr  px-4 py-4 hover:bg-primary/80">
-          More About us
-        </a>
       </div>
     </div>
   </section>
@@ -461,6 +462,51 @@
     </div>
   </div>
 
+
+  <section class="py-16 px-6 bg-white">
+    <div class="max-w-7xl mx-auto text-center">
+      <h2 class="text-3xl font-bold text-gray-800 mb-8">Our Achievements</h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Achievement 1 -->
+        <div class="bg-gray-200 rounded-lg overflow-hidden shadow-lg">
+          <img src="https://via.placeholder.com/500x300" alt="Achievement 1" class="w-full h-56 object-cover">
+          <div class="p-4">
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">Award for Excellence</h3>
+            <p class="text-gray-600">Recognized for exceptional performance in the industry.</p>
+          </div>
+        </div>
+
+        <!-- Achievement 2 -->
+        <div class="bg-gray-200 rounded-lg overflow-hidden shadow-lg">
+          <video controls class="w-full h-56 object-cover">
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="p-4">
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">Innovative Project</h3>
+            <p class="text-gray-600">A glimpse of the groundbreaking project we delivered.</p>
+          </div>
+        </div>
+
+        <!-- Achievement 3 -->
+        <div class="bg-gray-200 rounded-lg overflow-hidden shadow-lg">
+          <img src="https://via.placeholder.com/500x300" alt="Achievement 3" class="w-full h-56 object-cover">
+          <div class="p-4">
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">Employee of the Year</h3>
+            <p class="text-gray-600">Celebrating our top-performing team member.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-12">
+        <a href="#more-achievements"
+          class="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-full hover:bg-blue-700 transition">See
+          More Achievements</a>
+      </div>
+    </div>
+  </section>
+
   <section class="w-100 mx-auto max-w-6xl py-12">
     <h2 class="text-3xl font-bold text-center text-gray-800  mt-[60px]">
       Follow Us on Social Media
@@ -505,115 +551,50 @@
         <a href="#" class="mt-4 inline-block text-blue-800 font-semibold hover:underline">View on Facebook →</a>
       </div>
 
-        <!-- LinkedIn Post -->
-        <div
-          class="relative bg-white p-6 rounded-xl shadow-lg border border-gray-200 transition transform hover:scale-105"
-        >
-          <img
-            src="https://media.licdn.com/dms/image/v2/D5622AQGCNDPHWMV4vQ/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1726652417701?e=2147483647&v=beta&t=BaAOXMlnf_YgP1LTTQbSyy7x8aFLtU3dpRMUPkhlPMs"
-            alt="LinkedIn Post"
-            class="rounded-lg w-full"
-          />
-          <div class="flex items-center space-x-3 mt-4">
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/733/733561.png"
-              alt="LinkedIn"
-              class="w-8"
-            />
-            <h3 class="text-xl font-semibold text-blue-700">
-              LinkedIn Profile
-            </h3>
-          </div>
-          <p class="text-gray-600 mt-2">
-            "Networking is key! Connect with industry leaders and explore new
-            opportunities. 🤝 #Networking"
-          </p>
-          <a
-            href="#"
-            class="mt-4 inline-block text-blue-700 font-semibold hover:underline"
-            >View on LinkedIn →</a
-          >
+      <!-- LinkedIn Post -->
+      <div
+        class="relative bg-white p-6 rounded-xl shadow-lg border border-gray-200 transition transform hover:scale-105">
+        <img
+          src="https://media.licdn.com/dms/image/v2/D5622AQGCNDPHWMV4vQ/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1726652417701?e=2147483647&v=beta&t=BaAOXMlnf_YgP1LTTQbSyy7x8aFLtU3dpRMUPkhlPMs"
+          alt="LinkedIn Post" class="rounded-lg w-full" />
+        <div class="flex items-center space-x-3 mt-4">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733561.png" alt="LinkedIn" class="w-8" />
+          <h3 class="text-xl font-semibold text-blue-700">
+            LinkedIn Profile
+          </h3>
         </div>
-      </div>
-    </section>
-    <div class="flex items-center justify-center mt-8">
-      <div class="max-w-6xl w-full text-center py-16">
-        <h2
-          class="text-3xl md:text-4xl font-bold text-gray-900 leading-snug mb-[50px]"
-        >
-          Our Core Values
-        </h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-          <div class="flex flex-col items-center">
-            <div
-              class="animate-bounce w-16 h-16 border border-primary text-primary bg-white text-3xl  flex items-center justify-center rounded-full"
-            >
-              <i class="fas fa-balance-scale"></i>
-            </div>
-            <h3 class="text-2xl font-semibold mt-4">Integrity</h3>
-            <p class="text-gray-700 mt-2">
-              We uphold honesty and strong moral principles in all our actions.
-            </p>
-          </div>
-          <div class="flex flex-col items-center">
-            <div
-              class="animate-bounce w-16 h-16 border border-primary text-primary bg-white text-3xl  flex items-center justify-center rounded-full"
-            >
-              <i class="fas fa-trophy"></i>
-            </div>
-            <h3 class="text-2xl font-semibold mt-4">Excellence</h3>
-            <p class="text-gray-700 mt-2">
-              Striving for the highest quality in everything we do.
-            </p>
-          </div>
-          <div class="flex flex-col items-center">
-            <div
-              class="animate-bounce w-16 h-16 border border-primary text-primary bg-white text-3xl  flex items-center justify-center rounded-full"
-            >
-              <i class="fas fa-handshake"></i>
-            </div>
-            <h3 class="text-2xl font-semibold mt-4">Commitment</h3>
-            <p class="text-gray-700 mt-2">
-              Dedicated to delivering value and exceeding expectations.
-            </p>
-          </div>
-          <div class="flex flex-col items-center">
-            <div
-              class="animate-bounce w-16 h-16 border border-primary text-primary bg-white text-3xl  flex items-center justify-center rounded-full"
-            >
-              <i class="fas fa-lightbulb"></i>
-            </div>
-            <h3 class="text-2xl font-semibold mt-4">Innovation</h3>
-            <p class="text-gray-700 mt-2">
-              Embracing creativity to drive progress and efficiency.
-            </p>
-          </div>
-        </div>
+        <p class="text-gray-600 mt-2">
+          "Networking is key! Connect with industry leaders and explore new
+          opportunities. 🤝 #Networking"
+        </p>
+        <a href="#" class="mt-4 inline-block text-blue-700 font-semibold hover:underline">View on LinkedIn →</a>
       </div>
     </div>
-    
-    <div class="relative bg-[url('/assets/images/home-banners/latest2.jpg')] bg-cover bg-no-repeat mt-[60px] p-[60px]">
-      <!-- Gradient Overlay -->
-      <div class="absolute inset-0 bg-gradient-to-t from-gray-200 to-transparent bg-opacity-10"></div>
-    
-      <!-- Content Wrapper -->
-      <div class="relative max-w-6xl mx-auto">
-        <h2 class="text-3xl font-semibold text-gray-700 mb-8 text-center">
-          Latest Company News
-        </h2>
-    
-        <div class="newsgrid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <!-- News items will be inserted here dynamically -->
-        </div>
+  </section>
+
+
+  <div class="relative bg-[url('/assets/images/home-banners/latest2.jpg')] bg-cover bg-no-repeat mt-[60px] p-[60px]">
+    <!-- Gradient Overlay -->
+    <div class="absolute inset-0 bg-gradient-to-t from-gray-200 to-transparent bg-opacity-10"></div>
+
+    <!-- Content Wrapper -->
+    <div class="relative max-w-6xl mx-auto">
+      <h2 class="text-3xl font-semibold text-gray-700 mb-8 text-center">
+        Latest Company News
+      </h2>
+
+      <div class="newsgrid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- News items will be inserted here dynamically -->
       </div>
     </div>
-    
-    
-    <div class="flex justify-center items-center pt-2 mt-[80px]">
-      <section class="w-[80%] text-center">
-        <h2 class="text-2xl font-bold text-gray-800 mb-4">
-          Featured Integrations
-        </h2>
+  </div>
+
+
+  <div class="flex justify-center items-center pt-2 mt-[80px]">
+    <section class="w-[80%] text-center">
+      <h2 class="text-2xl font-bold text-gray-800 mb-4">
+        Featured Integrations
+      </h2>
 
       <div class="relative flex items-center justify-between">
         <button id="prev" class="p-2 bg-gray-200 rounded-full shadow">
@@ -632,99 +613,15 @@
         Description of the partner integration goes here.
       </p>
 
-        <div class="flex justify-center mt-4 space-x-2">
-          <span class="dot w-3 h-3 bg-gray-300 rounded-full"></span>
-          <span class="dot w-3 h-3 bg-gray-300 rounded-full"></span>
-          <span class="dot w-3 h-3 bg-gray-300 rounded-full"></span>
-          <span class="dot w-3 h-3 bg-gray-300 rounded-full"></span>
-        </div>
-      </section>
-    </div>
-    <div class="flex justify-center items-center min-h-screen">
-      <div class="w-[80%] bg-white shadow-lg rounded-lg p-10">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-          <!-- Left Section: Heading and Description -->
-          <div>
-            <h2 class="text-4xl font-bold text-gray-800">Join Our Team</h2>
-            <p class="text-gray-600 mt-4 text-lg">
-              We are looking for creative minds and passionate professionals to
-              innovate with us. Explore our open positions and start your
-              journey today. Effective teams communicate openly, leverage
-              strengths, and embrace diversity for success.
-            </p>
-            <a
-              href="#"
-              class="bg-primary text-whiteClr hover:bg-primary/80 px-4 py-4"
-            >
-              View More Openings
-            </a>
-          </div>
-          <!-- Right Section: Team Members -->
-          <div class="grid grid-cols-2 gap-6">
-            <div
-              class="p-6 bg-white shadow-lg rounded-lg text-center transform hover:-translate-y-2 transition duration-300 ring-1 ring-gray-200 hover:ring-blue-500"
-            >
-              <h3 class="text-2xl font-semibold text-gray-800">
-                UI/UX Designer
-              </h3>
-              <p class="mt-2 text-gray-600">
-                Design beautiful user experiences with Figma and Adobe XD.
-              </p>
-              <a
-                href="#"
-                class="text-blue-500 font-semibold mt-2 inline-block hover:underline"
-                >Apply Now →</a
-              >
-            </div>
-            <div
-              class="p-6 bg-white shadow-lg rounded-lg text-center transform hover:-translate-y-2 transition duration-300 ring-1 ring-gray-200 hover:ring-blue-500"
-            >
-              <h3 class="text-2xl font-semibold text-gray-800">
-                UI/UX Designer
-              </h3>
-              <p class="mt-2 text-gray-600">
-                Design beautiful user experiences with Figma and Adobe XD.
-              </p>
-              <a
-                href="#"
-                class="text-blue-500 font-semibold mt-2 inline-block hover:underline"
-                >Apply Now →</a
-              >
-            </div>
-            <div
-              class="p-6 bg-white shadow-lg rounded-lg text-center transform hover:-translate-y-2 transition duration-300 ring-1 ring-gray-200 hover:ring-blue-500"
-            >
-              <h3 class="text-2xl font-semibold text-gray-800">
-                UI/UX Designer
-              </h3>
-              <p class="mt-2 text-gray-600">
-                Design beautiful user experiences with Figma and Adobe XD.
-              </p>
-              <a
-                href="#"
-                class="text-blue-500 font-semibold mt-2 inline-block hover:underline"
-                >Apply Now →</a
-              >
-            </div>
-            <div
-              class="p-6 bg-white shadow-lg rounded-lg text-center transform hover:-translate-y-2 transition duration-300 ring-1 ring-gray-200 hover:ring-blue-500"
-            >
-              <h3 class="text-2xl font-semibold text-gray-800">
-                UI/UX Designer
-              </h3>
-              <p class="mt-2 text-gray-600">
-                Design beautiful user experiences with Figma and Adobe XD.
-              </p>
-              <a
-                href="#"
-                class="text-blue-500 font-semibold mt-2 inline-block hover:underline"
-                >Apply Now →</a
-              >
-            </div>
-          </div>
-        </div>
+      <div class="flex justify-center mt-4 space-x-2">
+        <span class="dot w-3 h-3 bg-gray-300 rounded-full"></span>
+        <span class="dot w-3 h-3 bg-gray-300 rounded-full"></span>
+        <span class="dot w-3 h-3 bg-gray-300 rounded-full"></span>
+        <span class="dot w-3 h-3 bg-gray-300 rounded-full"></span>
       </div>
-    </div>
+    </section>
+  </div>
+
 
   <!-- 
 <div class="bg-gray-100 py-10">
@@ -1052,80 +949,7 @@
 
 
 
-  <section class="w-[80%] flex mx-auto flex-col justify-center items-center py-16 px-10 overflow-hidden ">
-    <h1
-      class="text-4xl font-bold tracking-tight text-gray-900 mb-16 transform transition-all duration-500 ease-in-out hover:scale-105">
-      Key Features of the Exchange
-    </h1>
 
-    <div class="w-full max-w-7xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 ">
-      <div
-        class="flex flex-col items-center p-5  rounded-xl shadow-lg hover:scale-105 transition-all duration-300 ease-in-out ">
-        <span class="material-symbols-outlined text-primary text-5xl w-16 h-16 mb-4">hub</span>
-
-        <p class="text-medium text-center">
-          Nation-wide, electronic Exchange for trading of power.
-        </p>
-      </div>
-
-      <div
-        class="flex flex-col items-center bg-white rounded-xl shadow-lg hover:scale-105 transition-all  p-5  duration-300 ease-in-out "
-        style="animation-delay: 0.2s">
-
-        <span class="material-symbols-outlined text-primary text-5xl w-16 h-16 mb-4">analytics</span>
-
-        <p class="text-medium text-center ">
-          Exchange handles power trading and transmission clearance
-          simultaneously.
-        </p>
-      </div>
-
-      <div
-        class="flex flex-col items-center bg-white rounded-xl shadow-lg hover:scale-105 transition-all p-5 duration-300 ease-in-out"
-        style="animation-delay: 0.4s">
-
-        <span class="material-symbols-outlined text-primary text-5xl w-16 h-16 mb-4">update</span>
-        <p class="text-medium  text-center">
-          Trading happens for Day Ahead, Day Ahead Contingency, Any Day, Intra
-          Day, and Weekly Contracts.
-        </p>
-      </div>
-
-      <div
-        class="flex flex-col items-center bg-white rounded-xl shadow-lg hover:scale-105 transition-all  p-5  duration-300 ease-in-out"
-        style="animation-delay: 0.6s">
-
-        <span class="material-symbols-outlined text-primary text-5xl w-16 h-16 mb-4">eco</span>
-
-        <p class="text-medium text-center">
-          Trading platform available for Renewable Energy Certificates.
-        </p>
-      </div>
-
-      <div
-        class="flex flex-col items-center  bg-white rounded-xl shadow-lg hover:scale-105 transition-all p-5 duration-300 ease-in-out col-span-2"
-        style="animation-delay: 0.8s">
-
-        <span class="material-symbols-outlined text-primary text-5xl w-16 h-16 mb-4">bolt</span>
-
-        <p class="text-medium text-center">
-          More contracts to be introduced in due course.
-        </p>
-      </div>
-
-      <div
-        class="flex flex-col items-center  bg-white rounded-xl shadow-lg hover:scale-105 transition-all p-5 duration-300 ease-in-out col-span-2"
-        style="animation-delay: 1s">
-
-        <i class="fas fa-shield-alt  text-primary text-5xl w-16 h-16 mb-4"></i>
-
-        <p class="text-medium text-center">
-          Exchange is a central counterparty to all trades done on the
-          Exchange.
-        </p>
-      </div>
-    </div>
-  </section>
 
 
   <!-- <div class="bg-white text-gray-800">
@@ -1305,6 +1129,128 @@
         </div>
       </div>
     </section>
+  </div>
+
+
+
+  <section class="bg-blue-50 py-12 ">
+    <div class="mx-auto px-4 text-center w-[80%]">
+      <h2 class="text-3xl font-bold text-blue-600 mb-6">What <span class="text-gray-700">People Say About Us</span></h2>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
+        Travel has helped us to understand the meaning of life and it has helped us become better people. Each time we
+        travel, we see the world with new eyes.
+      </p>
+      <div class=" overflow-hidden">
+        <div class="flex space-x-6 transition-transform duration-500 ease-in-out" id="testimonial-slider">
+          <div class=" bg-white p-6 rounded-2xl shadow-lg text-gray-700 ">
+            <div class="mb-4 text-blue-500 text-2xl">
+              <i class="fa fa-quote-left"></i>
+            </div>
+            <p class="italic">Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p>
+            <div class="mt-4 flex items-center justify-center">
+              <img src="./assets/images/home-banners/latest2.jpg" class="w-12 h-12 rounded-full" alt="Elison Marks">
+              <div class="ml-3 text-left ">
+                <h4 class="text-blue-500 font-semibold">Elison Marks</h4>
+                <div class="text-yellow-500 text-sm">★★★★★</div>
+              </div>
+            </div>
+          </div>
+          <div class=" bg-white p-6 rounded-2xl shadow-lg text-gray-700">
+            <div class="mb-4 text-blue-500 text-2xl">
+              <i class="fa fa-quote-left"></i>
+            </div>
+            <p class="italic">Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p>
+            <div class="mt-4 flex items-center">
+              <img src="images/testimonial/img2.jpg" class="w-12 h-12 rounded-full" alt="Jared Erondu">
+              <div class="ml-3 text-left">
+                <h4 class="text-blue-500 font-semibold">Jared Erondu</h4>
+                <div class="text-yellow-500 text-sm">★★★★★</div>
+              </div>
+            </div>
+          </div>
+          <div class=" bg-white p-6 rounded-2xl shadow-lg text-gray-700">
+            <div class="mb-4 text-blue-500 text-2xl">
+              <i class="fa fa-quote-left"></i>
+            </div>
+            <p class="italic">Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p>
+            <div class="mt-4 flex items-center">
+              <img src="images/testimonial/img3.jpg" class="w-12 h-12 rounded-full" alt="Kelson Kelly">
+              <div class="ml-3 text-left">
+                <h4 class="text-blue-500 font-semibold">Kelson Kelly</h4>
+                <div class="text-yellow-500 text-sm">★★★★★</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <button id="prev" class="absolute left-5 top-1/2 transform -translate-y-1/2 bg-blue-500 text-white p-3 rounded-full shadow-md">❮</button>
+        <button id="next" class="absolute right-5 top-1/2 transform -translate-y-1/2 bg-blue-500 text-white p-3 rounded-full shadow-md">❯</button> -->
+    </div>
+    <!-- <div class="absolute inset-0 bg-gray-900 bg-opacity-50"></div> -->
+  </section>
+
+
+  <div class="flex justify-center items-center min-h-screen">
+    <div class="w-[80%] bg-white shadow-lg rounded-lg p-10">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <!-- Left Section: Heading and Description -->
+        <div>
+          <h2 class="text-4xl font-bold text-gray-800">Join Our Team</h2>
+          <p class="text-gray-600 mt-4 text-lg">
+            We are looking for creative minds and passionate professionals to
+            innovate with us. Explore our open positions and start your
+            journey today. Effective teams communicate openly, leverage
+            strengths, and embrace diversity for success.
+          </p>
+          <a href="#" class="bg-primary text-whiteClr hover:bg-primary/80 px-4 py-4">
+            View More Openings
+          </a>
+        </div>
+        <!-- Right Section: Team Members -->
+        <div class="grid grid-cols-2 gap-6">
+          <div
+            class="p-6 bg-white shadow-lg rounded-lg text-center transform hover:-translate-y-2 transition duration-300 ring-1 ring-gray-200 hover:ring-blue-500">
+            <h3 class="text-2xl font-semibold text-gray-800">
+              UI/UX Designer
+            </h3>
+            <p class="mt-2 text-gray-600">
+              Design beautiful user experiences with Figma and Adobe XD.
+            </p>
+            <a href="#" class="text-blue-500 font-semibold mt-2 inline-block hover:underline">Apply Now →</a>
+          </div>
+          <div
+            class="p-6 bg-white shadow-lg rounded-lg text-center transform hover:-translate-y-2 transition duration-300 ring-1 ring-gray-200 hover:ring-blue-500">
+            <h3 class="text-2xl font-semibold text-gray-800">
+              UI/UX Designer
+            </h3>
+            <p class="mt-2 text-gray-600">
+              Design beautiful user experiences with Figma and Adobe XD.
+            </p>
+            <a href="#" class="text-blue-500 font-semibold mt-2 inline-block hover:underline">Apply Now →</a>
+          </div>
+          <div
+            class="p-6 bg-white shadow-lg rounded-lg text-center transform hover:-translate-y-2 transition duration-300 ring-1 ring-gray-200 hover:ring-blue-500">
+            <h3 class="text-2xl font-semibold text-gray-800">
+              UI/UX Designer
+            </h3>
+            <p class="mt-2 text-gray-600">
+              Design beautiful user experiences with Figma and Adobe XD.
+            </p>
+            <a href="#" class="text-blue-500 font-semibold mt-2 inline-block hover:underline">Apply Now →</a>
+          </div>
+          <div
+            class="p-6 bg-white shadow-lg rounded-lg text-center transform hover:-translate-y-2 transition duration-300 ring-1 ring-gray-200 hover:ring-blue-500">
+            <h3 class="text-2xl font-semibold text-gray-800">
+              UI/UX Designer
+            </h3>
+            <p class="mt-2 text-gray-600">
+              Design beautiful user experiences with Figma and Adobe XD.
+            </p>
+            <a href="#" class="text-blue-500 font-semibold mt-2 inline-block hover:underline">Apply Now →</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
 

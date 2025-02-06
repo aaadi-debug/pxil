@@ -1,3 +1,4 @@
+//number counter
 function startCounters() {
   const counters = document.querySelectorAll(".counter");
   const observer = new IntersectionObserver(
@@ -38,31 +39,48 @@ function startCounters() {
   counters.forEach((counter) => observer.observe(counter));
 }
 
-document.addEventListener("DOMContentLoaded", startCounters);
-
-
-function showTab(tabId) {
-  // Hide all tab contents
-  document.querySelectorAll(".tab-content").forEach((tab) => {
+//switch tabs
+function switchTab(sectionId, tabId) {
+  // Hide all tab contents within the specific section
+  document.querySelectorAll(`#${sectionId} .tab-content`).forEach((tab) => {
     tab.classList.add("hidden");
     tab.classList.remove("fade-in");
   });
 
-  // Remove active class from all buttons
-  document.querySelectorAll("button").forEach((btn) => {
-    btn.classList.remove("active-tab");
+  // Remove active styles from all buttons in the section
+  document.querySelectorAll(`#${sectionId} button`).forEach((btn) => {
+    btn.classList.remove("bg-primary", "text-white", "shadow-md", "active-tab");
+    btn.classList.add("border-primary", "text-primary");
   });
 
   // Show the selected tab content with animation
-  const activeTab = document.getElementById(tabId);
-  activeTab.classList.remove("hidden");
-  setTimeout(() => {
-    activeTab.classList.add("fade-in");
-  }, 10);
+  const activeTab = document.querySelector(`#${sectionId} #${tabId}`);
+  if (activeTab) {
+    activeTab.classList.remove("hidden");
+    setTimeout(() => {
+      activeTab.classList.add("fade-in");
+    }, 10);
+  }
 
-  // Highlight active button
-  document.getElementById(`btn-${tabId}`).classList.add("active-tab");
+  // Highlight the active button
+  const activeButton = document.querySelector(`#${sectionId} #btn-${tabId}`);
+  if (activeButton) {
+    activeButton.classList.add("bg-primary", "text-white", "shadow-md", "active-tab");
+    activeButton.classList.remove("border-primary", "text-primary");
+  }
 }
+
+// Automatically open the first tab of each section on page load
+document.addEventListener("DOMContentLoaded", () => {
+  startCounters();
+  switchTab("section1", "DAS");  // Default first tab for first section
+  switchTab("section2", "idas"); // Default first tab for second section
+});
+
+
+
+
+
 const newsData = [
   {
     title: "New Product Launch",
@@ -319,21 +337,7 @@ updateCarousel();
 
 // updatePartner();
 
-function openTab(tabName) {
-  let tabs = document.querySelectorAll(".tab-content");
-  tabs.forEach((tab) => tab.classList.add("hidden"));
 
-  document.getElementById(tabName).classList.remove("hidden");
-
-  let tabButtons = document.querySelectorAll(".tab-button");
-  tabButtons.forEach((btn) =>
-    btn.classList.remove("bg-primary", "text-white", "shadow-md")
-  );
-
-  document
-    .getElementById("btn-" + tabName)
-    .classList.add("bg-primary", "text-white", "shadow-md");
-}
 // var swiper = new Swiper('.swiper-container', {
 //     loop: true,
 //     autoplay: {
