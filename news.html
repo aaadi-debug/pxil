@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PXIL | Power Exchnage India Limited | Energy Exchange</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+ 
+    <style>
+                .table-row:hover {
+            background-color: #ddf0ff; /* Yellow color on hover */
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            overflow: auto;
+        }
+        .modal-content {
+            background-color: #fff;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 400px;
+            text-align: center;
+        }
+        .modal-close {
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+           
+        }
+        .modal-close:hover,
+        .modal-close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar"></div>
+    <!-- <nav class="text-primary text-sm pt-[27px]">
+        <ol class="flex items-center space-x-2 bg-gray-100 p-10 rounded-lg shadow-lg">
+            <li><a href="#" class="px-3 text-lg font-bold">Home</a></li>
+            <li>&gt;</li>
+            <li >Products</li>
+        </ol>
+    </nav> -->
+    <div class="mt-24"></div>
+    <div class="relative w-[80%] mx-auto overflow-hidden rounded-lg shadow-lg mt-[100px]">
+        <div class="flex transition-transform duration-500 ease-in-out" id="carousel">
+            <div class="relative w-full flex-shrink-0">
+                <img src="https://powerexindia.in/static/images/News/1.jpg" class="w-full object-cover" alt="Slide 1">
+                <button class="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black text-white px-4 py-2 rounded-md shadow-md ">Know More</button>
+            </div>
+            <div class="relative w-full flex-shrink-0">
+                <img src="https://powerexindia.in/static/images/News/1.jpg" class="w-full object-cover" alt="Slide 2">
+                <button class="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black text-white px-4 py-2 rounded-md shadow-md ">Know More</button>
+            </div>
+            <div class="relative w-full flex-shrink-0">
+                <img src="https://powerexindia.in/static/images/News/1.jpg" class="w-full object-cover" alt="Slide 3">
+                <button class="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black text-white px-4 py-2 rounded-md shadow-md ">Know More</button>
+            </div>
+        </div>
+        <button onclick="prevSlide()" class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded-md">❮</button>
+        <button onclick="nextSlide()" class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded-md">❯</button>
+    </div>
+</div>
+
+
+
+
+
+    <section >
+        <div class="container mx-auto w-[80%] py-20">
+            <h2 class="text-3xl text-center font-semibold text-blue-900 mb-6">PXIL News</h2>
+
+            <!-- Search Box -->
+            <div class="mb-6 text-center flex items-center">
+                <p class="font-semibold pr-2 ">Search :</p>
+                <input 
+                    type="text" 
+                    id="yearSearch" 
+                    class="border  px-4 py-2 rounded-lg" 
+                    placeholder="Search by year" 
+                    oninput="filterNews()"
+                />
+            </div>
+
+            <!-- News Table -->
+            <table class="min-w-full table-auto border-collapse bg-white shadow-lg">
+                <thead class="bg-primary text-white">
+                    <tr>
+                        <th class="px-6 py-3 text-left">Headline</th>
+                        <th class="px-6 py-3 text-left">Date</th>
+                        <th class="px-6 py-3 text-left">Download</th>
+                    </tr>
+                </thead>
+                <tbody id="news-table-body">
+                    <!-- Dynamic rows will be added here -->
+                </tbody>
+            </table>
+            <div class="flex items-center ">
+                <p id="pageInfo" class=" mt-4 text-black font-medium">
+                    Showing 1 to 5 of 10 entries
+                </p>
+            <div class=" mt-6 text-center">
+                <button id="loadMoreButton" class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-yellow-500" onclick="loadMoreNews()">
+                    Load More
+                </button>
+            </div>
+           
+        </div>
+        </div>
+    </section>
+<!-- Modal -->
+<div id="noMoreDataModal" class="modal">
+    <div class="modal-content">
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <h3>No more information available!</h3>
+        <p>Contact us for more info.</p>
+    </div>
+</div>
+    
+
+
+
+
+
+    <div id="footer"></div>
+
+    <script src="./assets/js/news.js"></script>
+
+    <!-- To import taiwlind css -->
+    <script src="./assets/js/tailwind.js"></script>
+    <!-- Load External JS -->
+    <script src="./assets/js/loadComponents.js"></script>
+</body>
+</html>
