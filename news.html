@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PXIL | Power Exchnage India Limited | Energy Exchange</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
- 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <style>
-                .table-row:hover {
-            background-color: #ddf0ff; /* Yellow color on hover */
+        .table-row:hover {
+            background-color: #ddf0ff;
+            /* Yellow color on hover */
         }
+
         .modal {
             display: none;
             position: fixed;
@@ -28,6 +27,7 @@
             background-color: rgba(0, 0, 0, 0.4);
             overflow: auto;
         }
+
         .modal-content {
             background-color: #fff;
             margin: 15% auto;
@@ -37,12 +37,14 @@
             max-width: 400px;
             text-align: center;
         }
+
         .modal-close {
             color: #aaa;
             font-size: 28px;
             font-weight: bold;
-           
+
         }
+
         .modal-close:hover,
         .modal-close:focus {
             color: black;
@@ -51,6 +53,7 @@
         }
     </style>
 </head>
+
 <body>
     <div id="navbar"></div>
     <!-- <nav class="text-primary text-sm pt-[27px]">
@@ -65,40 +68,43 @@
         <div class="flex transition-transform duration-500 ease-in-out" id="carousel">
             <div class="relative w-full flex-shrink-0">
                 <img src="https://powerexindia.in/static/images/News/1.jpg" class="w-full object-cover" alt="Slide 1">
-                <button class="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black text-white px-4 py-2 rounded-md shadow-md ">Know More</button>
+                <button
+                    class="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black text-white px-4 py-2 rounded-md shadow-md ">Know
+                    More</button>
             </div>
             <div class="relative w-full flex-shrink-0">
                 <img src="https://powerexindia.in/static/images/News/1.jpg" class="w-full object-cover" alt="Slide 2">
-                <button class="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black text-white px-4 py-2 rounded-md shadow-md ">Know More</button>
+                <button
+                    class="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black text-white px-4 py-2 rounded-md shadow-md ">Know
+                    More</button>
             </div>
             <div class="relative w-full flex-shrink-0">
                 <img src="https://powerexindia.in/static/images/News/1.jpg" class="w-full object-cover" alt="Slide 3">
-                <button class="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black text-white px-4 py-2 rounded-md shadow-md ">Know More</button>
+                <button
+                    class="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black text-white px-4 py-2 rounded-md shadow-md ">Know
+                    More</button>
             </div>
         </div>
-        <button onclick="prevSlide()" class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded-md">❮</button>
-        <button onclick="nextSlide()" class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded-md">❯</button>
+        <button onclick="prevSlide()"
+            class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded-md">❮</button>
+        <button onclick="nextSlide()"
+            class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded-md">❯</button>
     </div>
-</div>
+    </div>
 
 
 
 
 
-    <section >
+    <section>
         <div class="container mx-auto w-[80%] py-20">
             <h2 class="text-3xl text-center font-semibold text-blue-900 mb-6">PXIL News</h2>
 
             <!-- Search Box -->
             <div class="mb-6 text-center flex items-center">
                 <p class="font-semibold pr-2 ">Search :</p>
-                <input 
-                    type="text" 
-                    id="yearSearch" 
-                    class="border  px-4 py-2 rounded-lg" 
-                    placeholder="Search by year" 
-                    oninput="filterNews()"
-                />
+                <input type="text" id="yearSearch" class="border  px-4 py-2 rounded-lg" placeholder="Search by year"
+                    oninput="filterNews()" />
             </div>
 
             <!-- News Table -->
@@ -118,24 +124,25 @@
                 <p id="pageInfo" class=" mt-4 text-black font-medium">
                     Showing 1 to 5 of 10 entries
                 </p>
-            <div class=" mt-6 text-center">
-                <button id="loadMoreButton" class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-yellow-500" onclick="loadMoreNews()">
-                    Load More
-                </button>
+                <div class=" mt-6 text-center">
+                    <button id="loadMoreButton" class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-yellow-500"
+                        onclick="loadMoreNews()">
+                        Load More
+                    </button>
+                </div>
+
             </div>
-           
-        </div>
         </div>
     </section>
-<!-- Modal -->
-<div id="noMoreDataModal" class="modal">
-    <div class="modal-content">
-        <span class="modal-close" onclick="closeModal()">&times;</span>
-        <h3>No more information available!</h3>
-        <p>Contact us for more info.</p>
+    <!-- Modal -->
+    <div id="noMoreDataModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <h3>No more information available!</h3>
+            <p>Contact us for more info.</p>
+        </div>
     </div>
-</div>
-    
+
 
 
 
@@ -150,4 +157,5 @@
     <!-- Load External JS -->
     <script src="./assets/js/loadComponents.js"></script>
 </body>
+
 </html>
