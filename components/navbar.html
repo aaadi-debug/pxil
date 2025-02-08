@@ -22,15 +22,21 @@
   <!-- Main Navbar -->
   <div class="flex justify-between items-center px-10 pt-3">
     <!-- Logo -->
-    <a href="index.html">
+    <a href="/">
       <img src="/assets/images/logos/MainLogo.jpg" class="w-60 p-1" alt="Logo" />
     </a>
 
     <!-- Nav Links -->
     <ul class="navbar-links">
-      <li><a href="/">Home</a></li>
+      <li class="navbar-dropdown">
+        <a href="#" class="mainNavLink">Home<i class="fa-solid fa-chevron-down"></i></a>
+        <div class="dropdown">
+          <a href="/">Home 1</a>
+          <a href="/index2.html">Home 2</a>
+        </div>
+      </li>
       <li>
-        <a href="/about-us.html">About Us</a>
+        <a href="/about-us.html" class="mainNavLink">About Us</a>
       </li>
       <li class="navbar-dropdown">
         <a href="#">Trading<i class="fa-solid fa-chevron-down"></i></a>
@@ -78,19 +84,19 @@
 
     <!-- Social Icons -->
     <div class="flex space-x-4 pb-3">
-      <a href="#" class="text-gray-700 text-lg hover:text-tertiary transition duration-300">
+      <a href="#" class="text-gray-700 text-lg hover:text-primary transition duration-300">
         <i class="fab fa-facebook-f"></i>
       </a>
-      <a href="#" class="text-gray-700 text-lg hover:text-tertiary transition duration-300">
+      <a href="#" class="text-gray-700 text-lg hover:text-primary transition duration-300">
         <i class="fab fa-linkedin-in"></i>
       </a>
-      <a href="#" class="text-gray-700 text-lg hover:text-tertiary transition duration-300">
+      <a href="#" class="text-gray-700 text-lg hover:text-primary transition duration-300">
         <i class="fa-brands fa-x-twitter"></i>
       </a>
-      <a href="#" class="text-gray-700 text-lg hover:text-tertiary transition duration-300">
+      <a href="#" class="text-gray-700 text-lg hover:text-primary transition duration-300">
         <i class="fab fa-linkedin-in"></i>
       </a>
-      <a href="#" class="text-gray-700 text-lg hover:text-tertiary transition duration-300">
+      <a href="#" class="text-gray-700 text-lg hover:text-primary transition duration-300">
         <i class="fa-brands fa-instagram"></i>
       </a>
     </div>
@@ -98,4 +104,4 @@
 </nav>
 
 <!-- To prevent content from being hidden behind fixed navbar -->
-<div class="mt-24"></div>
+<!-- <div class="mt-24"></div> -->

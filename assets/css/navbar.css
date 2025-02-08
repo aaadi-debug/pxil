@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #0058a2;
+    --secondary: #272727;
+    --tertiary: #FFD334;
+    --whiteClr: #FFFFFF;
+    --textClr: #555555;
+    --lightText: #A4A4A4;
+}
+
+/* =============================================== */
+/* ---------------- Navbar stars ----------------- */
+/* =============================================== */
+.navbar-links {
+    list-style-type: none;
+    display: flex;
+}
+
+.navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: #444;
+    padding: 20px 20px 30px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.4s all;
+}
+
+.navbar-links li.navbar-dropdown {
+    position: relative;
+}
+
+.navbar-links li.navbar-dropdown:hover .dropdown {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.navbar-links li.navbar-dropdown .dropdown {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 100%;
+    transform: translateY(50px);
+    left: 0;
+    width: 280px;
+    background-color: #fff;
+    box-shadow: 0px 10px 10px 3px rgba(0, 0, 0, 0.3);
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    z-index: 111;
+    transition: 0.4s all;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+/* Custom scrollbar styling */
+.navbar-links li.navbar-dropdown .dropdown::-webkit-scrollbar {
+    width: 8px; /* Makes scrollbar thin */
+}
+
+.navbar-links li.navbar-dropdown .dropdown::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Light gray track */
+    border-radius: 10px;
+}
+
+.navbar-links li.navbar-dropdown .dropdown::-webkit-scrollbar-thumb {
+    background: #888; /* Dark gray thumb */
+    border-radius: 10px;
+}
+
+.navbar-links li.navbar-dropdown .dropdown::-webkit-scrollbar-thumb:hover {
+    background: var(--primary); /* Slightly darker gray on hover */
+}
+
+.navbar-links li.navbar-dropdown .dropdown a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: 400;
+
+    border-bottom: 1px solid #ededed;
+}
+
+.navbar-links li.navbar-dropdown .dropdown a:last-child {
+    border-bottom: none;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.navbar-dropdown .dropdown a:hover {
+    padding-left: 30px;
+    background: #ededed;
+    color: var(--secondary);
+}
+
+.navbar-links li.navbar-dropdown a i {
+    transition: transform 0.3s ease-in-out;
+    margin-left: 4px;
+    font-size: 12px;
+}
+
+.navbar-links li.navbar-dropdown:hover a i {
+    transform: rotate(180deg);
+    transition: 0.3s ease-in-out;
+}
+
+
+.navbar-links li a:hover {
+    color: var(--primary);
+}
+
+.navbar-links li .mainNavLink.active {
+    color: var(--primary); /* Highlight color */
+    font-weight: bold;
+    border-bottom: 2px solid var(--primary);
+}
+
+/* =============================================== */
+/* ---------------- Navbar ends ----------------- */
+/* =============================================== */
