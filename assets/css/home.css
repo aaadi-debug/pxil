@@ -13,6 +13,34 @@
     --lightText: #A4A4A4;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+.oneLinerText {
+    display: -webkit-box;
+  -webkit-line-clamp: 1; /* Limits text to 2 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.twoLinerText {
+    display: -webkit-box;
+  -webkit-line-clamp: 2; /* Limits text to 2 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.threeLinerText {
+    display: -webkit-box;
+  -webkit-line-clamp: 3; /* Limits text to 2 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 /* Default button styles */
 .sevenTabs button {
     color: var(--primary);
