@@ -212,98 +212,7 @@ const style = document.createElement("style");
 style.innerHTML = ` @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } } `;
 document.head.appendChild(style);
 
-const partners = [
-  {
-    logo: "/assets/images/logos/GMR_logo.png",
-    name: "Salesforce",
-    desc: "1 Sales pipeline integration.",
-  },
-  {
-    logo: "/assets/images/logos/GUVNL.png",
-    name: "HubSpot",
-    desc: "2 Customer management integration.",
-  },
-  {
-    logo: "/assets/images/logos/JSW.jpeg",
-    name: "Zoho",
-    desc: "3 Business automation tool.",
-  },
-  {
-    logo: "/assets/images/logos/MPPMCL.png",
-    name: "Salesforce",
-    desc: "4 Sales pipeline integration.",
-  },
-  {
-    logo: "/assets/images/logos/NCDEX.jpeg",
-    name: "HubSpot",
-    desc: "5 Customer management integration.",
-  },
-  {
-    logo: "/assets/images/logos/NSE.png",
-    name: "Zoho",
-    desc: "6 Business automation tool.",
-  },
-  {
-    logo: "/assets/images/logos/NVVNL.jpg",
-    name: "Zoho",
-    desc: "7 Business automation tool.",
-  },
-  {
-    logo: "/assets/images/logos/Tata_power.png",
-    name: "Salesforce",
-    desc: "8 Sales pipeline integration.",
-  },
-  {
-    logo: "/assets/images/logos/WBSEDCL.png",
-    name: "HubSpot",
-    desc: "9 Customer management integration.",
-  },
-  {
-    logo: "/assets/images/logos/NSE.png",
-    name: "Zoho",
-    desc: "10 Business automation tool.",
-  },
-  {
-    logo: "/assets/images/logos/Banyan_Tree_Finance_Logo.png",
-    name: "Banyan_Tree_Finance",
-    desc: "11 Business automation tool.",
-  },
-];
-let index = 0;
 
-function updateCarousel() {
-  const carousel = document.getElementById("carousel");
-  carousel.innerHTML = "";
-  for (let i = -3; i <= 3; i++) {
-    let partnerIndex = (index + i + partners.length) % partners.length;
-    let partner = partners[partnerIndex];
-    let opacity =
-      Math.abs(i) === 3
-        ? "opacity-50"
-        : Math.abs(i) === 2
-        ? "opacity-75"
-        : Math.abs(i) === 1
-        ? "opacity-90"
-        : "";
-    let size = i === 0 ? "w-40 h-40" : "w-28 h-28";
-    carousel.innerHTML += `<div class="${size} flex items-center justify-center rounded-full p-5 shadow-lg bg-white border ${opacity}">
-                    <img src="${partner.logo}" alt="${partner.name}" class="h-50 w-50 object-fill">
-                </div>`;
-  }
-  document.getElementById("partner-name").innerText = partners[index].name;
-  document.getElementById("partner-desc").innerText = partners[index].desc;
-}
-
-document.getElementById("prev").addEventListener("click", () => {
-  index = (index - 1 + partners.length) % partners.length;
-  updateCarousel();
-});
-document.getElementById("next").addEventListener("click", () => {
-  index = (index + 1) % partners.length;
-  updateCarousel();
-});
-
-updateCarousel();
 //     </script>
 // let index = 0;
 
@@ -368,3 +277,57 @@ var swiper = new Swiper('.swiper-container', {
 
 
 
+
+
+
+
+// ----------------- modal--------------------
+// Function to show modal and play video
+function showModal() {
+  const modal = document.getElementById('aboutusVideoModal');
+  const videoPlayer = document.getElementById('videoPlayer');
+  const videoSource = document.getElementById('videoSource');
+
+  // Set the video file (Replace with your actual file path)
+  videoSource.src = "../assets/videos/video1.mp4";  // Example: stored inside "videos" folder
+  videoPlayer.load(); // Load the new source
+  videoPlayer.play(); // Auto-play when modal opens
+  
+  modal.style.display = "flex"; 
+}
+
+// Function to close modal and stop video
+function closeModal() {
+  const modal = document.getElementById('aboutusVideoModal');
+  const videoPlayer = document.getElementById('videoPlayer');
+
+  modal.style.display = "none";
+  videoPlayer.pause(); // Pause video when closing
+  videoPlayer.currentTime = 0; // Reset video to start
+}
+
+
+
+
+let currentIndex = 0;
+const eventsSlides = document.querySelectorAll('.events-slide');
+const totalSlides = eventsSlides.length;
+
+// Move slide function
+function moveSlide(direction) {
+    currentIndex += direction;
+    
+    if (currentIndex < 0) {
+        currentIndex = totalSlides - 1;
+    } else if (currentIndex >= totalSlides) {
+        currentIndex = 0;
+    }
+    
+    updateSlider();
+}
+
+// Update slide position
+function updateSlider() {
+    const slider = document.querySelector('.events-slider');
+    slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+}

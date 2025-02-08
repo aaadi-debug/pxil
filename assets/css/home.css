@@ -75,6 +75,223 @@
 
 
 
+.play-button {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 2;
+}
+
+.play-button::before {
+    content: "";
+    position: absolute;
+    width: 60%;
+    height: 60%;
+    background-color: white;
+    clip-path: polygon(30% 20%, 30% 80%, 80% 50%);
+    z-index: 3;
+}
+
+.ripple {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0;
+    animation: rippleEffect 3s infinite;
+}
+
+.ripple:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.ripple:nth-child(3) {
+    animation-delay: 1s;
+}
+
+@keyframes rippleEffect {
+    0% {
+        transform: scale(1);
+        opacity: 0.6;
+    }
+
+    100% {
+        transform: scale(2.5);
+        opacity: 0;
+    }
+}
 
 
 
+
+
+
+.modal {
+    display: none;  /* ✅ Keeps modal hidden initially */
+    position: fixed;
+    z-index: 99;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    overflow: auto;
+    
+    /* ✅ Add flex inside JavaScript instead */
+}
+
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    height: 80%;
+    text-align: center;
+    border-radius: 10px;
+
+    position: relative;
+    margin: auto;
+
+    display: flex;
+    justify-content: center;
+}
+
+.modal-close {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    color: white;
+    background-color: var(--primary);
+    border-radius: 50%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    transition: all 0.3s ease-in;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+    color: var(--tertiary);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+
+/* Slider Container */
+.events-slider-container {
+    position: relative;
+    width: 70%;
+    /* max-width: 800px; */
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Slider */
+.events-slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Slide */
+.events-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.events-slide img, .events-slide video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Navigation Buttons */
+/* .prev-btn-events, .next-btn-events {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.prev-btn-events:hover, .next-btn-events:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.prev-btn-events {
+    left: 10px;
+}
+
+.next-btn-events {
+    right: 10px;
+} */
+
+
+
+
+
+/* --------------------- slider ------------------ */
+.featured-inte-slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100%; */
+    /* width: 80%; */
+    overflow: hidden;
+    background: rgb(255, 255, 255);
+    border-radius: 16px;
+    /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
+    backdrop-filter: blur(7.4px);
+    -webkit-backdrop-filter: blur(7.4px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.featured-inte-slider-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    animation: scrolling 20s linear infinite;
+}
+
+/* Pause animation on hover */
+.featured-inte-slider-items:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scrolling {
+
+    0% {
+        transform: translateX(80%);
+    }
+
+    100% {
+        transform: translateX(-20%);
+    }
+}
+
+.featured-inte-slider-items img {
+    width: 12%;
+    margin: 20px;
+
+}

@@ -134,19 +134,35 @@
                 <li>
                     <a href="https://trading.pxil.in/" target="_blank">Pratyay Login</a>
                 </li>
-                <li>
-                    <a href="/contact-us.html">Contact Us</a>
-                </li>
             </ul>
 
-
-
-            <!-- Social Icons -->
+            <!-- Contact Us Button -->
             <div class="flex space-x-4 pb-3">
-                <a href="/contact-us.html" class="border">Contact Us</a>
+                <a href="/contact-us.html"
+                    class="border-2 font-semibold px-3 py-1 border-primary text-primary rounded-full hover:bg-primary hover:text-white transition duration-500">Contact
+                    Us</a>
             </div>
         </div>
     </nav>
+
+
+    <div class="fixed bottom-8 left-0 bg-primary flex flex-col gap-2 p-2 rounded-lg rounded-br-full pb-8 z-10">
+        <a href="#" class="text-white text-md hover:text-tertiary transition duration-300">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" class="text-white text-md hover:text-tertiary transition duration-300">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="#" class="text-white text-md hover:text-tertiary transition duration-300">
+            <i class="fa-brands fa-x-twitter"></i>
+        </a>
+        <a href="#" class="text-white text-md hover:text-tertiary transition duration-300">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="#" class="text-white text-md hover:text-tertiary transition duration-300">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+    </div>
 
     <!-- Herosection -->
     <div class="relative w-full h-[80vh] sm:h-[600px] md:h-[500px] overflow-hidden">
@@ -410,537 +426,534 @@
                 </div>
             </div>
         </section>
+    </div>
 
-        <section class="relative w-[80%] py-16 mx-auto lg:px-10 ">
-            <div class="grid grid-cols-2 gap-12">
-                <!-- Left Side (Image & Floating Elements) -->
-                <div class="relative w-full">
-                    <div class="flex justify-end">
-                        <img src="https://powerexindia.in/static/images/Homepage/SocialMedia/linkedin.jpg"
-                            alt="Businessman" class="w-[70%]" />
+    <section class="relative w-[80%] py-16 mx-auto lg:px-10 ">
+        <div class="grid grid-cols-2 gap-12">
+            <!-- Left Side (Image & Floating Elements) -->
+            <div class="relative w-full">
+                <div class="flex justify-end">
+                    <img src="https://powerexindia.in/static/images/Homepage/SocialMedia/linkedin.jpg" alt="Businessman"
+                        class="w-[70%]" />
+                </div>
+
+                <!-- Floating Cards -->
+                <div class="absolute top-10 right-0 bg-white shadow-md px-6 py-4 flex items-center gap-2">
+                    <span class="text-blue-500 text-xl">💼</span>
+                    <span class="text-sm font-semibold">PXIL Service 1</span>
+                </div>
+
+                <div class="absolute top-28 right-10 bg-white shadow-md px-6 py-4 flex items-center gap-2">
+                    <span class="text-blue-500 text-xl">💳</span>
+                    <span class="text-sm font-semibold">PXIL Service 2</span>
+                </div>
+
+                <div class="absolute bottom-[-40px] right-0">
+                    <img src="/assets/images/home-banners/about-style1-2.jpg" alt="Financial Growth"
+                        class="border-8 border-whiteClr" />
+                </div>
+            </div>
+
+            <!-- Right Side (Text Content) -->
+            <div class="w-full">
+                <p class="text-blue-600 font-semibold mb-2">About PXIL</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 leading-snug">
+                    Building A More Compact <br />
+                    Our Power Market
+                </h2>
+                <p class="text-gray-600 mt-4">
+                    Power Exchange India Limited (PXIL) is India’s first institutionally
+                    promoted power exchange, revolutionizing the energy sector since
+                    2008. By seamlessly connecting buyers and sellers, we enhance the
+                    efficiency of India’s energy markets.
+                </p>
+                <p class="text-gray-600 mt-4 mb-6">
+                    Our innovative solutions blend local expertise with global insights,
+                    providing stakeholders with the tools to succeed in a fast-evolving
+                    energy landscape.
+                </p>
+
+                <div class="bg-white px-6 py-4 rounded-md shadow-md mt-6 mb-4">
+                    <p class="text-gray-600 italic">
+                        <b>VISION : </b>To continually innovate and offer credible
+                        solutions to transform Indian power markets and efficiently
+                        allocate energy resources, thereby creating a significant
+                        difference for our stakeholders across the globe.
+                    </p>
+                </div>
+
+                <div class="bg-white px-6 py-4 rounded-md shadow-md mt-6 mb-4">
+                    <p class="text-gray-600 italic">
+                        <b>MISSION : </b>To increase the accessibility and transparency of
+                        the power market in India, and enhance the speed and efficiency of
+                        trade execution, via optimal utilization of local and global
+                        insights.
+                    </p>
+                </div>
+
+                <a href="/about-us.html" class="bg-primary text-whiteClr  px-4 py-4 hover:bg-primary/80">
+                    More About us
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="section2" class="py-10 lg:px-10 px-6 sevenTabs">
+        <div class="mx-auto">
+            <div class="flex flex-wrap justify-center gap-4 max-sm:gap-2">
+                <button onclick="switchTab('section2', 'idas')" id="btn-idas"
+                    class="max-sm:text-xs px-6 py-2 border border-primary font-semibold rounded transition active-tab transform hover:translate-y-[-5px] hover:shadow-xl transition-all duration-300">
+                    IDAS
+                </button>
+                <button onclick="switchTab('section2', 'rtm')" id="btn-rtm"
+                    class="max-sm:text-xs px-6 py-2 border border-primary text-primary font-semibold rounded hover:bg-primary hover:text-white transition transform hover:translate-y-[-5px] hover:shadow-xl transition-all duration-300">
+                    RTM
+                </button>
+                <button onclick="switchTab('section2', 'tam')" id="btn-tam"
+                    class="max-sm:text-xs px-6 py-2 border border-primary text-primary font-semibold rounded hover:bg-primary hover:text-white transition transform hover:translate-y-[-5px] hover:shadow-xl transition-all duration-300">
+                    TAM
+                </button>
+                <button onclick="switchTab('section2', 'gtam')" id="btn-gtam"
+                    class="max-sm:text-xs px-6 py-2 border border-primary text-primary font-semibold rounded hover:bg-primary hover:text-white transition transform hover:translate-y-[-5px] hover:shadow-xl transition-all duration-300">
+                    GTAM
+                </button>
+                <button onclick="switchTab('section2', 'rec')" id="btn-rec"
+                    class="max-sm:text-xs px-6 py-2 border border-primary text-primary font-semibold rounded hover:bg-primary hover:text-white transition transform hover:translate-y-[-5px] hover:shadow-xl transition-all duration-300">
+                    REC
+                </button>
+                <button onclick="switchTab('section2', 'escert')" id="btn-escert"
+                    class="max-sm:text-xs px-6 py-2 border border-primary text-primary font-semibold rounded hover:bg-primary hover:text-white transition transform hover:translate-y-[-5px] hover:shadow-xl transition-all duration-300">
+                    ESCERT
+                </button>
+                <button onclick="switchTab('section2', 'reverse')" id="btn-reverse"
+                    class="max-sm:text-xs px-6 py-2 border border-primary text-primary font-semibold rounded hover:bg-primary hover:text-white transition transform hover:translate-y-[-5px] hover:shadow-xl transition-all duration-300">
+                    REVERSE AUCTION
+                </button>
+            </div>
+            <div id="idas" class="tab-content active-tab-content mt-6 p-4 bg-gray-100 rounded">
+                Content for IDAS
+            </div>
+            <div id="rtm" class="tab-content hidden mt-6 p-4 bg-gray-100 rounded">
+                Content for RTM
+            </div>
+            <div id="tam" class="tab-content hidden mt-6 p-4 bg-gray-100 rounded">
+                Content for TAM
+            </div>
+            <div id="gtam" class="tab-content hidden mt-6 p-4 bg-gray-100 rounded">
+                Content for GTAM
+            </div>
+            <div id="rec" class="tab-content hidden mt-6 p-4 bg-gray-100 rounded">
+                Content for REC
+            </div>
+            <div id="escert" class="tab-content hidden mt-6 p-4 bg-gray-100 rounded">
+                Content for ESCERT
+            </div>
+            <div id="reverse" class="tab-content hidden mt-6 p-4 bg-gray-100 rounded">
+                Content for REVERSE AUCTION
+            </div>
+        </div>
+    </section>
+
+    <div
+        class="relative grid lg:grid-cols-4 md:grid-cols-2 max-sm:grid-cols-1 gap-8 mt-[80px] justify-center items-center bg-cover bg-no-repeat p-10 bg-[url(./assets/images/home-banners/small.webp)]">
+        <!-- Gradient Overlay -->
+        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-80"></div>
+
+        <!-- Counter 1: Products with Contracts -->
+        <div class="counter-section text-center border-r-2 border-gray-100 transition-all duration-300 transform">
+            <div class="counter text-4xl font-semibold text-tertiary mb-4" data-target="12">
+                0
+            </div>
+            <h2 class="uppercase text-md text-white font-medium font-extrabold">
+                Products with Contracts
+            </h2>
+        </div>
+
+        <!-- Counter 2: PAN India Bidding Regions -->
+        <div class="counter-section text-center border-r-2 border-gray-100 p-4 transition-all duration-300 transform">
+            <div class="counter text-4xl font-semibold text-tertiary mb-4" data-target="13">
+                0
+            </div>
+            <h2 class="uppercase text-md text-white font-medium">
+                PAN India Bidding Regions
+            </h2>
+        </div>
+
+        <!-- Counter 3: Clients -->
+        <div class="counter-section text-center border-r-2 border-gray-100 transition-all duration-300 transform">
+            <div class="counter text-4xl font-semibold text-tertiary mb-4" data-target="4325">
+                0
+            </div>
+            <h2 class="uppercase text-md text-white font-medium">Clients</h2>
+        </div>
+
+        <!-- Counter 4: Billion Units Transacted -->
+        <div class="counter-section text-center transition-all duration-300 transform">
+            <div class="counter text-4xl font-semibold text-tertiary mb-4" data-target="51.92">
+                0
+            </div>
+            <h2 class="uppercase text-md text-white font-medium">
+                Billion Units Transacted
+            </h2>
+        </div>
+    </div>
+
+    <section class="w-100 mx-auto max-w-6xl py-12">
+        <h2 class="text-3xl font-bold text-center text-gray-800  mt-[60px]">
+            Follow Us on Social Media
+        </h2>
+        <p class="text-center text-lg text-gray-600 mb-10">
+            Stay connected with us for updates, news, and more!
+        </p>
+        <div class="grid md:grid-cols-3 gap-6">
+            <!-- Twitter Post -->
+            <div
+                class="relative bg-white p-6 rounded-xl shadow-lg border border-gray-200 transition transform hover:scale-105">
+                <img src="https://scontent.fdel58-1.fna.fbcdn.net/v/t39.30808-6/449742237_937618021502506_6149730171188058089_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=rjbdNJ7rei0Q7kNvgHWFslv&_nc_zt=23&_nc_ht=scontent.fdel58-1.fna&_nc_gid=ATRaLsuwof8xzZBumFcXZ0S&oh=00_AYBLDYj7ris6-U1e-jrJnoSSQ2y0Hhz_tCikkZ4zlTVl8A&oe=67A583D6"
+                    alt="Twitter Post" class="rounded-lg w-full" />
+                <div class="flex items-center space-x-3 mt-4">
+                    <img src="https://scontent.fdel58-1.fna.fbcdn.net/v/t39.30808-6/449742237_937618021502506_6149730171188058089_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=rjbdNJ7rei0Q7kNvgHWFslv&_nc_zt=23&_nc_ht=scontent.fdel58-1.fna&_nc_gid=ATRaLsuwof8xzZBumFcXZ0S&oh=00_AYBLDYj7ris6-U1e-jrJnoSSQ2y0Hhz_tCikkZ4zlTVl8A&oe=67A583D6"
+                        alt="Twitter" class="w-8" />
+                    <h3 class="text-xl font-semibold text-blue-500">@TwitterHandle</h3>
+                </div>
+                <p class="text-gray-600 mt-2">
+                    "Exciting news! Our latest update is live 🚀 Check it out!
+                    #Innovation #Tech"
+                </p>
+                <a href="#" class="mt-4 inline-block text-blue-500 font-semibold hover:underline">View on Twitter
+                    →</a>
+            </div>
+
+            <!-- Facebook Post -->
+            <div
+                class="relative bg-white p-6 rounded-xl shadow-lg border border-gray-200 transition transform hover:scale-105">
+                <img src="https://scontent.fdel58-1.fna.fbcdn.net/v/t39.30808-6/449742237_937618021502506_6149730171188058089_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=rjbdNJ7rei0Q7kNvgHWFslv&_nc_zt=23&_nc_ht=scontent.fdel58-1.fna&_nc_gid=ATRaLsuwof8xzZBumFcXZ0S&oh=00_AYBLDYj7ris6-U1e-jrJnoSSQ2y0Hhz_tCikkZ4zlTVl8A&oe=67A583D6"
+                    alt="Facebook Post" class="rounded-lg w-full" />
+                <div class="flex items-center space-x-3 mt-4">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" class="w-8" />
+                    <h3 class="text-xl font-semibold text-blue-800">Facebook Page</h3>
+                </div>
+                <p class="text-gray-600 mt-2">
+                    "Join us for an exclusive behind-the-scenes look at our upcoming
+                    project! 🎬 #ExcitingTimes"
+                </p>
+                <a href="#" class="mt-4 inline-block text-blue-800 font-semibold hover:underline">View on Facebook
+                    →</a>
+            </div>
+
+            <!-- LinkedIn Post -->
+            <div
+                class="relative bg-white p-6 rounded-xl shadow-lg border border-gray-200 transition transform hover:scale-105">
+                <img src="https://media.licdn.com/dms/image/v2/D5622AQGCNDPHWMV4vQ/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1726652417701?e=2147483647&v=beta&t=BaAOXMlnf_YgP1LTTQbSyy7x8aFLtU3dpRMUPkhlPMs"
+                    alt="LinkedIn Post" class="rounded-lg w-full" />
+                <div class="flex items-center space-x-3 mt-4">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733561.png" alt="LinkedIn" class="w-8" />
+                    <h3 class="text-xl font-semibold text-blue-700">
+                        LinkedIn Profile
+                    </h3>
+                </div>
+                <p class="text-gray-600 mt-2">
+                    "Networking is key! Connect with industry leaders and explore new
+                    opportunities. 🤝 #Networking"
+                </p>
+                <a href="#" class="mt-4 inline-block text-blue-700 font-semibold hover:underline">View on LinkedIn
+                    →</a>
+            </div>
+        </div>
+    </section>
+    <div class="flex items-center justify-center mt-8">
+        <div class="max-w-6xl w-full text-center py-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 leading-snug mb-[50px]">
+                Our Core Values
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+                <div class="flex flex-col items-center">
+                    <div
+                        class="animate-bounce w-16 h-16 border border-primary text-primary bg-white text-3xl  flex items-center justify-center rounded-full">
+                        <i class="fas fa-balance-scale"></i>
                     </div>
-
-                    <!-- Floating Cards -->
-                    <div class="absolute top-10 right-0 bg-white shadow-md px-6 py-4 flex items-center gap-2">
-                        <span class="text-blue-500 text-xl">💼</span>
-                        <span class="text-sm font-semibold">PXIL Service 1</span>
+                    <h3 class="text-2xl font-semibold mt-4">Integrity</h3>
+                    <p class="text-gray-700 mt-2">
+                        We uphold honesty and strong moral principles in all our actions.
+                    </p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div
+                        class="animate-bounce w-16 h-16 border border-primary text-primary bg-white text-3xl  flex items-center justify-center rounded-full">
+                        <i class="fas fa-trophy"></i>
                     </div>
-
-                    <div class="absolute top-28 right-10 bg-white shadow-md px-6 py-4 flex items-center gap-2">
-                        <span class="text-blue-500 text-xl">💳</span>
-                        <span class="text-sm font-semibold">PXIL Service 2</span>
+                    <h3 class="text-2xl font-semibold mt-4">Excellence</h3>
+                    <p class="text-gray-700 mt-2">
+                        Striving for the highest quality in everything we do.
+                    </p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div
+                        class="animate-bounce w-16 h-16 border border-primary text-primary bg-white text-3xl  flex items-center justify-center rounded-full">
+                        <i class="fas fa-handshake"></i>
                     </div>
+                    <h3 class="text-2xl font-semibold mt-4">Commitment</h3>
+                    <p class="text-gray-700 mt-2">
+                        Dedicated to delivering value and exceeding expectations.
+                    </p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div
+                        class="animate-bounce w-16 h-16 border border-primary text-primary bg-white text-3xl  flex items-center justify-center rounded-full">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mt-4">Innovation</h3>
+                    <p class="text-gray-700 mt-2">
+                        Embracing creativity to drive progress and efficiency.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
 
-                    <div class="absolute bottom-[-40px] right-0">
-                        <img src="/assets/images/home-banners/about-style1-2.jpg" alt="Financial Growth"
-                            class="border-8 border-whiteClr" />
+    <div class="relative bg-[url('/assets/images/home-banners/latest2.jpg')] bg-cover bg-no-repeat mt-[60px] p-[60px]">
+        <!-- Gradient Overlay -->
+        <div class="absolute inset-0 bg-gradient-to-t from-gray-200 to-transparent bg-opacity-10"></div>
+
+        <!-- Content Wrapper -->
+        <div class="relative max-w-6xl mx-auto">
+            <h2 class="text-3xl font-semibold text-gray-700 mb-8 text-center">
+                Latest Company News
+            </h2>
+
+            <div class="newsgrid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- News items will be inserted here dynamically -->
+            </div>
+        </div>
+    </div>
+
+
+    <div class="flex justify-center items-center pt-2 mt-[80px]">
+        <section class="w-[80%] text-center">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">
+                Featured Integrations
+            </h2>
+
+            <div class="relative flex items-center justify-between">
+                <button id="prev" class="p-2 bg-gray-200 rounded-full shadow">
+                    <i class="fa-solid fa-angle-left"></i>
+                </button>
+                <div id="carousel" class="flex space-x-4 justify-center items-center w-full overflow-hidden"></div>
+                <button id="next" class="p-2 bg-gray-200 rounded-full shadow">
+                    <i class="fa-solid fa-angle-right" id="next" class=""></i>
+                </button>
+            </div>
+
+            <h3 id="partner-name" class="text-lg font-semibold mt-4">
+                Partner Name
+            </h3>
+            <p id="partner-desc" class="text-gray-600 mt-2">
+                Description of the partner integration goes here.
+            </p>
+
+            <div class="flex justify-center mt-4 space-x-2">
+                <span class="dot w-3 h-3 bg-gray-300 rounded-full"></span>
+                <span class="dot w-3 h-3 bg-gray-300 rounded-full"></span>
+                <span class="dot w-3 h-3 bg-gray-300 rounded-full"></span>
+                <span class="dot w-3 h-3 bg-gray-300 rounded-full"></span>
+            </div>
+        </section>
+    </div>
+    <section class="py-16 px-6 bg-white">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8">Our Achievements</h2>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Achievement 1 -->
+                <div class="bg-gray-200 rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://via.placeholder.com/500x300" alt="Achievement 1"
+                        class="w-full h-56 object-cover" />
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">
+                            Award for Excellence
+                        </h3>
+                        <p class="text-gray-600">
+                            Recognized for exceptional performance in the industry.
+                        </p>
                     </div>
                 </div>
 
-                <!-- Right Side (Text Content) -->
-                <div class="w-full">
-                    <p class="text-blue-600 font-semibold mb-2">About PXIL</p>
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 leading-snug">
-                        Building A More Compact <br />
-                        Our Power Market
-                    </h2>
-                    <p class="text-gray-600 mt-4">
-                        Power Exchange India Limited (PXIL) is India’s first institutionally
-                        promoted power exchange, revolutionizing the energy sector since
-                        2008. By seamlessly connecting buyers and sellers, we enhance the
-                        efficiency of India’s energy markets.
-                    </p>
-                    <p class="text-gray-600 mt-4 mb-6">
-                        Our innovative solutions blend local expertise with global insights,
-                        providing stakeholders with the tools to succeed in a fast-evolving
-                        energy landscape.
-                    </p>
-
-                    <div class="bg-white px-6 py-4 rounded-md shadow-md mt-6 mb-4">
-                        <p class="text-gray-600 italic">
-                            <b>VISION : </b>To continually innovate and offer credible
-                            solutions to transform Indian power markets and efficiently
-                            allocate energy resources, thereby creating a significant
-                            difference for our stakeholders across the globe.
+                <!-- Achievement 2 -->
+                <div class="bg-gray-200 rounded-lg overflow-hidden shadow-lg">
+                    <video controls class="w-full h-56 object-cover">
+                        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">
+                            Innovative Project
+                        </h3>
+                        <p class="text-gray-600">
+                            A glimpse of the groundbreaking project we delivered.
                         </p>
                     </div>
+                </div>
 
-                    <div class="bg-white px-6 py-4 rounded-md shadow-md mt-6 mb-4">
-                        <p class="text-gray-600 italic">
-                            <b>MISSION : </b>To increase the accessibility and transparency of
-                            the power market in India, and enhance the speed and efficiency of
-                            trade execution, via optimal utilization of local and global
-                            insights.
+                <!-- Achievement 3 -->
+                <div class="bg-gray-200 rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://via.placeholder.com/500x300" alt="Achievement 3"
+                        class="w-full h-56 object-cover" />
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">
+                            Employee of the Year
+                        </h3>
+                        <p class="text-gray-600">
+                            Celebrating our top-performing team member.
                         </p>
                     </div>
+                </div>
+            </div>
 
-                    <a href="/about-us.html" class="bg-primary text-whiteClr  px-4 py-4 hover:bg-primary/80">
-                        More About us
+            <div class="mt-12">
+                <a href="#more-achievements"
+                    class="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-full hover:bg-blue-700 transition">See
+                    More Achievements</a>
+            </div>
+        </div>
+    </section>
+    <section class="bg-blue-50 py-12">
+        <div class="mx-auto px-4 text-center w-[80%]">
+            <h2 class="text-3xl font-bold text-blue-600 mb-6">
+                What <span class="text-gray-700">People Say About Us</span>
+            </h2>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
+                Travel has helped us to understand the meaning of life and it has
+                helped us become better people. Each time we travel, we see the world
+                with new eyes.
+            </p>
+            <div class="overflow-hidden">
+                <div class="flex space-x-6 transition-transform duration-500 ease-in-out" id="testimonial-slider">
+                    <div class="bg-white p-6 rounded-2xl shadow-lg text-gray-700">
+                        <div class="mb-4 text-blue-500 text-2xl">
+                            <i class="fa fa-quote-left"></i>
+                        </div>
+                        <p class="italic">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting
+                            industry...
+                        </p>
+                        <div class="mt-4 flex items-center justify-center">
+                            <img src="./assets/images/home-banners/latest2.jpg" class="w-12 h-12 rounded-full"
+                                alt="Elison Marks" />
+                            <div class="ml-3 text-left">
+                                <h4 class="text-blue-500 font-semibold">Elison Marks</h4>
+                                <div class="text-yellow-500 text-sm">★★★★★</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-lg text-gray-700">
+                        <div class="mb-4 text-blue-500 text-2xl">
+                            <i class="fa fa-quote-left"></i>
+                        </div>
+                        <p class="italic">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting
+                            industry...
+                        </p>
+                        <div class="mt-4 flex items-center">
+                            <img src="images/testimonial/img2.jpg" class="w-12 h-12 rounded-full" alt="Jared Erondu" />
+                            <div class="ml-3 text-left">
+                                <h4 class="text-blue-500 font-semibold">Jared Erondu</h4>
+                                <div class="text-yellow-500 text-sm">★★★★★</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-lg text-gray-700">
+                        <div class="mb-4 text-blue-500 text-2xl">
+                            <i class="fa fa-quote-left"></i>
+                        </div>
+                        <p class="italic">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting
+                            industry...
+                        </p>
+                        <div class="mt-4 flex items-center">
+                            <img src="images/testimonial/img3.jpg" class="w-12 h-12 rounded-full" alt="Kelson Kelly" />
+                            <div class="ml-3 text-left">
+                                <h4 class="text-blue-500 font-semibold">Kelson Kelly</h4>
+                                <div class="text-yellow-500 text-sm">★★★★★</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <button id="prev" class="absolute left-5 top-1/2 transform -translate-y-1/2 bg-blue-500 text-white p-3 rounded-full shadow-md">❮</button>
+          <button id="next" class="absolute right-5 top-1/2 transform -translate-y-1/2 bg-blue-500 text-white p-3 rounded-full shadow-md">❯</button> -->
+        </div>
+        <!-- <div class="absolute inset-0 bg-gray-900 bg-opacity-50"></div> -->
+    </section>
+
+    <div class="flex justify-center items-center min-h-screen">
+        <div class="w-[80%] bg-white shadow-lg rounded-lg p-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <!-- Left Section: Heading and Description -->
+                <div>
+                    <h2 class="text-4xl font-bold text-gray-800">Join Our Team</h2>
+                    <p class="text-gray-600 mt-4 text-lg">
+                        We are looking for creative minds and passionate professionals to
+                        innovate with us. Explore our open positions and start your
+                        journey today. Effective teams communicate openly, leverage
+                        strengths, and embrace diversity for success.
+                    </p>
+                    <a href="#" class="bg-primary text-whiteClr hover:bg-primary/80 px-4 py-4">
+                        View More Openings
                     </a>
                 </div>
-            </div>
-        </section>
-
-
-        <section id="section2" class="py-10 lg:px-10 px-6 sevenTabs">
-            <div class="mx-auto">
-                <div class="flex flex-wrap justify-center gap-4 max-sm:gap-2">
-                    <button onclick="switchTab('section2', 'idas')" id="btn-idas"
-                        class="max-sm:text-xs px-6 py-2 border border-primary font-semibold rounded transition active-tab transform hover:translate-y-[-5px] hover:shadow-xl transition-all duration-300">
-                        IDAS
-                    </button>
-                    <button onclick="switchTab('section2', 'rtm')" id="btn-rtm"
-                        class="max-sm:text-xs px-6 py-2 border border-primary text-primary font-semibold rounded hover:bg-primary hover:text-white transition transform hover:translate-y-[-5px] hover:shadow-xl transition-all duration-300">
-                        RTM
-                    </button>
-                    <button onclick="switchTab('section2', 'tam')" id="btn-tam"
-                        class="max-sm:text-xs px-6 py-2 border border-primary text-primary font-semibold rounded hover:bg-primary hover:text-white transition transform hover:translate-y-[-5px] hover:shadow-xl transition-all duration-300">
-                        TAM
-                    </button>
-                    <button onclick="switchTab('section2', 'gtam')" id="btn-gtam"
-                        class="max-sm:text-xs px-6 py-2 border border-primary text-primary font-semibold rounded hover:bg-primary hover:text-white transition transform hover:translate-y-[-5px] hover:shadow-xl transition-all duration-300">
-                        GTAM
-                    </button>
-                    <button onclick="switchTab('section2', 'rec')" id="btn-rec"
-                        class="max-sm:text-xs px-6 py-2 border border-primary text-primary font-semibold rounded hover:bg-primary hover:text-white transition transform hover:translate-y-[-5px] hover:shadow-xl transition-all duration-300">
-                        REC
-                    </button>
-                    <button onclick="switchTab('section2', 'escert')" id="btn-escert"
-                        class="max-sm:text-xs px-6 py-2 border border-primary text-primary font-semibold rounded hover:bg-primary hover:text-white transition transform hover:translate-y-[-5px] hover:shadow-xl transition-all duration-300">
-                        ESCERT
-                    </button>
-                    <button onclick="switchTab('section2', 'reverse')" id="btn-reverse"
-                        class="max-sm:text-xs px-6 py-2 border border-primary text-primary font-semibold rounded hover:bg-primary hover:text-white transition transform hover:translate-y-[-5px] hover:shadow-xl transition-all duration-300">
-                        REVERSE AUCTION
-                    </button>
-                </div>
-                <div id="idas" class="tab-content active-tab-content mt-6 p-4 bg-gray-100 rounded">
-                    Content for IDAS
-                </div>
-                <div id="rtm" class="tab-content hidden mt-6 p-4 bg-gray-100 rounded">
-                    Content for RTM
-                </div>
-                <div id="tam" class="tab-content hidden mt-6 p-4 bg-gray-100 rounded">
-                    Content for TAM
-                </div>
-                <div id="gtam" class="tab-content hidden mt-6 p-4 bg-gray-100 rounded">
-                    Content for GTAM
-                </div>
-                <div id="rec" class="tab-content hidden mt-6 p-4 bg-gray-100 rounded">
-                    Content for REC
-                </div>
-                <div id="escert" class="tab-content hidden mt-6 p-4 bg-gray-100 rounded">
-                    Content for ESCERT
-                </div>
-                <div id="reverse" class="tab-content hidden mt-6 p-4 bg-gray-100 rounded">
-                    Content for REVERSE AUCTION
-                </div>
-            </div>
-        </section>
-
-        <div
-            class="relative grid lg:grid-cols-4 md:grid-cols-2 max-sm:grid-cols-1 gap-8 mt-[80px] justify-center items-center bg-cover bg-no-repeat p-10 bg-[url(./assets/images/home-banners/small.webp)]">
-            <!-- Gradient Overlay -->
-            <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-80"></div>
-
-            <!-- Counter 1: Products with Contracts -->
-            <div class="counter-section text-center border-r-2 border-gray-100 transition-all duration-300 transform">
-                <div class="counter text-4xl font-semibold text-tertiary mb-4" data-target="12">
-                    0
-                </div>
-                <h2 class="uppercase text-md text-white font-medium font-extrabold">
-                    Products with Contracts
-                </h2>
-            </div>
-
-            <!-- Counter 2: PAN India Bidding Regions -->
-            <div
-                class="counter-section text-center border-r-2 border-gray-100 p-4 transition-all duration-300 transform">
-                <div class="counter text-4xl font-semibold text-tertiary mb-4" data-target="13">
-                    0
-                </div>
-                <h2 class="uppercase text-md text-white font-medium">
-                    PAN India Bidding Regions
-                </h2>
-            </div>
-
-            <!-- Counter 3: Clients -->
-            <div class="counter-section text-center border-r-2 border-gray-100 transition-all duration-300 transform">
-                <div class="counter text-4xl font-semibold text-tertiary mb-4" data-target="4325">
-                    0
-                </div>
-                <h2 class="uppercase text-md text-white font-medium">Clients</h2>
-            </div>
-
-            <!-- Counter 4: Billion Units Transacted -->
-            <div class="counter-section text-center transition-all duration-300 transform">
-                <div class="counter text-4xl font-semibold text-tertiary mb-4" data-target="51.92">
-                    0
-                </div>
-                <h2 class="uppercase text-md text-white font-medium">
-                    Billion Units Transacted
-                </h2>
-            </div>
-        </div>
-
-        <section class="w-100 mx-auto max-w-6xl py-12">
-            <h2 class="text-3xl font-bold text-center text-gray-800  mt-[60px]">
-                Follow Us on Social Media
-            </h2>
-            <p class="text-center text-lg text-gray-600 mb-10">
-                Stay connected with us for updates, news, and more!
-            </p>
-            <div class="grid md:grid-cols-3 gap-6">
-                <!-- Twitter Post -->
-                <div
-                    class="relative bg-white p-6 rounded-xl shadow-lg border border-gray-200 transition transform hover:scale-105">
-                    <img src="https://scontent.fdel58-1.fna.fbcdn.net/v/t39.30808-6/449742237_937618021502506_6149730171188058089_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=rjbdNJ7rei0Q7kNvgHWFslv&_nc_zt=23&_nc_ht=scontent.fdel58-1.fna&_nc_gid=ATRaLsuwof8xzZBumFcXZ0S&oh=00_AYBLDYj7ris6-U1e-jrJnoSSQ2y0Hhz_tCikkZ4zlTVl8A&oe=67A583D6"
-                        alt="Twitter Post" class="rounded-lg w-full" />
-                    <div class="flex items-center space-x-3 mt-4">
-                        <img src="https://scontent.fdel58-1.fna.fbcdn.net/v/t39.30808-6/449742237_937618021502506_6149730171188058089_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=rjbdNJ7rei0Q7kNvgHWFslv&_nc_zt=23&_nc_ht=scontent.fdel58-1.fna&_nc_gid=ATRaLsuwof8xzZBumFcXZ0S&oh=00_AYBLDYj7ris6-U1e-jrJnoSSQ2y0Hhz_tCikkZ4zlTVl8A&oe=67A583D6"
-                            alt="Twitter" class="w-8" />
-                        <h3 class="text-xl font-semibold text-blue-500">@TwitterHandle</h3>
-                    </div>
-                    <p class="text-gray-600 mt-2">
-                        "Exciting news! Our latest update is live 🚀 Check it out!
-                        #Innovation #Tech"
-                    </p>
-                    <a href="#" class="mt-4 inline-block text-blue-500 font-semibold hover:underline">View on Twitter
-                        →</a>
-                </div>
-
-                <!-- Facebook Post -->
-                <div
-                    class="relative bg-white p-6 rounded-xl shadow-lg border border-gray-200 transition transform hover:scale-105">
-                    <img src="https://scontent.fdel58-1.fna.fbcdn.net/v/t39.30808-6/449742237_937618021502506_6149730171188058089_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=rjbdNJ7rei0Q7kNvgHWFslv&_nc_zt=23&_nc_ht=scontent.fdel58-1.fna&_nc_gid=ATRaLsuwof8xzZBumFcXZ0S&oh=00_AYBLDYj7ris6-U1e-jrJnoSSQ2y0Hhz_tCikkZ4zlTVl8A&oe=67A583D6"
-                        alt="Facebook Post" class="rounded-lg w-full" />
-                    <div class="flex items-center space-x-3 mt-4">
-                        <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" class="w-8" />
-                        <h3 class="text-xl font-semibold text-blue-800">Facebook Page</h3>
-                    </div>
-                    <p class="text-gray-600 mt-2">
-                        "Join us for an exclusive behind-the-scenes look at our upcoming
-                        project! 🎬 #ExcitingTimes"
-                    </p>
-                    <a href="#" class="mt-4 inline-block text-blue-800 font-semibold hover:underline">View on Facebook
-                        →</a>
-                </div>
-
-                <!-- LinkedIn Post -->
-                <div
-                    class="relative bg-white p-6 rounded-xl shadow-lg border border-gray-200 transition transform hover:scale-105">
-                    <img src="https://media.licdn.com/dms/image/v2/D5622AQGCNDPHWMV4vQ/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1726652417701?e=2147483647&v=beta&t=BaAOXMlnf_YgP1LTTQbSyy7x8aFLtU3dpRMUPkhlPMs"
-                        alt="LinkedIn Post" class="rounded-lg w-full" />
-                    <div class="flex items-center space-x-3 mt-4">
-                        <img src="https://cdn-icons-png.flaticon.com/512/733/733561.png" alt="LinkedIn" class="w-8" />
-                        <h3 class="text-xl font-semibold text-blue-700">
-                            LinkedIn Profile
+                <!-- Right Section: Team Members -->
+                <div class="grid grid-cols-2 gap-6">
+                    <div
+                        class="p-6 bg-white shadow-lg rounded-lg text-center transform hover:-translate-y-2 transition duration-300 ring-1 ring-gray-200 hover:ring-blue-500">
+                        <h3 class="text-2xl font-semibold text-gray-800">
+                            UI/UX Designer
                         </h3>
-                    </div>
-                    <p class="text-gray-600 mt-2">
-                        "Networking is key! Connect with industry leaders and explore new
-                        opportunities. 🤝 #Networking"
-                    </p>
-                    <a href="#" class="mt-4 inline-block text-blue-700 font-semibold hover:underline">View on LinkedIn
-                        →</a>
-                </div>
-            </div>
-        </section>
-        <div class="flex items-center justify-center mt-8">
-            <div class="max-w-6xl w-full text-center py-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 leading-snug mb-[50px]">
-                    Our Core Values
-                </h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-                    <div class="flex flex-col items-center">
-                        <div
-                            class="animate-bounce w-16 h-16 border border-primary text-primary bg-white text-3xl  flex items-center justify-center rounded-full">
-                            <i class="fas fa-balance-scale"></i>
-                        </div>
-                        <h3 class="text-2xl font-semibold mt-4">Integrity</h3>
-                        <p class="text-gray-700 mt-2">
-                            We uphold honesty and strong moral principles in all our actions.
+                        <p class="mt-2 text-gray-600">
+                            Design beautiful user experiences with Figma and Adobe XD.
                         </p>
+                        <a href="#" class="text-blue-500 font-semibold mt-2 inline-block hover:underline">Apply Now
+                            →</a>
                     </div>
-                    <div class="flex flex-col items-center">
-                        <div
-                            class="animate-bounce w-16 h-16 border border-primary text-primary bg-white text-3xl  flex items-center justify-center rounded-full">
-                            <i class="fas fa-trophy"></i>
-                        </div>
-                        <h3 class="text-2xl font-semibold mt-4">Excellence</h3>
-                        <p class="text-gray-700 mt-2">
-                            Striving for the highest quality in everything we do.
+                    <div
+                        class="p-6 bg-white shadow-lg rounded-lg text-center transform hover:-translate-y-2 transition duration-300 ring-1 ring-gray-200 hover:ring-blue-500">
+                        <h3 class="text-2xl font-semibold text-gray-800">
+                            UI/UX Designer
+                        </h3>
+                        <p class="mt-2 text-gray-600">
+                            Design beautiful user experiences with Figma and Adobe XD.
                         </p>
+                        <a href="#" class="text-blue-500 font-semibold mt-2 inline-block hover:underline">Apply Now
+                            →</a>
                     </div>
-                    <div class="flex flex-col items-center">
-                        <div
-                            class="animate-bounce w-16 h-16 border border-primary text-primary bg-white text-3xl  flex items-center justify-center rounded-full">
-                            <i class="fas fa-handshake"></i>
-                        </div>
-                        <h3 class="text-2xl font-semibold mt-4">Commitment</h3>
-                        <p class="text-gray-700 mt-2">
-                            Dedicated to delivering value and exceeding expectations.
+                    <div
+                        class="p-6 bg-white shadow-lg rounded-lg text-center transform hover:-translate-y-2 transition duration-300 ring-1 ring-gray-200 hover:ring-blue-500">
+                        <h3 class="text-2xl font-semibold text-gray-800">
+                            UI/UX Designer
+                        </h3>
+                        <p class="mt-2 text-gray-600">
+                            Design beautiful user experiences with Figma and Adobe XD.
                         </p>
+                        <a href="#" class="text-blue-500 font-semibold mt-2 inline-block hover:underline">Apply Now
+                            →</a>
                     </div>
-                    <div class="flex flex-col items-center">
-                        <div
-                            class="animate-bounce w-16 h-16 border border-primary text-primary bg-white text-3xl  flex items-center justify-center rounded-full">
-                            <i class="fas fa-lightbulb"></i>
-                        </div>
-                        <h3 class="text-2xl font-semibold mt-4">Innovation</h3>
-                        <p class="text-gray-700 mt-2">
-                            Embracing creativity to drive progress and efficiency.
+                    <div
+                        class="p-6 bg-white shadow-lg rounded-lg text-center transform hover:-translate-y-2 transition duration-300 ring-1 ring-gray-200 hover:ring-blue-500">
+                        <h3 class="text-2xl font-semibold text-gray-800">
+                            UI/UX Designer
+                        </h3>
+                        <p class="mt-2 text-gray-600">
+                            Design beautiful user experiences with Figma and Adobe XD.
                         </p>
+                        <a href="#" class="text-blue-500 font-semibold mt-2 inline-block hover:underline">Apply Now
+                            →</a>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <div
-            class="relative bg-[url('/assets/images/home-banners/latest2.jpg')] bg-cover bg-no-repeat mt-[60px] p-[60px]">
-            <!-- Gradient Overlay -->
-            <div class="absolute inset-0 bg-gradient-to-t from-gray-200 to-transparent bg-opacity-10"></div>
-
-            <!-- Content Wrapper -->
-            <div class="relative max-w-6xl mx-auto">
-                <h2 class="text-3xl font-semibold text-gray-700 mb-8 text-center">
-                    Latest Company News
-                </h2>
-
-                <div class="newsgrid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <!-- News items will be inserted here dynamically -->
-                </div>
-            </div>
-        </div>
-
-
-        <div class="flex justify-center items-center pt-2 mt-[80px]">
-            <section class="w-[80%] text-center">
-                <h2 class="text-2xl font-bold text-gray-800 mb-4">
-                    Featured Integrations
-                </h2>
-
-                <div class="relative flex items-center justify-between">
-                    <button id="prev" class="p-2 bg-gray-200 rounded-full shadow">
-                        <i class="fa-solid fa-angle-left"></i>
-                    </button>
-                    <div id="carousel" class="flex space-x-4 justify-center items-center w-full overflow-hidden"></div>
-                    <button id="next" class="p-2 bg-gray-200 rounded-full shadow">
-                        <i class="fa-solid fa-angle-right" id="next" class=""></i>
-                    </button>
-                </div>
-
-                <h3 id="partner-name" class="text-lg font-semibold mt-4">
-                    Partner Name
-                </h3>
-                <p id="partner-desc" class="text-gray-600 mt-2">
-                    Description of the partner integration goes here.
-                </p>
-
-                <div class="flex justify-center mt-4 space-x-2">
-                    <span class="dot w-3 h-3 bg-gray-300 rounded-full"></span>
-                    <span class="dot w-3 h-3 bg-gray-300 rounded-full"></span>
-                    <span class="dot w-3 h-3 bg-gray-300 rounded-full"></span>
-                    <span class="dot w-3 h-3 bg-gray-300 rounded-full"></span>
-                </div>
-            </section>
-        </div>
-        <section class="py-16 px-6 bg-white">
-            <div class="max-w-7xl mx-auto text-center">
-                <h2 class="text-3xl font-bold text-gray-800 mb-8">Our Achievements</h2>
-
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Achievement 1 -->
-                    <div class="bg-gray-200 rounded-lg overflow-hidden shadow-lg">
-                        <img src="https://via.placeholder.com/500x300" alt="Achievement 1"
-                            class="w-full h-56 object-cover" />
-                        <div class="p-4">
-                            <h3 class="text-xl font-semibold text-gray-800 mb-2">
-                                Award for Excellence
-                            </h3>
-                            <p class="text-gray-600">
-                                Recognized for exceptional performance in the industry.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Achievement 2 -->
-                    <div class="bg-gray-200 rounded-lg overflow-hidden shadow-lg">
-                        <video controls class="w-full h-56 object-cover">
-                            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
-                            Your browser does not support the video tag.
-                        </video>
-                        <div class="p-4">
-                            <h3 class="text-xl font-semibold text-gray-800 mb-2">
-                                Innovative Project
-                            </h3>
-                            <p class="text-gray-600">
-                                A glimpse of the groundbreaking project we delivered.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Achievement 3 -->
-                    <div class="bg-gray-200 rounded-lg overflow-hidden shadow-lg">
-                        <img src="https://via.placeholder.com/500x300" alt="Achievement 3"
-                            class="w-full h-56 object-cover" />
-                        <div class="p-4">
-                            <h3 class="text-xl font-semibold text-gray-800 mb-2">
-                                Employee of the Year
-                            </h3>
-                            <p class="text-gray-600">
-                                Celebrating our top-performing team member.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="mt-12">
-                    <a href="#more-achievements"
-                        class="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-full hover:bg-blue-700 transition">See
-                        More Achievements</a>
-                </div>
-            </div>
-        </section>
-        <section class="bg-blue-50 py-12">
-            <div class="mx-auto px-4 text-center w-[80%]">
-                <h2 class="text-3xl font-bold text-blue-600 mb-6">
-                    What <span class="text-gray-700">People Say About Us</span>
-                </h2>
-                <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
-                    Travel has helped us to understand the meaning of life and it has
-                    helped us become better people. Each time we travel, we see the world
-                    with new eyes.
-                </p>
-                <div class="overflow-hidden">
-                    <div class="flex space-x-6 transition-transform duration-500 ease-in-out" id="testimonial-slider">
-                        <div class="bg-white p-6 rounded-2xl shadow-lg text-gray-700">
-                            <div class="mb-4 text-blue-500 text-2xl">
-                                <i class="fa fa-quote-left"></i>
-                            </div>
-                            <p class="italic">
-                                Lorem Ipsum is simply dummy text of the printing and typesetting
-                                industry...
-                            </p>
-                            <div class="mt-4 flex items-center justify-center">
-                                <img src="./assets/images/home-banners/latest2.jpg" class="w-12 h-12 rounded-full"
-                                    alt="Elison Marks" />
-                                <div class="ml-3 text-left">
-                                    <h4 class="text-blue-500 font-semibold">Elison Marks</h4>
-                                    <div class="text-yellow-500 text-sm">★★★★★</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="bg-white p-6 rounded-2xl shadow-lg text-gray-700">
-                            <div class="mb-4 text-blue-500 text-2xl">
-                                <i class="fa fa-quote-left"></i>
-                            </div>
-                            <p class="italic">
-                                Lorem Ipsum is simply dummy text of the printing and typesetting
-                                industry...
-                            </p>
-                            <div class="mt-4 flex items-center">
-                                <img src="images/testimonial/img2.jpg" class="w-12 h-12 rounded-full"
-                                    alt="Jared Erondu" />
-                                <div class="ml-3 text-left">
-                                    <h4 class="text-blue-500 font-semibold">Jared Erondu</h4>
-                                    <div class="text-yellow-500 text-sm">★★★★★</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="bg-white p-6 rounded-2xl shadow-lg text-gray-700">
-                            <div class="mb-4 text-blue-500 text-2xl">
-                                <i class="fa fa-quote-left"></i>
-                            </div>
-                            <p class="italic">
-                                Lorem Ipsum is simply dummy text of the printing and typesetting
-                                industry...
-                            </p>
-                            <div class="mt-4 flex items-center">
-                                <img src="images/testimonial/img3.jpg" class="w-12 h-12 rounded-full"
-                                    alt="Kelson Kelly" />
-                                <div class="ml-3 text-left">
-                                    <h4 class="text-blue-500 font-semibold">Kelson Kelly</h4>
-                                    <div class="text-yellow-500 text-sm">★★★★★</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- <button id="prev" class="absolute left-5 top-1/2 transform -translate-y-1/2 bg-blue-500 text-white p-3 rounded-full shadow-md">❮</button>
-          <button id="next" class="absolute right-5 top-1/2 transform -translate-y-1/2 bg-blue-500 text-white p-3 rounded-full shadow-md">❯</button> -->
-            </div>
-            <!-- <div class="absolute inset-0 bg-gray-900 bg-opacity-50"></div> -->
-        </section>
-
-        <div class="flex justify-center items-center min-h-screen">
-            <div class="w-[80%] bg-white shadow-lg rounded-lg p-10">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                    <!-- Left Section: Heading and Description -->
-                    <div>
-                        <h2 class="text-4xl font-bold text-gray-800">Join Our Team</h2>
-                        <p class="text-gray-600 mt-4 text-lg">
-                            We are looking for creative minds and passionate professionals to
-                            innovate with us. Explore our open positions and start your
-                            journey today. Effective teams communicate openly, leverage
-                            strengths, and embrace diversity for success.
-                        </p>
-                        <a href="#" class="bg-primary text-whiteClr hover:bg-primary/80 px-4 py-4">
-                            View More Openings
-                        </a>
-                    </div>
-                    <!-- Right Section: Team Members -->
-                    <div class="grid grid-cols-2 gap-6">
-                        <div
-                            class="p-6 bg-white shadow-lg rounded-lg text-center transform hover:-translate-y-2 transition duration-300 ring-1 ring-gray-200 hover:ring-blue-500">
-                            <h3 class="text-2xl font-semibold text-gray-800">
-                                UI/UX Designer
-                            </h3>
-                            <p class="mt-2 text-gray-600">
-                                Design beautiful user experiences with Figma and Adobe XD.
-                            </p>
-                            <a href="#" class="text-blue-500 font-semibold mt-2 inline-block hover:underline">Apply Now
-                                →</a>
-                        </div>
-                        <div
-                            class="p-6 bg-white shadow-lg rounded-lg text-center transform hover:-translate-y-2 transition duration-300 ring-1 ring-gray-200 hover:ring-blue-500">
-                            <h3 class="text-2xl font-semibold text-gray-800">
-                                UI/UX Designer
-                            </h3>
-                            <p class="mt-2 text-gray-600">
-                                Design beautiful user experiences with Figma and Adobe XD.
-                            </p>
-                            <a href="#" class="text-blue-500 font-semibold mt-2 inline-block hover:underline">Apply Now
-                                →</a>
-                        </div>
-                        <div
-                            class="p-6 bg-white shadow-lg rounded-lg text-center transform hover:-translate-y-2 transition duration-300 ring-1 ring-gray-200 hover:ring-blue-500">
-                            <h3 class="text-2xl font-semibold text-gray-800">
-                                UI/UX Designer
-                            </h3>
-                            <p class="mt-2 text-gray-600">
-                                Design beautiful user experiences with Figma and Adobe XD.
-                            </p>
-                            <a href="#" class="text-blue-500 font-semibold mt-2 inline-block hover:underline">Apply Now
-                                →</a>
-                        </div>
-                        <div
-                            class="p-6 bg-white shadow-lg rounded-lg text-center transform hover:-translate-y-2 transition duration-300 ring-1 ring-gray-200 hover:ring-blue-500">
-                            <h3 class="text-2xl font-semibold text-gray-800">
-                                UI/UX Designer
-                            </h3>
-                            <p class="mt-2 text-gray-600">
-                                Design beautiful user experiences with Figma and Adobe XD.
-                            </p>
-                            <a href="#" class="text-blue-500 font-semibold mt-2 inline-block hover:underline">Apply Now
-                                →</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- 
+    <!-- 
 <div class="bg-gray-100 py-10">
     <div class="max-w-6xl mx-auto bg-white p-8 rounded-lg shadow-lg">
         <h2 class="text-3xl font-semibold text-center text-gray-800 mb-8">Document Table</h2>
@@ -998,162 +1011,162 @@
     </div>
 </div> -->
 
-        <section class="py-16 px-6">
-            <div class="max-w-8xl mx-auto">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-16">
-                    <div class="shadow-lg rounded-lg p-8">
-                        <h2 class="text-3xl font-semibold text-center text-gray-700 mb-6">
-                            Download Documents
-                        </h2>
+    <section class="py-16 px-6">
+        <div class="max-w-8xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-16">
+                <div class="shadow-lg rounded-lg p-8">
+                    <h2 class="text-3xl font-semibold text-center text-gray-700 mb-6">
+                        Download Documents
+                    </h2>
 
-                        <!-- Swiper Container -->
-                        <div class="swiper-container relative w-full rounded-lg overflow-hidden">
-                            <div class="swiper-wrapper">
-                                <!-- Slide 1 -->
-                                <div class="swiper-slide flex justify-center items-center">
-                                    <div class="space-y-4 w-full max-w-lg">
-                                        <!-- Document 1 -->
-                                        <div
-                                            class="flex items-center justify-between p-4 bg-gray-50 rounded-lg shadow-md hover:bg-gray-100 transition">
-                                            <div class="flex items-center space-x-4">
-                                                <i class="fas fa-file-pdf text-red-600 text-3xl"></i>
-                                                <div>
-                                                    <p class="font-medium text-lg text-gray-800">
-                                                        PDF Guide
-                                                    </p>
-                                                    <p class="text-sm text-gray-500">
-                                                        Last updated: Jan 2025
-                                                    </p>
-                                                </div>
+                    <!-- Swiper Container -->
+                    <div class="swiper-container relative w-full rounded-lg overflow-hidden">
+                        <div class="swiper-wrapper">
+                            <!-- Slide 1 -->
+                            <div class="swiper-slide flex justify-center items-center">
+                                <div class="space-y-4 w-full max-w-lg">
+                                    <!-- Document 1 -->
+                                    <div
+                                        class="flex items-center justify-between p-4 bg-gray-50 rounded-lg shadow-md hover:bg-gray-100 transition">
+                                        <div class="flex items-center space-x-4">
+                                            <i class="fas fa-file-pdf text-red-600 text-3xl"></i>
+                                            <div>
+                                                <p class="font-medium text-lg text-gray-800">
+                                                    PDF Guide
+                                                </p>
+                                                <p class="text-sm text-gray-500">
+                                                    Last updated: Jan 2025
+                                                </p>
                                             </div>
-                                            <a href="#"
-                                                class="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-blue-700 transition">Download</a>
                                         </div>
-
-                                        <!-- Document 2 -->
-                                        <div
-                                            class="flex items-center justify-between p-4 bg-gray-50 rounded-lg shadow-md hover:bg-gray-100 transition">
-                                            <div class="flex items-center space-x-4">
-                                                <i class="fas fa-file-word text-blue-600 text-3xl"></i>
-                                                <div>
-                                                    <p class="font-medium text-lg text-gray-800">
-                                                        Word Document
-                                                    </p>
-                                                    <p class="text-sm text-gray-500">
-                                                        Last updated: Dec 2024
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <a href="#"
-                                                class="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-blue-700 transition">Download</a>
-                                        </div>
-
-                                        <!-- Document 3 -->
-                                        <div
-                                            class="flex items-center justify-between p-4 bg-gray-50 rounded-lg shadow-md hover:bg-gray-100 transition">
-                                            <div class="flex items-center space-x-4">
-                                                <i class="fas fa-file-excel text-green-600 text-3xl"></i>
-                                                <div>
-                                                    <p class="font-medium text-lg text-gray-800">
-                                                        Excel Sheet
-                                                    </p>
-                                                    <p class="text-sm text-gray-500">
-                                                        Last updated: Nov 2024
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <a href="#"
-                                                class="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-blue-700 transition">Download</a>
-                                        </div>
+                                        <a href="#"
+                                            class="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-blue-700 transition">Download</a>
                                     </div>
-                                </div>
 
-                                <!-- Slide 2 -->
-                                <div class="swiper-slide flex justify-center items-center">
-                                    <div class="space-y-4 w-full max-w-lg">
-                                        <!-- Document 1 -->
-                                        <div
-                                            class="flex items-center justify-between p-4 bg-gray-50 rounded-lg shadow-md hover:bg-gray-100 transition">
-                                            <div class="flex items-center space-x-4">
-                                                <i class="fas fa-file-pdf text-red-600 text-3xl"></i>
-                                                <div>
-                                                    <p class="font-medium text-lg text-gray-800">
-                                                        PDF 222 Guide
-                                                    </p>
-                                                    <p class="text-sm text-gray-500">
-                                                        Last updated: Jan 2025
-                                                    </p>
-                                                </div>
+                                    <!-- Document 2 -->
+                                    <div
+                                        class="flex items-center justify-between p-4 bg-gray-50 rounded-lg shadow-md hover:bg-gray-100 transition">
+                                        <div class="flex items-center space-x-4">
+                                            <i class="fas fa-file-word text-blue-600 text-3xl"></i>
+                                            <div>
+                                                <p class="font-medium text-lg text-gray-800">
+                                                    Word Document
+                                                </p>
+                                                <p class="text-sm text-gray-500">
+                                                    Last updated: Dec 2024
+                                                </p>
                                             </div>
-                                            <a href="#"
-                                                class="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-blue-700 transition">Download</a>
                                         </div>
+                                        <a href="#"
+                                            class="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-blue-700 transition">Download</a>
+                                    </div>
 
-                                        <!-- Document 2 -->
-                                        <div
-                                            class="flex items-center justify-between p-4 bg-gray-50 rounded-lg shadow-md hover:bg-gray-100 transition">
-                                            <div class="flex items-center space-x-4">
-                                                <i class="fas fa-file-word text-blue-600 text-3xl"></i>
-                                                <div>
-                                                    <p class="font-medium text-lg text-gray-800">
-                                                        Word 222 Document
-                                                    </p>
-                                                    <p class="text-sm text-gray-500">
-                                                        Last updated: Dec 2024
-                                                    </p>
-                                                </div>
+                                    <!-- Document 3 -->
+                                    <div
+                                        class="flex items-center justify-between p-4 bg-gray-50 rounded-lg shadow-md hover:bg-gray-100 transition">
+                                        <div class="flex items-center space-x-4">
+                                            <i class="fas fa-file-excel text-green-600 text-3xl"></i>
+                                            <div>
+                                                <p class="font-medium text-lg text-gray-800">
+                                                    Excel Sheet
+                                                </p>
+                                                <p class="text-sm text-gray-500">
+                                                    Last updated: Nov 2024
+                                                </p>
                                             </div>
-                                            <a href="#"
-                                                class="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-blue-700 transition">Download</a>
                                         </div>
-
-                                        <!-- Document 3 -->
-                                        <div
-                                            class="flex items-center justify-between p-4 bg-gray-50 rounded-lg shadow-md hover:bg-gray-100 transition">
-                                            <div class="flex items-center space-x-4">
-                                                <i class="fas fa-file-excel text-green-600 text-3xl"></i>
-                                                <div>
-                                                    <p class="font-medium text-lg text-gray-800">
-                                                        Excel 2222 Sheet
-                                                    </p>
-                                                    <p class="text-sm text-gray-500">
-                                                        Last updated: Nov 2024
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <a href="#"
-                                                class="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-blue-700 transition">Download</a>
-                                        </div>
+                                        <a href="#"
+                                            class="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-blue-700 transition">Download</a>
                                     </div>
                                 </div>
                             </div>
 
-                            <!-- Swiper Pagination -->
-                            <div class="swiper-pagination mt-6"></div>
+                            <!-- Slide 2 -->
+                            <div class="swiper-slide flex justify-center items-center">
+                                <div class="space-y-4 w-full max-w-lg">
+                                    <!-- Document 1 -->
+                                    <div
+                                        class="flex items-center justify-between p-4 bg-gray-50 rounded-lg shadow-md hover:bg-gray-100 transition">
+                                        <div class="flex items-center space-x-4">
+                                            <i class="fas fa-file-pdf text-red-600 text-3xl"></i>
+                                            <div>
+                                                <p class="font-medium text-lg text-gray-800">
+                                                    PDF 222 Guide
+                                                </p>
+                                                <p class="text-sm text-gray-500">
+                                                    Last updated: Jan 2025
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <a href="#"
+                                            class="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-blue-700 transition">Download</a>
+                                    </div>
 
-                            <!-- Swiper Navigation Arrows -->
-                            <div class="swiper-button-next text-secondary font-xs"></div>
-                            <div class="swiper-button-prev text-secondary"></div>
+                                    <!-- Document 2 -->
+                                    <div
+                                        class="flex items-center justify-between p-4 bg-gray-50 rounded-lg shadow-md hover:bg-gray-100 transition">
+                                        <div class="flex items-center space-x-4">
+                                            <i class="fas fa-file-word text-blue-600 text-3xl"></i>
+                                            <div>
+                                                <p class="font-medium text-lg text-gray-800">
+                                                    Word 222 Document
+                                                </p>
+                                                <p class="text-sm text-gray-500">
+                                                    Last updated: Dec 2024
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <a href="#"
+                                            class="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-blue-700 transition">Download</a>
+                                    </div>
+
+                                    <!-- Document 3 -->
+                                    <div
+                                        class="flex items-center justify-between p-4 bg-gray-50 rounded-lg shadow-md hover:bg-gray-100 transition">
+                                        <div class="flex items-center space-x-4">
+                                            <i class="fas fa-file-excel text-green-600 text-3xl"></i>
+                                            <div>
+                                                <p class="font-medium text-lg text-gray-800">
+                                                    Excel 2222 Sheet
+                                                </p>
+                                                <p class="text-sm text-gray-500">
+                                                    Last updated: Nov 2024
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <a href="#"
+                                            class="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-blue-700 transition">Download</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+
+                        <!-- Swiper Pagination -->
+                        <div class="swiper-pagination mt-6"></div>
+
+                        <!-- Swiper Navigation Arrows -->
+                        <div class="swiper-button-next text-secondary font-xs"></div>
+                        <div class="swiper-button-prev text-secondary"></div>
                     </div>
-                    <!-- Right Column: Circular Download -->
-                    <div class="flex justify-center items-center">
-                        <div
-                            class="relative w-80 h-80 bg-gradient-to-r from-primary to-secondary rounded-full flex flex-col justify-center items-center shadow-xl text-white text-center">
-                            <h3 class="text-2xl font-bold">Download Circulars</h3>
-                            <p class="text-sm text-gray-100 px-6 mt-2">
-                                Stay updated with important notices.
-                            </p>
-                            <a href="#"
-                                class="mt-4 bg-white text-blue-600 px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-gray-100 transition">Download
-                                Now</a>
-                        </div>
+                </div>
+                <!-- Right Column: Circular Download -->
+                <div class="flex justify-center items-center">
+                    <div
+                        class="relative w-80 h-80 bg-gradient-to-r from-primary to-secondary rounded-full flex flex-col justify-center items-center shadow-xl text-white text-center">
+                        <h3 class="text-2xl font-bold">Download Circulars</h3>
+                        <p class="text-sm text-gray-100 px-6 mt-2">
+                            Stay updated with important notices.
+                        </p>
+                        <a href="#"
+                            class="mt-4 bg-white text-blue-600 px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-gray-100 transition">Download
+                            Now</a>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- <section class="text-center py-16 px-6 ">
+    <!-- <section class="text-center py-16 px-6 ">
         <h2 class="text-3xl font-extrabold text-blue-600 uppercase relative inline-block">
             WHAT WE OFFER
             <span class="absolute bottom-0 left-1/2 w-24 h-1 bg-blue-500 -translate-x-1/2"></span>
@@ -1218,7 +1231,7 @@
         </div>
     </section> -->
 
-        <!-- <section class="w-full max-w-6xl px-6 py-12">
+    <!-- <section class="w-full max-w-6xl px-6 py-12">
         <div class="grid md:grid-cols-3 gap-6">
             <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-200 transition transform hover:scale-105">
                 <div class="flex items-center space-x-3">
@@ -1266,78 +1279,78 @@
 
 
 
-        <section class="w-[80%] flex mx-auto flex-col justify-center items-center py-16 px-10 overflow-hidden ">
-            <h1
-                class="text-4xl font-bold tracking-tight text-gray-900 mb-16 transform transition-all duration-500 ease-in-out hover:scale-105">
-                Key Features of the Exchange
-            </h1>
+    <section class="w-[80%] flex mx-auto flex-col justify-center items-center py-16 px-10 overflow-hidden ">
+        <h1
+            class="text-4xl font-bold tracking-tight text-gray-900 mb-16 transform transition-all duration-500 ease-in-out hover:scale-105">
+            Key Features of the Exchange
+        </h1>
 
-            <div class="w-full max-w-7xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 ">
-                <div
-                    class="flex flex-col items-center p-5  rounded-xl shadow-lg hover:scale-105 transition-all duration-300 ease-in-out ">
-                    <span class="material-symbols-outlined text-primary text-5xl w-16 h-16 mb-4">hub</span>
+        <div class="w-full max-w-7xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 ">
+            <div
+                class="flex flex-col items-center p-5  rounded-xl shadow-lg hover:scale-105 transition-all duration-300 ease-in-out ">
+                <span class="material-symbols-outlined text-primary text-5xl w-16 h-16 mb-4">hub</span>
 
-                    <p class="text-medium text-center">
-                        Nation-wide, electronic Exchange for trading of power.
-                    </p>
-                </div>
-
-                <div class="flex flex-col items-center bg-white rounded-xl shadow-lg hover:scale-105 transition-all  p-5  duration-300 ease-in-out "
-                    style="animation-delay: 0.2s">
-
-                    <span class="material-symbols-outlined text-primary text-5xl w-16 h-16 mb-4">analytics</span>
-
-                    <p class="text-medium text-center ">
-                        Exchange handles power trading and transmission clearance
-                        simultaneously.
-                    </p>
-                </div>
-
-                <div class="flex flex-col items-center bg-white rounded-xl shadow-lg hover:scale-105 transition-all p-5 duration-300 ease-in-out"
-                    style="animation-delay: 0.4s">
-
-                    <span class="material-symbols-outlined text-primary text-5xl w-16 h-16 mb-4">update</span>
-                    <p class="text-medium  text-center">
-                        Trading happens for Day Ahead, Day Ahead Contingency, Any Day, Intra
-                        Day, and Weekly Contracts.
-                    </p>
-                </div>
-
-                <div class="flex flex-col items-center bg-white rounded-xl shadow-lg hover:scale-105 transition-all  p-5  duration-300 ease-in-out"
-                    style="animation-delay: 0.6s">
-
-                    <span class="material-symbols-outlined text-primary text-5xl w-16 h-16 mb-4">eco</span>
-
-                    <p class="text-medium text-center">
-                        Trading platform available for Renewable Energy Certificates.
-                    </p>
-                </div>
-
-                <div class="flex flex-col items-center  bg-white rounded-xl shadow-lg hover:scale-105 transition-all p-5 duration-300 ease-in-out col-span-2"
-                    style="animation-delay: 0.8s">
-
-                    <span class="material-symbols-outlined text-primary text-5xl w-16 h-16 mb-4">bolt</span>
-
-                    <p class="text-medium text-center">
-                        More contracts to be introduced in due course.
-                    </p>
-                </div>
-
-                <div class="flex flex-col items-center  bg-white rounded-xl shadow-lg hover:scale-105 transition-all p-5 duration-300 ease-in-out col-span-2"
-                    style="animation-delay: 1s">
-
-                    <i class="fas fa-shield-alt  text-primary text-5xl w-16 h-16 mb-4"></i>
-
-                    <p class="text-medium text-center">
-                        Exchange is a central counterparty to all trades done on the
-                        Exchange.
-                    </p>
-                </div>
+                <p class="text-medium text-center">
+                    Nation-wide, electronic Exchange for trading of power.
+                </p>
             </div>
-        </section>
+
+            <div class="flex flex-col items-center bg-white rounded-xl shadow-lg hover:scale-105 transition-all  p-5  duration-300 ease-in-out "
+                style="animation-delay: 0.2s">
+
+                <span class="material-symbols-outlined text-primary text-5xl w-16 h-16 mb-4">analytics</span>
+
+                <p class="text-medium text-center ">
+                    Exchange handles power trading and transmission clearance
+                    simultaneously.
+                </p>
+            </div>
+
+            <div class="flex flex-col items-center bg-white rounded-xl shadow-lg hover:scale-105 transition-all p-5 duration-300 ease-in-out"
+                style="animation-delay: 0.4s">
+
+                <span class="material-symbols-outlined text-primary text-5xl w-16 h-16 mb-4">update</span>
+                <p class="text-medium  text-center">
+                    Trading happens for Day Ahead, Day Ahead Contingency, Any Day, Intra
+                    Day, and Weekly Contracts.
+                </p>
+            </div>
+
+            <div class="flex flex-col items-center bg-white rounded-xl shadow-lg hover:scale-105 transition-all  p-5  duration-300 ease-in-out"
+                style="animation-delay: 0.6s">
+
+                <span class="material-symbols-outlined text-primary text-5xl w-16 h-16 mb-4">eco</span>
+
+                <p class="text-medium text-center">
+                    Trading platform available for Renewable Energy Certificates.
+                </p>
+            </div>
+
+            <div class="flex flex-col items-center  bg-white rounded-xl shadow-lg hover:scale-105 transition-all p-5 duration-300 ease-in-out col-span-2"
+                style="animation-delay: 0.8s">
+
+                <span class="material-symbols-outlined text-primary text-5xl w-16 h-16 mb-4">bolt</span>
+
+                <p class="text-medium text-center">
+                    More contracts to be introduced in due course.
+                </p>
+            </div>
+
+            <div class="flex flex-col items-center  bg-white rounded-xl shadow-lg hover:scale-105 transition-all p-5 duration-300 ease-in-out col-span-2"
+                style="animation-delay: 1s">
+
+                <i class="fas fa-shield-alt  text-primary text-5xl w-16 h-16 mb-4"></i>
+
+                <p class="text-medium text-center">
+                    Exchange is a central counterparty to all trades done on the
+                    Exchange.
+                </p>
+            </div>
+        </div>
+    </section>
 
 
-        <!-- <div class="bg-white text-gray-800">
+    <!-- <div class="bg-white text-gray-800">
             <section class="relative w-full min-h-screen flex flex-col justify-center items-center py-16 px-10 overflow-hidden">
                 <h1 class="text-5xl font-bold tracking-tight text-gray-900 mb-16 transform transition-all duration-500 ease-in-out hover:scale-105">
                     Key Features of the Exchange
@@ -1401,7 +1414,7 @@
             </section>
         </div> -->
 
-        <!--        
+    <!--        
         <div class="bg-white text-gray-800">
             <section class="relative w-full min-h-screen flex flex-col justify-center items-center py-16 px-10 overflow-hidden">
                 <h1 class="text-5xl font-bold tracking-tight text-gray-900 mb-16">
@@ -1466,65 +1479,65 @@
             </section>
         </div> -->
 
-        <div class="bg-whiteClr text-textClr">
-            <section class="w-full py-16 px-8 flex flex-col items-center">
-                <h2 class="text-4xl font-extrabold text-secondary text-center">
-                    OUR CONTACTS
-                </h2>
-                <p class="text-lightText text-center mt-2 max-w-2xl">
-                    Connect with us for inquiries and support. We are here to help you
-                    with all your energy trading needs.
-                </p>
+    <div class="bg-whiteClr text-textClr">
+        <section class="w-full py-16 px-8 flex flex-col items-center">
+            <h2 class="text-4xl font-extrabold text-secondary text-center">
+                OUR CONTACTS
+            </h2>
+            <p class="text-lightText text-center mt-2 max-w-2xl">
+                Connect with us for inquiries and support. We are here to help you
+                with all your energy trading needs.
+            </p>
 
-                <div
-                    class="mt-10 w-full max-w-7xl bg-whiteClr shadow-lg rounded-lg p-8 grid grid-cols-1 md:grid-cols-4 gap-6">
-                    <div class="flex flex-col items-center">
-                        <i class="ph ph-map-pin text-primary text-5xl"></i>
-                        <h3 class="font-semibold text-lg mt-3">HEAD OFFICE</h3>
-                        <p class="text-sm text-lightText text-center">
-                            9th Floor, 901 , Sumer Plaza, Marol Maroshi Road, Marol Andheri
-                            (East), Mumbai 400059, India
-                        </p>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <i class="ph ph-map-pin text-primary text-5xl"></i>
-                        <h3 class="font-semibold text-lg mt-3">BRANCH OFFICE</h3>
-                        <p class="text-sm text-lightText text-center">
-                            Unit No. 1012, 1014, 1015 10th Floor, Plot No. 11, DLF Tower-B,
-                            Jasola District Centre New Delhi 110025, India
-                        </p>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <i class="ph ph-phone text-tertiary text-5xl"></i>
-                        <h3 class="font-semibold text-lg mt-3">CALL US</h3>
-                        <p class="text-sm text-lightText text-center">
-                            HEAD OFFICE No.: + 91 22 4009 6600
-                        </p>
-                        <p class="text-sm text-lightText text-center">
-                            HEAD OFFICE No.: + 91 22 4009 6633
-                        </p>
-                        <p class="text-sm text-lightText text-center">
-                            BRANCH OFFICE No.: +91 11 4075 6000
-                        </p>
-                    </div>
-
-                    <div class="flex flex-col items-center">
-                        <i class="ph ph-envelope text-secondary text-5xl"></i>
-                        <h3 class="font-semibold text-lg mt-3">EMAIL US</h3>
-                        <p class="text-sm text-lightText text-center">info@pxil.co.in</p>
-                    </div>
+            <div
+                class="mt-10 w-full max-w-7xl bg-whiteClr shadow-lg rounded-lg p-8 grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div class="flex flex-col items-center">
+                    <i class="ph ph-map-pin text-primary text-5xl"></i>
+                    <h3 class="font-semibold text-lg mt-3">HEAD OFFICE</h3>
+                    <p class="text-sm text-lightText text-center">
+                        9th Floor, 901 , Sumer Plaza, Marol Maroshi Road, Marol Andheri
+                        (East), Mumbai 400059, India
+                    </p>
                 </div>
-            </section>
-        </div>
+                <div class="flex flex-col items-center">
+                    <i class="ph ph-map-pin text-primary text-5xl"></i>
+                    <h3 class="font-semibold text-lg mt-3">BRANCH OFFICE</h3>
+                    <p class="text-sm text-lightText text-center">
+                        Unit No. 1012, 1014, 1015 10th Floor, Plot No. 11, DLF Tower-B,
+                        Jasola District Centre New Delhi 110025, India
+                    </p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <i class="ph ph-phone text-tertiary text-5xl"></i>
+                    <h3 class="font-semibold text-lg mt-3">CALL US</h3>
+                    <p class="text-sm text-lightText text-center">
+                        HEAD OFFICE No.: + 91 22 4009 6600
+                    </p>
+                    <p class="text-sm text-lightText text-center">
+                        HEAD OFFICE No.: + 91 22 4009 6633
+                    </p>
+                    <p class="text-sm text-lightText text-center">
+                        BRANCH OFFICE No.: +91 11 4075 6000
+                    </p>
+                </div>
+
+                <div class="flex flex-col items-center">
+                    <i class="ph ph-envelope text-secondary text-5xl"></i>
+                    <h3 class="font-semibold text-lg mt-3">EMAIL US</h3>
+                    <p class="text-sm text-lightText text-center">info@pxil.co.in</p>
+                </div>
+            </div>
+        </section>
+    </div>
 
 
-        <!-- Footer will be loaded here -->
-        <div id="footer"></div>
+    <!-- Footer will be loaded here -->
+    <div id="footer"></div>
 
-        <!-- Pages/Components Sripts -->
-        <script src="./assets/js/loadComponents.js"></script>
-        <script src="./assets/js/home.js"></script>
-        <script src="./assets/js/tailwind.js"></script><!-- To import taiwlind css -->
+    <!-- Pages/Components Sripts -->
+    <script src="./assets/js/loadComponents.js"></script>
+    <script src="./assets/js/home.js"></script>
+    <script src="./assets/js/tailwind.js"></script><!-- To import taiwlind css -->
 </body>
 
 </html>
