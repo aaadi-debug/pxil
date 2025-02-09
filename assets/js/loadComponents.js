@@ -19,7 +19,7 @@ function loadComponent(componentId, filePath, callback) {
 // Function to highlight the active navbar link
 function highlightActiveNav() {
     let navLinks = document.querySelectorAll(".navbar-links a");
-    // console.log("🔍 Found nav links:", navLinks.length);
+    console.log("🔍 Found nav links:", navLinks.length);
 
     if (navLinks.length === 0) {
         console.error("❌ No navigation links found! Check if navbar loaded properly.");
@@ -27,15 +27,15 @@ function highlightActiveNav() {
     }
 
     let currentPage = window.location.pathname.replace(/\/$/, ""); // Remove trailing slash
-    // console.log("🌐 Current Page:", currentPage);
+    console.log("🌐 Current Page:", currentPage);
 
     navLinks.forEach(link => {
         let linkPath = new URL(link.href, window.location.origin).pathname.replace(/\/$/, "");
-        // console.log("🔗 Checking Link:", linkPath, "vs", currentPage);
+        console.log("🔗 Checking Link:", linkPath, "vs", currentPage);
 
         if (linkPath === currentPage || (linkPath === "/" && currentPage === "")) {
             link.classList.add("active");
-            // console.log("✅ Active class added to:", linkPath);
+            console.log("✅ Active class added to:", linkPath);
         }
     });
 }
