@@ -10,13 +10,13 @@
 
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-  integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-  crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
 
-<script src="https://unpkg.com/@phosphor-icons/web"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
-<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
   <style>
     .timeline-container {
@@ -40,9 +40,13 @@
 
   <div id="navbar"></div>
 
-  <section class="text-center py-20">
-    <h2 class="text-3xl font-bold">About Us</h2>
-    <p class="mt-4 text-lg">Latest energy exchange market prices.</p>
+  <section class="relative text-center py-20 bg-blue-50 mt-32">
+    <div class="text-3xl text-primary font-bold">About Us</div>
+    <div class="absolute left-0 bottom-0 py-4 w-full flex gap-2 justify-center items-center text-secondary ">
+      <a href="/" class="text-sm hover:text-primary transition duration-300"><i class="fa-solid fa-house"></i></a>
+      <i class="fa-solid fa-chevron-right text-xs"></i>
+      <div>About Us</div>
+    </div>
   </section>
 
 
@@ -113,315 +117,316 @@
       </div>
 
     </div>
+  </section>
 
 
 
-    <!-- Timeline Container -->
-    <div class="flex justify-center items-center mt-10 relative h-screen">
-      <div class="flex items-center relative z-10">
-        <!-- Timeline Steps (Year markers) -->
-        <div id="step1"
-          class="timeline-step bg-gray-400 text-white  flex justify-center items-center w-20 h-10 mx-3 font-semibold text-sm">
-          Year 2018</div>
-        <div id="step2"
-          class="timeline-step bg-gray-400 text-white rounded-full flex justify-center items-center w-10 h-10 mx-3 font-semibold text-sm">
-          2</div>
-        <div id="step3"
-          class="timeline-step bg-gray-400 text-white rounded-full flex justify-center items-center w-10 h-10 mx-3 font-semibold text-sm">
-          3</div>
-        <div id="step4"
-          class="timeline-step bg-gray-400 text-white rounded-full flex justify-center items-center w-10 h-10 mx-3 font-semibold text-sm">
-          4</div>
-        <div id="step5"
-          class="timeline-step bg-gray-400 text-white rounded-full flex justify-center items-center w-10 h-10 mx-3 font-semibold text-sm">
-          5</div>
-        <div id="step6"
-          class="timeline-step bg-gray-400 text-white rounded-full flex justify-center items-center w-10 h-10 mx-3 font-semibold text-sm">
-          6</div>
-        <div id="step7"
-          class="timeline-step bg-gray-400 text-white rounded-full flex justify-center items-center w-10 h-10 mx-3 font-semibold text-sm">
-          7</div>
-        <div id="step8"
-          class="timeline-step bg-gray-400 text-white rounded-full flex justify-center items-center w-10 h-10 mx-3 font-semibold text-sm">
-          8</div>
-        <div id="step9"
-          class="timeline-step bg-gray-400 text-white rounded-full flex justify-center items-center w-10 h-10 mx-3 font-semibold text-sm">
-          9</div>
-        <div id="step10"
-          class="timeline-step bg-gray-400 text-white rounded-full flex justify-center items-center w-10 h-10 mx-3 font-semibold text-sm">
-          10</div>
-      </div>
-
-      <!-- Timeline Line -->
-      <div class="absolute top-1/2 left-0 w-full h-1 bg-gray-300 transform -translate-y-1/2 z-0" id="timeline-line">
-      </div>
+  <!-- Timeline Container -->
+  <div class="flex justify-center items-center mt-10 relative h-screen">
+    <div class="flex items-center relative z-10">
+      <!-- Timeline Steps (Year markers) -->
+      <div id="step1"
+        class="timeline-step bg-gray-400 text-white  flex justify-center items-center w-20 h-10 mx-3 font-semibold text-sm">
+        Year 2018</div>
+      <div id="step2"
+        class="timeline-step bg-gray-400 text-white rounded-full flex justify-center items-center w-10 h-10 mx-3 font-semibold text-sm">
+        2</div>
+      <div id="step3"
+        class="timeline-step bg-gray-400 text-white rounded-full flex justify-center items-center w-10 h-10 mx-3 font-semibold text-sm">
+        3</div>
+      <div id="step4"
+        class="timeline-step bg-gray-400 text-white rounded-full flex justify-center items-center w-10 h-10 mx-3 font-semibold text-sm">
+        4</div>
+      <div id="step5"
+        class="timeline-step bg-gray-400 text-white rounded-full flex justify-center items-center w-10 h-10 mx-3 font-semibold text-sm">
+        5</div>
+      <div id="step6"
+        class="timeline-step bg-gray-400 text-white rounded-full flex justify-center items-center w-10 h-10 mx-3 font-semibold text-sm">
+        6</div>
+      <div id="step7"
+        class="timeline-step bg-gray-400 text-white rounded-full flex justify-center items-center w-10 h-10 mx-3 font-semibold text-sm">
+        7</div>
+      <div id="step8"
+        class="timeline-step bg-gray-400 text-white rounded-full flex justify-center items-center w-10 h-10 mx-3 font-semibold text-sm">
+        8</div>
+      <div id="step9"
+        class="timeline-step bg-gray-400 text-white rounded-full flex justify-center items-center w-10 h-10 mx-3 font-semibold text-sm">
+        9</div>
+      <div id="step10"
+        class="timeline-step bg-gray-400 text-white rounded-full flex justify-center items-center w-10 h-10 mx-3 font-semibold text-sm">
+        10</div>
     </div>
 
-    <!-- Story Cards -->
-    <div
-      class="absolute w-4/5 flex flex-row top-3/6 left-1/2 transform -translate-x-1/2  overflow-y-auto  bg-white p-6 rounded-lg shadow-lg space-y-6 border border-red-800">
-      <div id="card1" class="story-card opacity-0 transform translate-y-6 transition-all duration-500">
-        <h2 class="text-lg font-semibold text-gray-800">Year 1: The Beginning</h2>
-        <p class="text-gray-600 text-sm">In the first year, we set the foundations and established our core mission. It
-          was all about starting strong!</p>
+    <!-- Timeline Line -->
+    <div class="absolute top-1/2 left-0 w-full h-1 bg-gray-300 transform -translate-y-1/2 z-0" id="timeline-line">
+    </div>
+  </div>
+
+  <!-- Story Cards -->
+  <div
+    class="absolute w-4/5 flex flex-row top-3/6 left-1/2 transform -translate-x-1/2  overflow-y-auto  bg-white p-6 rounded-lg shadow-lg space-y-6 border border-red-800">
+    <div id="card1" class="story-card opacity-0 transform translate-y-6 transition-all duration-500">
+      <h2 class="text-lg font-semibold text-gray-800">Year 1: The Beginning</h2>
+      <p class="text-gray-600 text-sm">In the first year, we set the foundations and established our core mission. It
+        was all about starting strong!</p>
+    </div>
+    <div id="card2" class="story-card opacity-0 transform translate-y-6 transition-all duration-500">
+      <h2 class="text-lg font-semibold text-gray-800">Year 2: Growth</h2>
+      <p class="text-gray-600 text-sm">Year 2 was about growth. Expanding our team, and increasing our reach.</p>
+    </div>
+    <div id="card3" class="story-card opacity-0 transform translate-y-6 transition-all duration-500">
+      <h2 class="text-lg font-semibold text-gray-800">Year 3: Expansion</h2>
+      <p class="text-gray-600 text-sm">We expanded into new markets, taking the brand to places we had never imagined.
+      </p>
+    </div>
+    <div id="card4" class="story-card opacity-0 transform translate-y-6 transition-all duration-500">
+      <h2 class="text-lg font-semibold text-gray-800">Year 4: Global Connections</h2>
+      <p class="text-gray-600 text-sm">Partnerships with international companies marked our global entry, creating new
+        opportunities.</p>
+    </div>
+    <div id="card5" class="story-card opacity-0 transform translate-y-6 transition-all duration-500">
+      <h2 class="text-lg font-semibold text-gray-800">Year 5: Milestone Achieved</h2>
+      <p class="text-gray-600 text-sm">We reached a major milestone this year with a new product launch that set
+        records!</p>
+    </div>
+    <div id="card6" class="story-card opacity-0 transform translate-y-6 transition-all duration-500">
+      <h2 class="text-lg font-semibold text-gray-800">Year 6: Innovation</h2>
+      <p class="text-gray-600 text-sm">We introduced innovative technology that disrupted the market and took us to
+        the next level.</p>
+    </div>
+    <div id="card7" class="story-card opacity-0 transform translate-y-6 transition-all duration-500">
+      <h2 class="text-lg font-semibold text-gray-800">Year 7: Overcoming Challenges</h2>
+      <p class="text-gray-600 text-sm">Faced with new challenges, we showed resilience and came out stronger.</p>
+    </div>
+    <div id="card8" class="story-card opacity-0 transform translate-y-6 transition-all duration-500">
+      <h2 class="text-lg font-semibold text-gray-800">Year 8: Scaling Globally</h2>
+      <p class="text-gray-600 text-sm">Our reach grew internationally with offices in 5 new countries.</p>
+    </div>
+    <div id="card9" class="story-card opacity-0 transform translate-y-6 transition-all duration-500">
+      <h2 class="text-lg font-semibold text-gray-800">Year 9: Community Engagement</h2>
+      <p class="text-gray-600 text-sm">In Year 9, we focused on giving back to the community and sustainability
+        efforts.</p>
+    </div>
+    <div id="card10" class="story-card opacity-0 transform translate-y-6 transition-all duration-500">
+      <h2 class="text-lg font-semibold text-gray-800">Year 10: Celebrating Success</h2>
+      <p class="text-gray-600 text-sm">The final year marked a decade of success, where we reflected on our
+        achievements and set new goals for the future.</p>
+    </div>
+  </div>
+
+  <div class="flex items-center justify-center mt-8">
+    <div class="max-w-6xl w-full text-center py-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 leading-snug mb-[50px]">
+        Our Core Values
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div class="flex flex-col items-center">
+          <div
+            class="animate-bounce w-16 h-16 border border-primary text-primary bg-white text-3xl  flex items-center justify-center rounded-full">
+            <i class="fas fa-balance-scale"></i>
+          </div>
+          <h3 class="text-2xl font-semibold mt-4">Integrity</h3>
+          <p class="text-gray-700 mt-2">
+            We uphold honesty and strong moral principles in all our actions.
+          </p>
+        </div>
+        <div class="flex flex-col items-center">
+          <div
+            class="animate-bounce w-16 h-16 border border-primary text-primary bg-white text-3xl  flex items-center justify-center rounded-full">
+            <i class="fas fa-trophy"></i>
+          </div>
+          <h3 class="text-2xl font-semibold mt-4">Excellence</h3>
+          <p class="text-gray-700 mt-2">
+            Striving for the highest quality in everything we do.
+          </p>
+        </div>
+        <div class="flex flex-col items-center">
+          <div
+            class="animate-bounce w-16 h-16 border border-primary text-primary bg-white text-3xl  flex items-center justify-center rounded-full">
+            <i class="fas fa-handshake"></i>
+          </div>
+          <h3 class="text-2xl font-semibold mt-4">Commitment</h3>
+          <p class="text-gray-700 mt-2">
+            Dedicated to delivering value and exceeding expectations.
+          </p>
+        </div>
+        <div class="flex flex-col items-center">
+          <div
+            class="animate-bounce w-16 h-16 border border-primary text-primary bg-white text-3xl  flex items-center justify-center rounded-full">
+            <i class="fas fa-lightbulb"></i>
+          </div>
+          <h3 class="text-2xl font-semibold mt-4">Innovation</h3>
+          <p class="text-gray-700 mt-2">
+            Embracing creativity to drive progress and efficiency.
+          </p>
+        </div>
       </div>
-      <div id="card2" class="story-card opacity-0 transform translate-y-6 transition-all duration-500">
-        <h2 class="text-lg font-semibold text-gray-800">Year 2: Growth</h2>
-        <p class="text-gray-600 text-sm">Year 2 was about growth. Expanding our team, and increasing our reach.</p>
+    </div>
+  </div>
+
+  <div class="flex items-center justify-center mt-8">
+    <div class="max-w-6xl w-full text-center py-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 leading-snug mb-[50px]">
+        Our Core Values
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div class="flex flex-col items-center">
+          <div
+            class="animate-bounce w-16 h-16 border border-primary text-primary bg-white text-3xl  flex items-center justify-center rounded-full">
+            <i class="fas fa-balance-scale"></i>
+          </div>
+          <h3 class="text-2xl font-semibold mt-4">Integrity</h3>
+          <p class="text-gray-700 mt-2">
+            We uphold honesty and strong moral principles in all our actions.
+          </p>
+        </div>
+        <div class="flex flex-col items-center">
+          <div
+            class="animate-bounce w-16 h-16 border border-primary text-primary bg-white text-3xl  flex items-center justify-center rounded-full">
+            <i class="fas fa-trophy"></i>
+          </div>
+          <h3 class="text-2xl font-semibold mt-4">Excellence</h3>
+          <p class="text-gray-700 mt-2">
+            Striving for the highest quality in everything we do.
+          </p>
+        </div>
+        <div class="flex flex-col items-center">
+          <div
+            class="animate-bounce w-16 h-16 border border-primary text-primary bg-white text-3xl  flex items-center justify-center rounded-full">
+            <i class="fas fa-handshake"></i>
+          </div>
+          <h3 class="text-2xl font-semibold mt-4">Commitment</h3>
+          <p class="text-gray-700 mt-2">
+            Dedicated to delivering value and exceeding expectations.
+          </p>
+        </div>
+        <div class="flex flex-col items-center">
+          <div
+            class="animate-bounce w-16 h-16 border border-primary text-primary bg-white text-3xl  flex items-center justify-center rounded-full">
+            <i class="fas fa-lightbulb"></i>
+          </div>
+          <h3 class="text-2xl font-semibold mt-4">Innovation</h3>
+          <p class="text-gray-700 mt-2">
+            Embracing creativity to drive progress and efficiency.
+          </p>
+        </div>
       </div>
-      <div id="card3" class="story-card opacity-0 transform translate-y-6 transition-all duration-500">
-        <h2 class="text-lg font-semibold text-gray-800">Year 3: Expansion</h2>
-        <p class="text-gray-600 text-sm">We expanded into new markets, taking the brand to places we had never imagined.
+    </div>
+  </div>
+
+  <section class="w-[80%] flex mx-auto flex-col justify-center items-center py-16 px-10 overflow-hidden ">
+    <h1
+      class="text-4xl font-bold tracking-tight text-gray-900 mb-16 transform transition-all duration-500 ease-in-out hover:scale-105">
+      Key Features of the Exchange
+    </h1>
+
+    <div class="w-full max-w-7xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 ">
+      <div
+        class="flex flex-col items-center p-5  rounded-xl shadow-lg hover:scale-105 transition-all duration-300 ease-in-out ">
+        <span class="material-symbols-outlined text-primary text-5xl w-16 h-16 mb-4">hub</span>
+
+        <p class="text-medium text-center">
+          Nation-wide, electronic Exchange for trading of power.
         </p>
       </div>
-      <div id="card4" class="story-card opacity-0 transform translate-y-6 transition-all duration-500">
-        <h2 class="text-lg font-semibold text-gray-800">Year 4: Global Connections</h2>
-        <p class="text-gray-600 text-sm">Partnerships with international companies marked our global entry, creating new
-          opportunities.</p>
-      </div>
-      <div id="card5" class="story-card opacity-0 transform translate-y-6 transition-all duration-500">
-        <h2 class="text-lg font-semibold text-gray-800">Year 5: Milestone Achieved</h2>
-        <p class="text-gray-600 text-sm">We reached a major milestone this year with a new product launch that set
-          records!</p>
-      </div>
-      <div id="card6" class="story-card opacity-0 transform translate-y-6 transition-all duration-500">
-        <h2 class="text-lg font-semibold text-gray-800">Year 6: Innovation</h2>
-        <p class="text-gray-600 text-sm">We introduced innovative technology that disrupted the market and took us to
-          the next level.</p>
-      </div>
-      <div id="card7" class="story-card opacity-0 transform translate-y-6 transition-all duration-500">
-        <h2 class="text-lg font-semibold text-gray-800">Year 7: Overcoming Challenges</h2>
-        <p class="text-gray-600 text-sm">Faced with new challenges, we showed resilience and came out stronger.</p>
-      </div>
-      <div id="card8" class="story-card opacity-0 transform translate-y-6 transition-all duration-500">
-        <h2 class="text-lg font-semibold text-gray-800">Year 8: Scaling Globally</h2>
-        <p class="text-gray-600 text-sm">Our reach grew internationally with offices in 5 new countries.</p>
-      </div>
-      <div id="card9" class="story-card opacity-0 transform translate-y-6 transition-all duration-500">
-        <h2 class="text-lg font-semibold text-gray-800">Year 9: Community Engagement</h2>
-        <p class="text-gray-600 text-sm">In Year 9, we focused on giving back to the community and sustainability
-          efforts.</p>
-      </div>
-      <div id="card10" class="story-card opacity-0 transform translate-y-6 transition-all duration-500">
-        <h2 class="text-lg font-semibold text-gray-800">Year 10: Celebrating Success</h2>
-        <p class="text-gray-600 text-sm">The final year marked a decade of success, where we reflected on our
-          achievements and set new goals for the future.</p>
-      </div>
-    </div>
 
-    <div class="flex items-center justify-center mt-8">
-      <div class="max-w-6xl w-full text-center py-16">
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 leading-snug mb-[50px]">
-          Our Core Values
-        </h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-          <div class="flex flex-col items-center">
-            <div
-              class="animate-bounce w-16 h-16 border border-primary text-primary bg-white text-3xl  flex items-center justify-center rounded-full">
-              <i class="fas fa-balance-scale"></i>
-            </div>
-            <h3 class="text-2xl font-semibold mt-4">Integrity</h3>
-            <p class="text-gray-700 mt-2">
-              We uphold honesty and strong moral principles in all our actions.
-            </p>
-          </div>
-          <div class="flex flex-col items-center">
-            <div
-              class="animate-bounce w-16 h-16 border border-primary text-primary bg-white text-3xl  flex items-center justify-center rounded-full">
-              <i class="fas fa-trophy"></i>
-            </div>
-            <h3 class="text-2xl font-semibold mt-4">Excellence</h3>
-            <p class="text-gray-700 mt-2">
-              Striving for the highest quality in everything we do.
-            </p>
-          </div>
-          <div class="flex flex-col items-center">
-            <div
-              class="animate-bounce w-16 h-16 border border-primary text-primary bg-white text-3xl  flex items-center justify-center rounded-full">
-              <i class="fas fa-handshake"></i>
-            </div>
-            <h3 class="text-2xl font-semibold mt-4">Commitment</h3>
-            <p class="text-gray-700 mt-2">
-              Dedicated to delivering value and exceeding expectations.
-            </p>
-          </div>
-          <div class="flex flex-col items-center">
-            <div
-              class="animate-bounce w-16 h-16 border border-primary text-primary bg-white text-3xl  flex items-center justify-center rounded-full">
-              <i class="fas fa-lightbulb"></i>
-            </div>
-            <h3 class="text-2xl font-semibold mt-4">Innovation</h3>
-            <p class="text-gray-700 mt-2">
-              Embracing creativity to drive progress and efficiency.
-            </p>
-          </div>
-        </div>
+      <div
+        class="flex flex-col items-center bg-white rounded-xl shadow-lg hover:scale-105 transition-all  p-5  duration-300 ease-in-out "
+        style="animation-delay: 0.2s">
+
+        <span class="material-symbols-outlined text-primary text-5xl w-16 h-16 mb-4">analytics</span>
+
+        <p class="text-medium text-center ">
+          Exchange handles power trading and transmission clearance
+          simultaneously.
+        </p>
+      </div>
+
+      <div
+        class="flex flex-col items-center bg-white rounded-xl shadow-lg hover:scale-105 transition-all p-5 duration-300 ease-in-out"
+        style="animation-delay: 0.4s">
+
+        <span class="material-symbols-outlined text-primary text-5xl w-16 h-16 mb-4">update</span>
+        <p class="text-medium  text-center">
+          Trading happens for Day Ahead, Day Ahead Contingency, Any Day, Intra
+          Day, and Weekly Contracts.
+        </p>
+      </div>
+
+      <div
+        class="flex flex-col items-center bg-white rounded-xl shadow-lg hover:scale-105 transition-all  p-5  duration-300 ease-in-out"
+        style="animation-delay: 0.6s">
+
+        <span class="material-symbols-outlined text-primary text-5xl w-16 h-16 mb-4">eco</span>
+
+        <p class="text-medium text-center">
+          Trading platform available for Renewable Energy Certificates.
+        </p>
+      </div>
+
+      <div
+        class="flex flex-col items-center  bg-white rounded-xl shadow-lg hover:scale-105 transition-all p-5 duration-300 ease-in-out col-span-2"
+        style="animation-delay: 0.8s">
+
+        <span class="material-symbols-outlined text-primary text-5xl w-16 h-16 mb-4">bolt</span>
+
+        <p class="text-medium text-center">
+          More contracts to be introduced in due course.
+        </p>
+      </div>
+
+      <div
+        class="flex flex-col items-center  bg-white rounded-xl shadow-lg hover:scale-105 transition-all p-5 duration-300 ease-in-out col-span-2"
+        style="animation-delay: 1s">
+
+        <i class="fas fa-shield-alt  text-primary text-5xl w-16 h-16 mb-4"></i>
+
+        <p class="text-medium text-center">
+          Exchange is a central counterparty to all trades done on the
+          Exchange.
+        </p>
       </div>
     </div>
-
-    <div class="flex items-center justify-center mt-8">
-      <div class="max-w-6xl w-full text-center py-16">
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 leading-snug mb-[50px]">
-          Our Core Values
-        </h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-          <div class="flex flex-col items-center">
-            <div
-              class="animate-bounce w-16 h-16 border border-primary text-primary bg-white text-3xl  flex items-center justify-center rounded-full">
-              <i class="fas fa-balance-scale"></i>
-            </div>
-            <h3 class="text-2xl font-semibold mt-4">Integrity</h3>
-            <p class="text-gray-700 mt-2">
-              We uphold honesty and strong moral principles in all our actions.
-            </p>
-          </div>
-          <div class="flex flex-col items-center">
-            <div
-              class="animate-bounce w-16 h-16 border border-primary text-primary bg-white text-3xl  flex items-center justify-center rounded-full">
-              <i class="fas fa-trophy"></i>
-            </div>
-            <h3 class="text-2xl font-semibold mt-4">Excellence</h3>
-            <p class="text-gray-700 mt-2">
-              Striving for the highest quality in everything we do.
-            </p>
-          </div>
-          <div class="flex flex-col items-center">
-            <div
-              class="animate-bounce w-16 h-16 border border-primary text-primary bg-white text-3xl  flex items-center justify-center rounded-full">
-              <i class="fas fa-handshake"></i>
-            </div>
-            <h3 class="text-2xl font-semibold mt-4">Commitment</h3>
-            <p class="text-gray-700 mt-2">
-              Dedicated to delivering value and exceeding expectations.
-            </p>
-          </div>
-          <div class="flex flex-col items-center">
-            <div
-              class="animate-bounce w-16 h-16 border border-primary text-primary bg-white text-3xl  flex items-center justify-center rounded-full">
-              <i class="fas fa-lightbulb"></i>
-            </div>
-            <h3 class="text-2xl font-semibold mt-4">Innovation</h3>
-            <p class="text-gray-700 mt-2">
-              Embracing creativity to drive progress and efficiency.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <section class="w-[80%] flex mx-auto flex-col justify-center items-center py-16 px-10 overflow-hidden ">
-      <h1
-        class="text-4xl font-bold tracking-tight text-gray-900 mb-16 transform transition-all duration-500 ease-in-out hover:scale-105">
-        Key Features of the Exchange
-      </h1>
-
-      <div class="w-full max-w-7xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 ">
-        <div
-          class="flex flex-col items-center p-5  rounded-xl shadow-lg hover:scale-105 transition-all duration-300 ease-in-out ">
-          <span class="material-symbols-outlined text-primary text-5xl w-16 h-16 mb-4">hub</span>
-
-          <p class="text-medium text-center">
-            Nation-wide, electronic Exchange for trading of power.
-          </p>
-        </div>
-
-        <div
-          class="flex flex-col items-center bg-white rounded-xl shadow-lg hover:scale-105 transition-all  p-5  duration-300 ease-in-out "
-          style="animation-delay: 0.2s">
-
-          <span class="material-symbols-outlined text-primary text-5xl w-16 h-16 mb-4">analytics</span>
-
-          <p class="text-medium text-center ">
-            Exchange handles power trading and transmission clearance
-            simultaneously.
-          </p>
-        </div>
-
-        <div
-          class="flex flex-col items-center bg-white rounded-xl shadow-lg hover:scale-105 transition-all p-5 duration-300 ease-in-out"
-          style="animation-delay: 0.4s">
-
-          <span class="material-symbols-outlined text-primary text-5xl w-16 h-16 mb-4">update</span>
-          <p class="text-medium  text-center">
-            Trading happens for Day Ahead, Day Ahead Contingency, Any Day, Intra
-            Day, and Weekly Contracts.
-          </p>
-        </div>
-
-        <div
-          class="flex flex-col items-center bg-white rounded-xl shadow-lg hover:scale-105 transition-all  p-5  duration-300 ease-in-out"
-          style="animation-delay: 0.6s">
-
-          <span class="material-symbols-outlined text-primary text-5xl w-16 h-16 mb-4">eco</span>
-
-          <p class="text-medium text-center">
-            Trading platform available for Renewable Energy Certificates.
-          </p>
-        </div>
-
-        <div
-          class="flex flex-col items-center  bg-white rounded-xl shadow-lg hover:scale-105 transition-all p-5 duration-300 ease-in-out col-span-2"
-          style="animation-delay: 0.8s">
-
-          <span class="material-symbols-outlined text-primary text-5xl w-16 h-16 mb-4">bolt</span>
-
-          <p class="text-medium text-center">
-            More contracts to be introduced in due course.
-          </p>
-        </div>
-
-        <div
-          class="flex flex-col items-center  bg-white rounded-xl shadow-lg hover:scale-105 transition-all p-5 duration-300 ease-in-out col-span-2"
-          style="animation-delay: 1s">
-
-          <i class="fas fa-shield-alt  text-primary text-5xl w-16 h-16 mb-4"></i>
-
-          <p class="text-medium text-center">
-            Exchange is a central counterparty to all trades done on the
-            Exchange.
-          </p>
-        </div>
-      </div>
-    </section>
+  </section>
 
 
-    <script>
-      let currentStep = 1;
+  <script>
+    let currentStep = 1;
 
-      function showNextStep() {
-        // Show the next step
-        const step = document.getElementById(`step${currentStep}`);
-        const card = document.getElementById(`card${currentStep}`);
-        const line = document.getElementById('timeline-line');
+    function showNextStep() {
+      // Show the next step
+      const step = document.getElementById(`step${currentStep}`);
+      const card = document.getElementById(`card${currentStep}`);
+      const line = document.getElementById('timeline-line');
 
-        // Update visual elements for the current step
-        step.classList.add('bg-blue-500');
-        card.classList.add('opacity-100', 'transform-none');
+      // Update visual elements for the current step
+      step.classList.add('bg-blue-500');
+      card.classList.add('opacity-100', 'transform-none');
 
-        // Highlight the line until the current step
-        line.style.width = `${(currentStep * 10)}%`;
+      // Highlight the line until the current step
+      line.style.width = `${(currentStep * 10)}%`;
 
-        currentStep++;
+      currentStep++;
 
-        // If we've reached the 10th step, stop the progression
-        if (currentStep > 10) {
-          clearInterval(stepInterval);
-        }
+      // If we've reached the 10th step, stop the progression
+      if (currentStep > 10) {
+        clearInterval(stepInterval);
       }
+    }
 
-      // Automatically progress the timeline every 2 seconds
-      const stepInterval = setInterval(showNextStep, 2000);
+    // Automatically progress the timeline every 2 seconds
+    const stepInterval = setInterval(showNextStep, 2000);
 
-      // Initialize the first step visible
-      showNextStep();
-    </script>
+    // Initialize the first step visible
+    showNextStep();
+  </script>
 
 
-    <div id="footer"></div>
+  <div id="footer"></div>
 
-    <!-- Pages/Components Sripts -->
-    <script src="./assets/js/loadComponents.js"></script>
-    <script src="./assets/js/tailwind.js"></script><!-- To import taiwlind css -->
+  <!-- Pages/Components Sripts -->
+  <script src="./assets/js/loadComponents.js"></script>
+  <script src="./assets/js/tailwind.js"></script><!-- To import taiwlind css -->
 </body>
 
 </html>

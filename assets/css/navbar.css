@@ -97,7 +97,8 @@
 
 .navbar-dropdown .dropdown a:hover {
     padding-left: 30px;
-    background: #ededed;
+    /* background: #ededed; */
+    background: #eff6ff;
     color: var(--secondary);
 }
 
