@@ -258,20 +258,20 @@ document.head.appendChild(style);
 //     effect: 'fade',
 // });
 var swiper = new Swiper('.swiper-container', {
-    loop: true,
-    autoplay: {
-        delay: 4000,
-        disableOnInteraction: false,
-    },
-    effect: 'slide',
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
+  loop: true,
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false,
+  },
+  effect: 'slide',
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
 });
 
 
@@ -294,8 +294,8 @@ function showModal() {
   videoSource.src = "../assets/videos/video1.mp4";  // Example: stored inside "videos" folder
   videoPlayer.load(); // Load the new source
   videoPlayer.play(); // Auto-play when modal opens
-  
-  modal.style.display = "flex"; 
+
+  modal.style.display = "flex";
 }
 
 // Function to close modal and stop video
@@ -317,19 +317,87 @@ const totalSlides = eventsSlides.length;
 
 // Move slide function
 function moveSlide(direction) {
-    currentIndex += direction;
-    
-    if (currentIndex < 0) {
-        currentIndex = totalSlides - 1;
-    } else if (currentIndex >= totalSlides) {
-        currentIndex = 0;
-    }
-    
-    updateSlider();
+  currentIndex += direction;
+
+  if (currentIndex < 0) {
+    currentIndex = totalSlides - 1;
+  } else if (currentIndex >= totalSlides) {
+    currentIndex = 0;
+  }
+
+  updateSlider();
 }
 
 // Update slide position
 function updateSlider() {
-    const slider = document.querySelector('.events-slider');
-    slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+  const slider = document.querySelector('.events-slider');
+  slider.style.transform = `translateX(-${currentIndex * 100}%)`;
 }
+
+
+
+
+
+
+
+const documents = [
+  { name: "Policy Guidelines", date: "2025-02-09", url: "#" },
+  { name: "Annual Report", date: "2025-01-15", url: "#" }
+];
+
+const circulars = [
+
+  { name: "Circular 001", date: "2025-02-01", url: "#" }, 
+
+  { name: "Notice Update", date: "2025-01-25", url: "#" }
+
+];
+
+function populateTable(data, tableId) {
+
+  const table = document.getElementById(tableId);
+
+  if (data.length === 0) {
+    table.innerHTML = `
+      <tr>
+        <td class="p-3 text-center text-gray-500" colspan="3">No results found</td>
+      </tr>
+    `;
+    return;
+  }
+
+  table.innerHTML = data.map(d => `
+    <tr class="border-b hover:bg-gray-100">
+      <td class="p-3">${d.name}</td>
+      <td class="p-3">${d.date}</td>
+      <td class="p-3 text-center">
+        <a href="${d.url}" class="px-3 py-1 rounded-full text-xs shadow bg-primary text-white border-2 border-primary hover:bg-white hover:text-primary transition duration-300">Download</a>
+      </td>
+    </tr>
+  `).join('');
+
+}
+
+function searchDocs() {
+
+  const query = document.getElementById("docSearch").value.toLowerCase();
+
+  const filtered = documents.filter(d => d.name.toLowerCase().includes(query));
+
+  populateTable(filtered, "docTable");
+
+}
+
+function searchCirculars() {
+
+  const query = document.getElementById("circSearch").value.toLowerCase();
+
+  const filtered = circulars.filter(c => c.name.toLowerCase().includes(query));
+
+  populateTable(filtered, "circTable");
+
+}
+
+populateTable(documents, "docTable");
+
+populateTable(circulars, "circTable");

@@ -323,3 +323,23 @@ html {
     margin: 20px;
 
 }
+
+
+/* -------------- document ------------------ */
+.documentCard {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.documentCard-btn-download {
+    background: linear-gradient(135deg, #0058a2, #764ba2);
+    color: white;
+}
+
+.documentCard-btn-download:hover {
+    background: linear-gradient(135deg, #764ba2, #0058a2);
+}
