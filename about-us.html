@@ -2,18 +2,23 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Us | PXIL</title>
-  <link rel="shortcut icon" href="/assets/images/favicon.gif" type="image/x-icon">
-
 
   <link rel="stylesheet" href="./assets/css/navbar.css" />
+  <link rel="stylesheet" href="./assets/css/home.css" />
+  <link rel="stylesheet" href="./assets/css/global.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
 
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
@@ -29,17 +34,24 @@
       content: "";
       position: absolute;
       top: 0;
+      /* bottom: 0; */
       left: 50%;
       width: 4px;
       height: 100%;
-      background: linear-gradient(to bottom, #3b82f6, #9333ea);
+      background: linear-gradient(to bottom, #3b82f6, #7313af);
       transform: translateX(-50%);
+    }
+
+    .zoom-btn {
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      border-radius: 5px;
+      padding: 5px 10px;
     }
   </style>
 </head>
 
 <body>
-
   <div id="navbar"></div>
 
   <section class="relative text-center py-20 bg-blue-50 mt-32">
@@ -52,179 +64,273 @@
   </section>
 
 
+  <section class="relative py-20 mx-auto lg:px-10 px-6">
+    <div class="grid grid-cols-2 gap-12">
+      <!-- Left Side (Image & Floating Elements) -->
+      <div class="relative w-full">
+        <div class="flex justify-start">
+          <img src="https://powerexindia.in/static/images/Homepage/SocialMedia/linkedin.jpg" alt="Businessman"
+            class="w-[90%] rounded-lg" />
+        </div>
 
+        <!-- Floating Cards -->
+        <div
+          class="absolute top-6 right-0 bg-primary text-white shadow-md px-6 py-4 flex items-center gap-2 rounded-lg">
+          <!-- <span class="text-blue-500 text-xl">💼</span> -->
+          <span class="text-sm font-semibold">Established Year: 2008</span>
+        </div>
 
+        <div
+          class="absolute top-24 right-10 bg-primary text-white shadow-md px-6 py-4 flex items-center gap-2 rounded-lg">
+          <!-- <span class="text-blue-500 text-xl">💳</span> -->
+          <span class="text-sm font-semibold">PXIL: Power Exchange India Limited</span>
+        </div>
+
+        <div class="absolute bottom-[-40px] right-0">
+          <div class="relative w-64 rounded-lg">
+            <img
+              src="https://media.licdn.com/dms/image/v2/D5622AQGCNDPHWMV4vQ/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1726652417701?e=2147483647&v=beta&t=BaAOXMlnf_YgP1LTTQbSyy7x8aFLtU3dpRMUPkhlPMs"
+              alt="Financial Growth" class="border-8 w-64 border-whiteClr shadow-2xl rounded-lg" />
+            <!-- Play Button with Ripple Effect -->
+            <div class="absolute inset-0 flex items-center justify-center">
+              <button class="play-button" onclick="showModal()">
+                <div class="ripple"></div>
+                <div class="ripple"></div>
+                <div class="ripple"></div>
+                <i class="fa-solid fa-play"></i>
+              </button>
+            </div>
+          </div>
+          <!-- Modal -->
+          <div id="aboutusVideoModal" class="modal">
+            <div class="modal-content">
+              <span class="modal-close" onclick="closeModal()"><i class="fa-solid fa-xmark"></i></span>
+              <!-- Video Frame -->
+              <!-- <iframe id="videoFrame" width="100%" height="400px" src="" frameborder="0" allowfullscreen>
+                </iframe> -->
+              <!-- Video Player -->
+              <video id="videoPlayer" class="flex justify-center rounded-lg" controls>
+                <source id="videoSource" src="" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Side (Text Content) -->
+      <div class="w-full">
+        <p class="text-blue-600 font-semibold mb-2">About PXIL</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 leading-snug">
+          Building A More Compact <br />
+          Our Power Market
+        </h2>
+        <p class="text-gray-600 mt-4">
+          Power Exchange India Limited (PXIL) is India’s first institutionally
+          promoted power exchange, revolutionizing the energy sector since
+          2008. By seamlessly connecting buyers and sellers, we enhance the
+          efficiency of India’s energy markets.
+        </p>
+
+        <div class="bg-white px-6 py-4 rounded-md shadow-md mt-6 mb-4">
+          <p class="text-gray-600 italic">
+            <b>VISION : </b>To continually innovate and offer credible
+            solutions to transform Indian power markets and efficiently
+            allocate energy resources, thereby creating a significant
+            difference for our stakeholders across the globe.
+          </p>
+        </div>
+
+        <div class="bg-white px-6 py-4 rounded-md shadow-md mt-6 mb-10">
+          <p class="text-gray-600 italic">
+            <b>MISSION : </b>To increase the accessibility and transparency of
+            the power market in India, and enhance the speed and efficiency of
+            trade execution, via optimal utilization of local and global
+            insights.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
   <section class="container mx-auto px-6 py-16">
-    <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Our Journey</h2>
+    <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">
+      Our Journey
+    </h2>
 
     <div class="timeline-container max-w-4xl mx-auto relative">
-
-      <!-- Timeline Item 1 -->
-      <div class="flex items-center mb-10 relative">
-        <div class="w-1/2 pr-8 text-right">
-          <h3 class="text-xl font-semibold text-gray-800">Founded - 2008</h3>
-          <p class="text-gray-600 mt-2">October - Launch of Day Ahead Spot</p>
+      <!-- Timeline Items -->
+      <div class="flex flex-col space-y-5">
+        <!-- 2008 -->
+        <div class="flex items-center relative">
+          <div class="w-1/2 pr-8 text-right" data-aos="fade-right" data-aos-duration="800">
+            <h3 class="text-xl font-semibold text-gray-800">
+              Founded - 2008
+            </h3>
+            <p class="text-gray-600 mt-2">
+              October - Launch of Day Ahead Spot
+            </p>
+          </div>
+          <div class="w-1/2 pl-8 flex justify-start" data-aos="fade-left" data-aos-duration="800">
+            <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-blue-500 hover:scale-105">
+              <i class="fas fa-rocket text-blue-500 text-3xl"></i>
+            </div>
+          </div>
         </div>
-        <div class="w-1/2 pl-8 flex justify-start">
-          <div
-            class="bg-white p-6 rounded-lg shadow-md border-l-4 border-blue-500 transform transition duration-300 hover:scale-105">
-            <i class="fas fa-rocket text-blue-500 text-3xl"></i>
+
+        <!-- 2009 -->
+        <div class="flex items-center relative flex-row-reverse">
+          <div class="w-1/2 pl-8 text-left" data-aos="fade-left" data-aos-duration="800">
+            <h3 class="text-xl font-semibold text-gray-800">2009</h3>
+            <p class="text-gray-600 mt-2">
+              September - Launch of Week Ahead September - Launch of Day Ahead
+              Contingency
+            </p>
+          </div>
+          <div class="w-1/2 pr-8 flex justify-end" data-aos="fade-right" data-aos-duration="800">
+            <div class="bg-white p-6 rounded-lg shadow-md border-r-4 border-green-500 hover:scale-105">
+              <i class="fas fa-chart-line text-green-500 text-3xl"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Add more years dynamically -->
+        <div class="flex items-center relative">
+          <div class="w-1/2 pr-8 text-right" data-aos="fade-right" data-aos-duration="800">
+            <h3 class="text-xl font-semibold text-gray-800">2011</h3>
+            <p class="text-gray-600 mt-2">
+              March - Launch of Renewable Energy Certificates (REC)
+            </p>
+          </div>
+          <div class="w-1/2 pl-8 flex justify-start" data-aos="fade-left" data-aos-duration="800">
+            <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-yellow-500 hover:scale-105">
+              <i class="fas fa-globe text-yellow-500 text-3xl"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex items-center relative flex-row-reverse">
+          <div class="w-1/2 pl-8 text-left" data-aos="fade-left" data-aos-duration="800">
+            <h3 class="text-xl font-semibold text-gray-800">2012</h3>
+            <p class="text-gray-600 mt-2">
+              November - Launch of Intra Day November - Launch of Any Day
+            </p>
+          </div>
+          <div class="w-1/2 pr-8 flex justify-end" data-aos="fade-right" data-aos-duration="800">
+            <div class="bg-white p-6 rounded-lg shadow-md border-r-4 border-red-500 hover:scale-105">
+              <i class="fas fa-bolt text-red-500 text-3xl"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex items-center relative">
+          <div class="w-1/2 pr-8 text-right" data-aos="fade-right" data-aos-duration="800">
+            <h3 class="text-xl font-semibold text-gray-800">2020</h3>
+            <p class="text-gray-600 mt-2">
+              Jaunuary - Launch of PRATYAY June - Launch of Real Time Market
+            </p>
+          </div>
+          <div class="w-1/2 pl-8 flex justify-start" data-aos="fade-left" data-aos-duration="800">
+            <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-teal-500 hover:scale-105">
+              <i class="fas fa-microchip text-teal-500 text-3xl"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex items-center relative flex-row-reverse">
+          <div class="w-1/2 pl-8 text-left" data-aos="fade-left" data-aos-duration="800">
+            <h3 class="text-xl font-semibold text-gray-800">2021</h3>
+            <p class="text-gray-600 mt-2">
+              March - Launch of GTAM October - Launch of ESCERTS December -
+              Launch of IDAS
+            </p>
+          </div>
+          <div class="w-1/2 pr-8 flex justify-end" data-aos="fade-right" data-aos-duration="800">
+            <div class="bg-white p-6 rounded-lg shadow-md border-r-4 border-red-500 hover:scale-105">
+              <i class="fas fa-bolt text-red-500 text-3xl"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex items-center relative">
+          <div class="w-1/2 pr-8 text-right" data-aos="fade-right" data-aos-duration="800">
+            <h3 class="text-xl font-semibold text-gray-800">2022</h3>
+            <p class="text-gray-600 mt-2">
+              August - Launch of Hydro TAM September - Launch of Anyday Single
+              Sided Market with Reverse Auction Contracts September - Launch
+              of Daily, Weekly and Month(s) Ahead Contracts
+            </p>
+          </div>
+          <div class="w-1/2 pl-8 flex justify-start" data-aos="fade-left" data-aos-duration="800">
+            <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-teal-500 hover:scale-105">
+              <i class="fas fa-microchip text-teal-500 text-3xl"></i>
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center relative flex-row-reverse">
+          <div class="w-1/2 pl-8 text-left" data-aos="fade-left" data-aos-duration="800">
+            <h3 class="text-xl font-semibold text-gray-800">2023</h3>
+            <p class="text-gray-600 mt-2">
+              June - Launch of HP-DAM & Ancillary Services October - Launch of
+              HP-TAM
+            </p>
+          </div>
+          <div class="w-1/2 pr-8 flex justify-end" data-aos="fade-right" data-aos-duration="800">
+            <div class="bg-white p-6 rounded-lg shadow-md border-r-4 border-red-500 hover:scale-105">
+              <i class="fas fa-bolt text-red-500 text-3xl"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex items-center relative">
+          <div class="w-1/2 pr-8 text-right" data-aos="fade-right" data-aos-duration="800">
+            <h3 class="text-xl font-semibold text-gray-800">2024</h3>
+            <p class="text-gray-600 mt-2">
+              Feb - Launch of High Price Daily, Weekly and Month(s) ahead
+              Contracts April - Advance block bids Under Day ahead Market
+            </p>
+          </div>
+          <div class="w-1/2 pl-8 flex justify-start" data-aos="fade-left" data-aos-duration="800">
+            <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-teal-500 hover:scale-105">
+              <i class="fas fa-microchip text-teal-500 text-3xl"></i>
+            </div>
           </div>
         </div>
       </div>
-
-      <!-- Timeline Item 2 -->
-      <div class="flex items-center mb-10 relative flex-row-reverse">
-        <div class="w-1/2 pl-8 text-left">
-          <h3 class="text-xl font-semibold text-gray-800">2009</h3>
-          <p class="text-gray-600 mt-2">September - Launch of Week Ahead</p>
-          <p class="text-gray-600 mt-2">September - Launch of Day Ahead Contingency</p>
-        </div>
-        <div class="w-1/2 pr-8 flex justify-end">
-          <div
-            class="bg-white p-6 rounded-lg shadow-md border-r-4 border-green-500 transform transition duration-300 hover:scale-105">
-            <i class="fas fa-chart-line text-green-500 text-3xl"></i>
-          </div>
-        </div>
-      </div>
-
-      <!-- Timeline Item 3 -->
-      <div class="flex items-center mb-10 relative">
-        <div class="w-1/2 pr-8 text-right">
-          <h3 class="text-xl font-semibold text-gray-800">2011</h3>
-          <p class="text-gray-600 mt-2">Our efforts were recognized worldwide, leading to industry awards and accolades.
-          </p>
-        </div>
-        <div class="w-1/2 pl-8 flex justify-start">
-          <div
-            class="bg-white p-6 rounded-lg shadow-md border-l-4 border-yellow-500 transform transition duration-300 hover:scale-105">
-            <i class="fas fa-globe text-yellow-500 text-3xl"></i>
-          </div>
-        </div>
-      </div>
-
-      <!-- Timeline Item 4 -->
-      <div class="flex items-center mb-10 relative flex-row-reverse">
-        <div class="w-1/2 pl-8 text-left">
-          <h3 class="text-xl font-semibold text-gray-800">Future Vision - 2025</h3>
-          <p class="text-gray-600 mt-2">We continue to innovate, aiming to create a sustainable and impactful future.
-          </p>
-        </div>
-        <div class="w-1/2 pr-8 flex justify-end">
-          <div
-            class="bg-white p-6 rounded-lg shadow-md border-r-4 border-purple-500 transform transition duration-300 hover:scale-105">
-            <i class="fas fa-lightbulb text-purple-500 text-3xl"></i>
-          </div>
-        </div>
-      </div>
-
     </div>
   </section>
 
 
-
-  <!-- Timeline Container -->
-  <div class="flex justify-center items-center mt-10 relative h-screen">
-    <div class="flex items-center relative z-10">
-      <!-- Timeline Steps (Year markers) -->
-      <div id="step1"
-        class="timeline-step bg-gray-400 text-white  flex justify-center items-center w-20 h-10 mx-3 font-semibold text-sm">
-        Year 2018</div>
-      <div id="step2"
-        class="timeline-step bg-gray-400 text-white rounded-full flex justify-center items-center w-10 h-10 mx-3 font-semibold text-sm">
-        2</div>
-      <div id="step3"
-        class="timeline-step bg-gray-400 text-white rounded-full flex justify-center items-center w-10 h-10 mx-3 font-semibold text-sm">
-        3</div>
-      <div id="step4"
-        class="timeline-step bg-gray-400 text-white rounded-full flex justify-center items-center w-10 h-10 mx-3 font-semibold text-sm">
-        4</div>
-      <div id="step5"
-        class="timeline-step bg-gray-400 text-white rounded-full flex justify-center items-center w-10 h-10 mx-3 font-semibold text-sm">
-        5</div>
-      <div id="step6"
-        class="timeline-step bg-gray-400 text-white rounded-full flex justify-center items-center w-10 h-10 mx-3 font-semibold text-sm">
-        6</div>
-      <div id="step7"
-        class="timeline-step bg-gray-400 text-white rounded-full flex justify-center items-center w-10 h-10 mx-3 font-semibold text-sm">
-        7</div>
-      <div id="step8"
-        class="timeline-step bg-gray-400 text-white rounded-full flex justify-center items-center w-10 h-10 mx-3 font-semibold text-sm">
-        8</div>
-      <div id="step9"
-        class="timeline-step bg-gray-400 text-white rounded-full flex justify-center items-center w-10 h-10 mx-3 font-semibold text-sm">
-        9</div>
-      <div id="step10"
-        class="timeline-step bg-gray-400 text-white rounded-full flex justify-center items-center w-10 h-10 mx-3 font-semibold text-sm">
-        10</div>
+  <!-- Why PXIL Section -->
+  <section class="py-16 px-6 bg-blue-100">
+    <div class="max-w-6xl mx-auto text-center">
+      <div class="flex gap-4 justify-center items-center">
+        <div class="w-20 border border-secondary"></div>
+        <h2 class="text-4xl font-bold text-secondary">Why PXIL</h2>
+        <div class="w-20 border border-secondary"></div>
+      </div>
+      <p class="text-gray-700 text-lg max-w-4xl mx-auto mt-6">PXIL works towards a common goal of <span
+          class="font-semibold text-blue-800">“Co-creating Corporate Excellence”</span>. We strive to be the employer of
+        choice by fostering a balanced and fulfilling work environment.</p>
     </div>
 
-    <!-- Timeline Line -->
-    <div class="absolute top-1/2 left-0 w-full h-1 bg-gray-300 transform -translate-y-1/2 z-0" id="timeline-line">
-    </div>
-  </div>
-
-  <!-- Story Cards -->
-  <div
-    class="absolute w-4/5 flex flex-row top-3/6 left-1/2 transform -translate-x-1/2  overflow-y-auto  bg-white p-6 rounded-lg shadow-lg space-y-6 border border-red-800">
-    <div id="card1" class="story-card opacity-0 transform translate-y-6 transition-all duration-500">
-      <h2 class="text-lg font-semibold text-gray-800">Year 1: The Beginning</h2>
-      <p class="text-gray-600 text-sm">In the first year, we set the foundations and established our core mission. It
-        was all about starting strong!</p>
-    </div>
-    <div id="card2" class="story-card opacity-0 transform translate-y-6 transition-all duration-500">
-      <h2 class="text-lg font-semibold text-gray-800">Year 2: Growth</h2>
-      <p class="text-gray-600 text-sm">Year 2 was about growth. Expanding our team, and increasing our reach.</p>
-    </div>
-    <div id="card3" class="story-card opacity-0 transform translate-y-6 transition-all duration-500">
-      <h2 class="text-lg font-semibold text-gray-800">Year 3: Expansion</h2>
-      <p class="text-gray-600 text-sm">We expanded into new markets, taking the brand to places we had never imagined.
+    <div class="max-w-7xl mx-auto mt-12 bg-white p-8 rounded-lg shadow-lg">
+      <p class="text-gray-600 text-lg leading-relaxed text-center">
+        We emphasize <span class="text-green-700 font-bold">Work-Life Balance</span> by ensuring joy at work and in life
+        while achieving tasks. We nurture passionate and committed talent that aims to co-create excellence. At PXIL, we
+        don’t just offer jobs – <span class="text-yellow-600 font-bold">we build careers!</span>
       </p>
     </div>
-    <div id="card4" class="story-card opacity-0 transform translate-y-6 transition-all duration-500">
-      <h2 class="text-lg font-semibold text-gray-800">Year 4: Global Connections</h2>
-      <p class="text-gray-600 text-sm">Partnerships with international companies marked our global entry, creating new
-        opportunities.</p>
-    </div>
-    <div id="card5" class="story-card opacity-0 transform translate-y-6 transition-all duration-500">
-      <h2 class="text-lg font-semibold text-gray-800">Year 5: Milestone Achieved</h2>
-      <p class="text-gray-600 text-sm">We reached a major milestone this year with a new product launch that set
-        records!</p>
-    </div>
-    <div id="card6" class="story-card opacity-0 transform translate-y-6 transition-all duration-500">
-      <h2 class="text-lg font-semibold text-gray-800">Year 6: Innovation</h2>
-      <p class="text-gray-600 text-sm">We introduced innovative technology that disrupted the market and took us to
-        the next level.</p>
-    </div>
-    <div id="card7" class="story-card opacity-0 transform translate-y-6 transition-all duration-500">
-      <h2 class="text-lg font-semibold text-gray-800">Year 7: Overcoming Challenges</h2>
-      <p class="text-gray-600 text-sm">Faced with new challenges, we showed resilience and came out stronger.</p>
-    </div>
-    <div id="card8" class="story-card opacity-0 transform translate-y-6 transition-all duration-500">
-      <h2 class="text-lg font-semibold text-gray-800">Year 8: Scaling Globally</h2>
-      <p class="text-gray-600 text-sm">Our reach grew internationally with offices in 5 new countries.</p>
-    </div>
-    <div id="card9" class="story-card opacity-0 transform translate-y-6 transition-all duration-500">
-      <h2 class="text-lg font-semibold text-gray-800">Year 9: Community Engagement</h2>
-      <p class="text-gray-600 text-sm">In Year 9, we focused on giving back to the community and sustainability
-        efforts.</p>
-    </div>
-    <div id="card10" class="story-card opacity-0 transform translate-y-6 transition-all duration-500">
-      <h2 class="text-lg font-semibold text-gray-800">Year 10: Celebrating Success</h2>
-      <p class="text-gray-600 text-sm">The final year marked a decade of success, where we reflected on our
-        achievements and set new goals for the future.</p>
-    </div>
-  </div>
-
+  </section>
   <div class="flex items-center justify-center mt-8">
     <div class="max-w-6xl w-full text-center py-16">
-      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 leading-snug mb-[50px]">
+      <h2 class="text-4xl font-bold text-secondary leading-snug mb-[50px]">
         Our Core Values
       </h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
         <div class="flex flex-col items-center">
           <div
-            class="animate-bounce w-16 h-16 border border-primary text-primary bg-white text-3xl  flex items-center justify-center rounded-full">
+            class="animate-bounce w-16 h-16 border border-primary text-primary bg-white text-3xl flex items-center justify-center rounded-full">
             <i class="fas fa-balance-scale"></i>
           </div>
           <h3 class="text-2xl font-semibold mt-4">Integrity</h3>
@@ -234,7 +340,7 @@
         </div>
         <div class="flex flex-col items-center">
           <div
-            class="animate-bounce w-16 h-16 border border-primary text-primary bg-white text-3xl  flex items-center justify-center rounded-full">
+            class="animate-bounce w-16 h-16 border border-primary text-primary bg-white text-3xl flex items-center justify-center rounded-full">
             <i class="fas fa-trophy"></i>
           </div>
           <h3 class="text-2xl font-semibold mt-4">Excellence</h3>
@@ -244,7 +350,7 @@
         </div>
         <div class="flex flex-col items-center">
           <div
-            class="animate-bounce w-16 h-16 border border-primary text-primary bg-white text-3xl  flex items-center justify-center rounded-full">
+            class="animate-bounce w-16 h-16 border border-primary text-primary bg-white text-3xl flex items-center justify-center rounded-full">
             <i class="fas fa-handshake"></i>
           </div>
           <h3 class="text-2xl font-semibold mt-4">Commitment</h3>
@@ -254,7 +360,7 @@
         </div>
         <div class="flex flex-col items-center">
           <div
-            class="animate-bounce w-16 h-16 border border-primary text-primary bg-white text-3xl  flex items-center justify-center rounded-full">
+            class="animate-bounce w-16 h-16 border border-primary text-primary bg-white text-3xl flex items-center justify-center rounded-full">
             <i class="fas fa-lightbulb"></i>
           </div>
           <h3 class="text-2xl font-semibold mt-4">Innovation</h3>
@@ -266,65 +372,70 @@
     </div>
   </div>
 
-  <div class="flex items-center justify-center mt-8">
-    <div class="max-w-6xl w-full text-center py-16">
-      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 leading-snug mb-[50px]">
-        Our Core Values
-      </h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-        <div class="flex flex-col items-center">
-          <div
-            class="animate-bounce w-16 h-16 border border-primary text-primary bg-white text-3xl  flex items-center justify-center rounded-full">
-            <i class="fas fa-balance-scale"></i>
-          </div>
-          <h3 class="text-2xl font-semibold mt-4">Integrity</h3>
-          <p class="text-gray-700 mt-2">
-            We uphold honesty and strong moral principles in all our actions.
-          </p>
-        </div>
-        <div class="flex flex-col items-center">
-          <div
-            class="animate-bounce w-16 h-16 border border-primary text-primary bg-white text-3xl  flex items-center justify-center rounded-full">
-            <i class="fas fa-trophy"></i>
-          </div>
-          <h3 class="text-2xl font-semibold mt-4">Excellence</h3>
-          <p class="text-gray-700 mt-2">
-            Striving for the highest quality in everything we do.
-          </p>
-        </div>
-        <div class="flex flex-col items-center">
-          <div
-            class="animate-bounce w-16 h-16 border border-primary text-primary bg-white text-3xl  flex items-center justify-center rounded-full">
-            <i class="fas fa-handshake"></i>
-          </div>
-          <h3 class="text-2xl font-semibold mt-4">Commitment</h3>
-          <p class="text-gray-700 mt-2">
-            Dedicated to delivering value and exceeding expectations.
-          </p>
-        </div>
-        <div class="flex flex-col items-center">
-          <div
-            class="animate-bounce w-16 h-16 border border-primary text-primary bg-white text-3xl  flex items-center justify-center rounded-full">
-            <i class="fas fa-lightbulb"></i>
-          </div>
-          <h3 class="text-2xl font-semibold mt-4">Innovation</h3>
-          <p class="text-gray-700 mt-2">
-            Embracing creativity to drive progress and efficiency.
-          </p>
-        </div>
+
+  <!-- Learning & Development Section -->
+  <section class="py-16 px-6">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-4xl font-bold text-secondary">Learning & Development</h2>
+      <p class="text-gray-700 text-lg max-w-4xl mx-auto mt-6">PXIL believes that for improving business performance &
+        creating business impact, capability building of the internal talent pool is critical. PXIL focuses on
+        up-skilling its employees through structured training and development programs.</p>
+    </div>
+
+    <div class="max-w-7xl mx-auto mt-12 grid grid-cols-1 md:grid-cols-2 gap-10">
+      <div class="bg-white p-8 rounded-lg shadow-lg border-l-8 border-blue-500">
+        <h3 class="text-3xl font-bold text-blue-700">Training Philosophy</h3>
+        <p class="text-gray-600 mt-4">PXIL’s HR – Talent Development Team strives to create opportunities for corporate
+          excellence through various training interventions, ensuring skill enhancement and business impact.</p>
+      </div>
+      <div class="bg-white p-8 rounded-lg shadow-lg border-l-8 border-green-500">
+        <h3 class="text-3xl font-bold text-green-700">Key Focus Areas</h3>
+        <ul class="list-disc pl-6 mt-4 space-y-2 text-gray-600 text-lg">
+          <li><span class="font-bold text-blue-600">Identifying Training Needs:</span> Addressing skill gaps
+            effectively.</li>
+          <li><span class="font-bold text-yellow-600">Objective Alignment:</span> Ensuring training aligns with business
+            productivity.</li>
+          <li><span class="font-bold text-green-600">Training Types:</span> Internal, Customized, Seminars, and
+            Conferences.</li>
+          <li><span class="font-bold text-blue-700">Internship Programs:</span> Hands-on exposure for young
+            professionals.</li>
+        </ul>
       </div>
     </div>
-  </div>
+  </section>
 
-  <section class="w-[80%] flex mx-auto flex-col justify-center items-center py-16 px-10 overflow-hidden ">
+  <section class="max-w-7xl w-full flex items-center bg-white shadow-lg rounded-lg overflow-hidden">
+    <div class="w-1/2 bg-yellow-400 p-12 flex items-center justify-center">
+      <img src="https://powerexindia.in/static/images/Discover/team/board/ashok%20sethi.jpg" alt="Team Member"
+        class="w-full max-w-sm rounded-lg shadow-md">
+    </div>
+    <div class="w-1/2 p-12">
+      <h2 class="text-4xl font-bold text-gray-800">John Doe</h2>
+      <p class="text-lg text-gray-600 mt-2">Managing Director</p>
+      <p class="text-gray-700 mt-4 leading-relaxed">Lorem ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+      <div class="flex items-center gap-4 mt-6">
+        <img src="https://via.placeholder.com/60" alt="Team Member"
+          class="w-16 h-16 rounded-full border border-gray-300">
+        <img src="https://via.placeholder.com/60" alt="Team Member"
+          class="w-16 h-16 rounded-full border border-gray-300">
+        <img src="https://via.placeholder.com/60" alt="Team Member"
+          class="w-16 h-16 rounded-full border border-gray-300">
+        <img src="https://via.placeholder.com/60" alt="Team Member"
+          class="w-16 h-16 rounded-full border border-gray-300">
+      </div>
+    </div>
+  </section>
+
+  <section class="w-[80%] flex mx-auto flex-col justify-center items-center py-16 px-10 overflow-hidden">
     <h1
       class="text-4xl font-bold tracking-tight text-gray-900 mb-16 transform transition-all duration-500 ease-in-out hover:scale-105">
       Key Features of the Exchange
     </h1>
 
-    <div class="w-full max-w-7xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 ">
+    <div class="w-full max-w-7xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
       <div
-        class="flex flex-col items-center p-5  rounded-xl shadow-lg hover:scale-105 transition-all duration-300 ease-in-out ">
+        class="flex flex-col items-center p-5 rounded-xl shadow-lg hover:scale-105 transition-all duration-300 ease-in-out">
         <span class="material-symbols-outlined text-primary text-5xl w-16 h-16 mb-4">hub</span>
 
         <p class="text-medium text-center">
@@ -333,12 +444,11 @@
       </div>
 
       <div
-        class="flex flex-col items-center bg-white rounded-xl shadow-lg hover:scale-105 transition-all  p-5  duration-300 ease-in-out "
+        class="flex flex-col items-center bg-white rounded-xl shadow-lg hover:scale-105 transition-all p-5 duration-300 ease-in-out"
         style="animation-delay: 0.2s">
-
         <span class="material-symbols-outlined text-primary text-5xl w-16 h-16 mb-4">analytics</span>
 
-        <p class="text-medium text-center ">
+        <p class="text-medium text-center">
           Exchange handles power trading and transmission clearance
           simultaneously.
         </p>
@@ -347,18 +457,16 @@
       <div
         class="flex flex-col items-center bg-white rounded-xl shadow-lg hover:scale-105 transition-all p-5 duration-300 ease-in-out"
         style="animation-delay: 0.4s">
-
         <span class="material-symbols-outlined text-primary text-5xl w-16 h-16 mb-4">update</span>
-        <p class="text-medium  text-center">
+        <p class="text-medium text-center">
           Trading happens for Day Ahead, Day Ahead Contingency, Any Day, Intra
           Day, and Weekly Contracts.
         </p>
       </div>
 
       <div
-        class="flex flex-col items-center bg-white rounded-xl shadow-lg hover:scale-105 transition-all  p-5  duration-300 ease-in-out"
+        class="flex flex-col items-center bg-white rounded-xl shadow-lg hover:scale-105 transition-all p-5 duration-300 ease-in-out"
         style="animation-delay: 0.6s">
-
         <span class="material-symbols-outlined text-primary text-5xl w-16 h-16 mb-4">eco</span>
 
         <p class="text-medium text-center">
@@ -367,9 +475,8 @@
       </div>
 
       <div
-        class="flex flex-col items-center  bg-white rounded-xl shadow-lg hover:scale-105 transition-all p-5 duration-300 ease-in-out col-span-2"
+        class="flex flex-col items-center bg-white rounded-xl shadow-lg hover:scale-105 transition-all p-5 duration-300 ease-in-out col-span-2"
         style="animation-delay: 0.8s">
-
         <span class="material-symbols-outlined text-primary text-5xl w-16 h-16 mb-4">bolt</span>
 
         <p class="text-medium text-center">
@@ -378,10 +485,9 @@
       </div>
 
       <div
-        class="flex flex-col items-center  bg-white rounded-xl shadow-lg hover:scale-105 transition-all p-5 duration-300 ease-in-out col-span-2"
+        class="flex flex-col items-center bg-white rounded-xl shadow-lg hover:scale-105 transition-all p-5 duration-300 ease-in-out col-span-2"
         style="animation-delay: 1s">
-
-        <i class="fas fa-shield-alt  text-primary text-5xl w-16 h-16 mb-4"></i>
+        <i class="fas fa-shield-alt text-primary text-5xl w-16 h-16 mb-4"></i>
 
         <p class="text-medium text-center">
           Exchange is a central counterparty to all trades done on the
@@ -392,43 +498,247 @@
   </section>
 
 
-  <script>
-    let currentStep = 1;
+  <section class="py-20">
+    <div class="text-4xl text-secondary font-bold text-center">PXIL Events</div>
+    <div class="flex justify-center items-center mt-6">
+      <div class="w-full max-w-5xl px-4">
+        <div class="swiper mySwiper swiperButtons">
+          <div class="swiper-wrapper flex">
+            <div class="swiper-slide bg-white border rounded-lg overflow-hidden">
+              <img src="https://t4.ftcdn.net/jpg/03/08/42/97/360_F_308429705_lGIgucANJu4CbyuwBU4NaYi52ZljS853.jpg"
+                alt="Event Image" class="w-full h-48 object-cover" />
+              <div class="p-6">
+                <h3 class="text-xl font-semibold text-blue-700">
+                  Annual Business Meetup
+                </h3>
+                <p class="text-gray-600 mt-2">
+                  Join us for an exclusive networking event with industry
+                  leaders.
+                </p>
+                <p class="text-blue-600 font-medium mt-4">
+                  Date: 25th March 2025
+                </p>
+                <button class="mt-4 bg-blue-700 text-white px-4 py-2 rounded-lg hover:bg-blue-800">
+                  Register Now
+                </button>
+              </div>
+            </div>
+            <div class="swiper-slide bg-white border rounded-lg overflow-hidden">
+              <img src="https://t4.ftcdn.net/jpg/03/08/42/97/360_F_308429705_lGIgucANJu4CbyuwBU4NaYi52ZljS853.jpg"
+                alt="Event Image" class="w-full h-48 object-cover" />
+              <div class="p-6">
+                <h3 class="text-xl font-semibold text-blue-700">
+                  Annual Business Meetup
+                </h3>
+                <p class="text-gray-600 mt-2">
+                  Join us for an exclusive networking event with industry
+                  leaders.
+                </p>
+                <p class="text-blue-600 font-medium mt-4">
+                  Date: 25th March 2025
+                </p>
+                <button class="mt-4 bg-blue-700 text-white px-4 py-2 rounded-lg hover:bg-blue-800">
+                  Register Now
+                </button>
+              </div>
+            </div>
+            <div class="swiper-slide bg-white border rounded-lg overflow-hidden">
+              <img
+                src="https://thumbs.dreamstime.com/b/solar-cells-wind-turbines-generating-electricity-power-station-alternative-renewable-energy-nature-97448690.jpg"
+                alt="Event Image" class="w-full h-48 object-cover" />
+              <div class="p-6">
+                <h3 class="text-xl font-semibold text-blue-700">
+                  Annual Business Meetup
+                </h3>
+                <p class="text-gray-600 mt-2">
+                  Join us for an exclusive networking event with industry
+                  leaders.
+                </p>
+                <p class="text-blue-600 font-medium mt-4">
+                  Date: 25th March 2025
+                </p>
+                <button class="mt-4 bg-blue-700 text-white px-4 py-2 rounded-lg hover:bg-blue-800">
+                  Register Now
+                </button>
+              </div>
+            </div>
+            <div class="swiper-slide bg-white shadow-lg rounded-lg overflow-hidden">
+              <img
+                src="https://thumbs.dreamstime.com/b/solar-cells-wind-turbines-generating-electricity-power-station-alternative-renewable-energy-nature-97448690.jpg"
+                alt="Event Image" class="w-full h-48 object-cover" />
+              <div class="p-6">
+                <h3 class="text-xl font-semibold text-blue-700">
+                  Annual Business Meetup
+                </h3>
+                <p class="text-gray-600 mt-2">
+                  Join us for an exclusive networking event with industry
+                  leaders.
+                </p>
+                <p class="text-blue-600 font-medium mt-4">
+                  Date: 25th March 2025
+                </p>
+                <button class="mt-4 bg-blue-700 text-white px-4 py-2 rounded-lg hover:bg-blue-800">
+                  Register Now
+                </button>
+              </div>
+            </div>
+          </div>
 
-    function showNextStep() {
-      // Show the next step
-      const step = document.getElementById(`step${currentStep}`);
-      const card = document.getElementById(`card${currentStep}`);
-      const line = document.getElementById('timeline-line');
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      // Update visual elements for the current step
-      step.classList.add('bg-blue-500');
-      card.classList.add('opacity-100', 'transform-none');
+  <section class="pb-20">
+    <div class="text-4xl text-secondary font-bold text-center">PXIL Activites</div>
+    <section class="mt-6 festival-container z-10 lg:px-10 px-6 grid gap-8 grid-cols-3">
+    </section>
+  </section>
 
-      // Highlight the line until the current step
-      line.style.width = `${(currentStep * 10)}%`;
+  <!-- Timeline Progression -->
+  <!-- <section class="flex justify-center items-center mt-10">
+      <div class="w-full max-w-5xl px-4">
+        <div class="relative w-full h-2 bg-gray-300 rounded-full">
+          <div
+            id="timeline-line"
+            class="absolute h-2 bg-blue-500 rounded-full w-0"
+          ></div>
+        </div>
+      </div>
+    </section> -->
 
-      currentStep++;
+  <!-- Swiper Carousel -->
+  <!-- <section class="flex justify-center items-center mt-10">
+      <div class="w-full max-w-5xl px-4">
+        <div class="swiper-container mySwiper rounded-lg shadow-lg">
+          <div class="swiper-wrapper">
+            <div
+              class="swiper-slide bg-white shadow-lg rounded-lg overflow-hidden"
+            >
+              <img
+                src="https://via.placeholder.com/500"
+                alt="Event Image"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-6">
+                <h3 class="text-xl font-semibold text-blue-700">
+                  Annual Business Meetup
+                </h3>
+                <p class="text-gray-600 mt-2">
+                  Join us for an exclusive networking event with industry
+                  leaders.
+                </p>
+                <p class="text-blue-600 font-medium mt-4">
+                  Date: 25th March 2025
+                </p>
+                <button
+                  class="mt-4 bg-blue-700 text-white px-4 py-2 rounded-lg hover:bg-blue-800"
+                >
+                  Register Now
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-next text-gray-700"></div>
+          <div class="swiper-button-prev text-gray-700"></div>
+        </div>
+      </div>
+    </section> -->
 
-      // If we've reached the 10th step, stop the progression
-      if (currentStep > 10) {
-        clearInterval(stepInterval);
-      }
-    }
+  <!-- Card with Image Carousel -->
+  <!-- <section class="flex justify-center items-center mt-10">
+      <div class="max-w-md bg-white shadow-lg rounded-lg overflow-hidden">
+        <div class="relative">
+          <div class="swiper-container cardSwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img
+                  src="https://via.placeholder.com/300"
+                  class="w-full h-auto"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="https://via.placeholder.com/300"
+                  class="w-full h-auto"
+                />
+              </div>
+            </div>
+          </div>
+          <button
+            class="absolute top-2 right-2 bg-gray-700 text-white p-2 rounded-full"
+            onclick="openModal()"
+          >
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+        <div class="p-4">
+          <h2 class="text-xl font-semibold">Product Name</h2>
+          <p class="text-gray-600">This is a sample product description.</p>
+        </div>
+      </div>
+    </section> -->
 
-    // Automatically progress the timeline every 2 seconds
-    const stepInterval = setInterval(showNextStep, 2000);
-
-    // Initialize the first step visible
-    showNextStep();
-  </script>
-
+  <!-- Image Modal -->
+  <!-- <div
+      id="imageModal"
+      class="fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center hidden"
+    >
+      <div class="bg-white p-4 rounded-lg relative max-w-xl w-full">
+        <div class="swiper-container modalSwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img
+                src="https://via.placeholder.com/300"
+                class="w-full h-auto"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="https://via.placeholder.com/300"
+                class="w-full h-auto"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-between mt-4">
+          <button
+            class="bg-gray-700 text-white px-4 py-2 rounded"
+            onclick="zoomIn()"
+          >
+            +
+          </button>
+          <button
+            class="bg-red-500 text-white px-4 py-2 rounded"
+            onclick="closeModal()"
+          >
+            Close
+          </button>
+          <button
+            class="bg-gray-700 text-white px-4 py-2 rounded"
+            onclick="zoomOut()"
+          >
+            -
+          </button>
+        </div>
+      </div>
+    </div> -->
 
   <div id="footer"></div>
 
+  <script src="./assets/js/about.js"></script>
+  <script src="./assets/js/home.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
   <!-- Pages/Components Sripts -->
   <script src="./assets/js/loadComponents.js"></script>
-  <script src="./assets/js/tailwind.js"></script><!-- To import taiwlind css -->
+  <script src="./assets/js/tailwind.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <!-- To import taiwlind css -->
 </body>
 
 </html>

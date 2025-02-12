@@ -1,0 +1,45 @@
+:root {
+    --primary: #0058a2;
+    --secondary: #272727;
+    --tertiary: #FFD334;
+    --whiteClr: #FFFFFF;
+    --textClr: #555555;
+    --lightText: #A4A4A4;
+}
+
+/* ==================================================
+--------- Swiper Styling --------------------------
+=================================================== */
+.swiperButtons .swiper-button-next {
+    background-color: var(--primary);
+    width: 30px;
+    height: 30px;
+    right: -30px;
+    transition: 0.3s all ease-in-out;
+}
+
+.swiperButtons:hover .swiper-button-next {
+    right: 20px;
+}
+
+.swiperButtons .swiper-button-next:after {
+    font-size: 12px;
+    color: var(--whiteClr);
+}
+
+
+.swiperButtons .swiper-button-prev {
+    background-color: var(--primary);
+    width: 30px;
+    height: 30px;
+    left: -30px;
+    transition: 0.3s all ease-in-out;
+}
+
+.swiperButtons .swiper-button-prev:after {
+    font-size: 12px;
+    color: var(--whiteClr);
+}
+.swiperButtons:hover .swiper-button-prev {
+    left: 20px;
+}
